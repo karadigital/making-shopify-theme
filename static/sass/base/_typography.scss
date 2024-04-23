@@ -56,6 +56,14 @@ a {
 	line-height: 160%;
 	font-size: 700;
 }
+
+/*-------------------------------------------*\ 
+Color
+\*-------------------------------------------*/
+.text-light-dark { color: $light-dark; }
+.text-grey-4 { color: $grey-4; }
+.text-black { color: $black-1; }
+
 /*-------------------------------------------*\ 
 Font Weight
 \*-------------------------------------------*/
@@ -73,6 +81,15 @@ Text Align
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
+
+/*-------------------------------------------*\ 
+Text Decoration
+\*-------------------------------------------*/
+
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+.none { text-decoration: none; }
 
 /*-------------------------------------------*\ 
 List Style
