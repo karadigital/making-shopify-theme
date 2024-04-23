@@ -1,0 +1,87 @@
+/*-------------------------------------------*\ 
+Font size
+\*-------------------------------------------*/
+
+:root {
+  font-size: 100%; //16px
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+	font-family: "Prata", serif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+}
+
+*, p, div, a, span, label, li {
+	font-family: "Poppins", sans-serif;
+	@include font-size(0.9375rem, 0.9375rem); //15px, 16px
+	line-height: 20px;
+
+	@include desktop-up {
+		line-height: 32px;
+	}
+}
+
+a {
+	color: inherit;
+}
+
+.heading-1 {
+	@include font-size(2rem, 2.625rem); // 32px, 42px
+}
+
+.heading-2 {
+	@include font-size(1.5rem, 2.25rem); //24px, 36px
+}
+
+
+.heading-3 {
+	@include font-size(1.5rem, 1.875rem); //24px, 30px
+	line-height: 120%;
+
+	@include desktop-up {
+		line-height: normal;
+	}
+}
+
+.small {
+	@include font-size(0.875rem, 1rem); //14px, 16px
+	line-height: normal;
+}
+
+.company-title {
+	font-family: "Rufina", serif;
+	@include font-size(1.5rem, 1.5rem); //24px
+	line-height: 160%;
+	font-size: 700;
+}
+/*-------------------------------------------*\ 
+Font Weight
+\*-------------------------------------------*/
+
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.medium { font-weight: 500; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
+.extra-bold { font-weight: 800; }
+
+/*-------------------------------------------*\ 
+Text Align
+\*-------------------------------------------*/
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+/*-------------------------------------------*\ 
+List Style
+\*-------------------------------------------*/
+
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+.list-none { list-style-type: none; }
+.list-lower-alpha { list-style-type: lower-alpha; }
+
+.list-outside { list-style-position: outside; }
+.list-inside { list-style-position: inside; }

@@ -1,0 +1,32 @@
+.footer__wrapper {
+	.footer__logo { grid-area: logo; }
+	.address { grid-area: address; }
+	.about-us { grid-area: about-us; }
+	.contact-person { grid-area: contact; }
+	.copywriting { grid-area: copywriting; }
+	.footer-logo-link {
+		display: none;
+		grid-area: logo-app;
+		@include desktop-up {
+			display: block;
+		}
+	}
+
+	display: grid;
+	row-gap: 1.5rem;
+	grid-template-areas:
+	'logo'
+	'address'
+	'about-us'
+	'contact'
+	'copywriting';
+
+	@include desktop-up {
+		row-gap: 3rem;
+		column-gap: 3%;
+		grid-template-areas: 
+		'logo logo logo logo'
+		'address about-us contact logo-app'
+		'copywriting copywriting copywriting copywriting';
+	}
+}

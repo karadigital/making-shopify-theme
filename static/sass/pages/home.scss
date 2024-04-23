@@ -1,0 +1,44 @@
+// Collection Home
+.collection-home__item {
+	img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: 160px;
+		object-fit: cover;
+	}
+}
+
+// Featured Product
+.featured-main {
+	position: sticky;
+	top: 0;
+}
+
+// Testimonials
+.testimonials {
+	&__header img {
+		height: 60px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
+}
+
+.link-interaction {
+	position: relative;
+
+	width: max-content;
+	margin: auto;
+	&:hover::after {
+		content: '';
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+
+		width: 75%;
+		height: 2px;
+		background-color: $gold;
+		border-radius: 1px;
+	}
+}

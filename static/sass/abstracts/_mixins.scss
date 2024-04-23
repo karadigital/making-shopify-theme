@@ -1,0 +1,52 @@
+/*-------------------------------------------*\ 
+Responsive mixins
+\*-------------------------------------------*/
+
+@mixin mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+}
+  
+@mixin tablet-up {
+    @media (min-width: 768px) {
+      @content;
+    }
+}
+  
+@mixin desktop-up {
+    @media (min-width: 1024px) {
+      @content;
+    }
+}
+  
+@mixin monitor-up {
+    @media (min-width: 1440px) {
+      @content;
+    }
+}
+
+/*-------------------------------------------*\ 
+Sizes
+\*-------------------------------------------*/
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+  
+  @if $radius !=0 {
+    border-radius: $radius;
+  }
+}
+
+@mixin font-size($mobile, $desktop: null) {
+  font-size: $mobile;
+
+  @include desktop-up() {
+    font-size: $desktop;
+
+    @if $desktop == null {
+      font-size: $mobile;
+    }
+  }
+}

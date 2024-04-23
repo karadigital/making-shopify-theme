@@ -1,0 +1,8 @@
+.about__item {
+	display: grid;
+	row-gap: 16px;
+
+	@include desktop-up {
+		grid-template-columns: 5fr 4fr;
+	}
+}
