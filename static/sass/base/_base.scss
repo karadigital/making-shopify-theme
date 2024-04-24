@@ -52,6 +52,12 @@ a {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  &--big {
+	@include monitor-up {
+		padding-left: 7.5rem;
+		padding-right: 7.5rem;
+	}
+  }
 }
 
 .section__padding__mobile {
