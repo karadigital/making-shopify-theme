@@ -8,17 +8,18 @@ button {
   align-items: center;
   justify-content: center;
 
+  background: $black-1;
   border-radius: 8px;
   box-sizing: border-box;
   width: max-content;
   min-width: 120px;
-  min-height: 36px;
-  padding: 8px 20px;
+  min-height: 32px;
+  padding: 6px 20px;
+
+  color: $white;
   outline: none;
-  
   cursor: pointer;
 
-  background: $linear-gradient;
 }
 
 .chip {
@@ -27,7 +28,7 @@ button {
   border-radius: 8px;
   width: max-content;
 
-  color: $white-50;
+  color: $white;
   font-weight: 600;
   @include font-size(0.75rem, 0.875rem); //12px, 14px
 

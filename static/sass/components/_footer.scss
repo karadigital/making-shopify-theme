@@ -1,32 +1,21 @@
-.footer__wrapper {
-	.footer__logo { grid-area: logo; }
-	.address { grid-area: address; }
-	.about-us { grid-area: about-us; }
-	.contact-person { grid-area: contact; }
-	.copywriting { grid-area: copywriting; }
-	.footer-logo-link {
-		display: none;
-		grid-area: logo-app;
-		@include desktop-up {
-			display: block;
-		}
-	}
+footer {
+	.footer__header { grid-area: header; }
+	.footer__link { grid-area: link; }
+	.footer__info { grid-area: info; }
+	.footer__newsletter { grid-area: newsletter; }
+	.footer__copyright { grid-area: copyright; @include desktop-up { text-align: center; }}
 
-	display: grid;
-	row-gap: 1.5rem;
 	grid-template-areas:
-	'logo'
-	'address'
-	'about-us'
-	'contact'
-	'copywriting';
+	'header'
+	'link'
+	'info'
+	'newsletter'
+	'copyright';
 
 	@include desktop-up {
-		row-gap: 3rem;
-		column-gap: 3%;
 		grid-template-areas: 
-		'logo logo logo logo'
-		'address about-us contact logo-app'
-		'copywriting copywriting copywriting copywriting';
+		'header link info newsletter'
+		'copyright copyright copyright copyright';
+		grid-template-columns: 1fr 0.75fr 1fr 1fr;
 	}
 }

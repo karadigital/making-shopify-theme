@@ -20,10 +20,20 @@
 		width: 75%;
 	}
 }
+.w-lg-65 {
+	@include desktop-up {
+		width: 65%;
+	}
+}
+.w-lg-50 {
+	@include desktop-up {
+		width: 50%;
+	}
+}
 
-.w-xl-45 {
+.w-xl-43 {
 	@include monitor-up {
-		width: 45%;
+		width: 43%;
 	}
 }
 // ===========================================

@@ -9,6 +9,31 @@
 		object-fit: cover;
 	}
 }
+.collection__card {
+	p {
+		position: relative;
+	
+		width: max-content;
+	
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+	
+			width: 0;
+			height: 2px;
+			background-color: $gold;
+			border-radius: 1px;
+			
+			transition: width 0.25s ease-out;
+		}
+	}
+	&:hover p::before {
+		content: '';
+		width: 75%;
+	}
+}
 
 // Featured Product
 .featured-main {
@@ -25,19 +50,3 @@
 	}
 }
 
-.link-interaction {
-	position: relative;
-
-	width: max-content;
-	&:hover::after {
-		content: '';
-		position: absolute;
-		bottom: 1px;
-		left: 0;
-
-		width: 75%;
-		height: 2px;
-		background-color: $gold;
-		border-radius: 1px;
-	}
-}

@@ -6,20 +6,20 @@ Font size
   font-size: 100%; //16px
 }
 
-.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+.title-1, .title-2, .title-3, .title-4, .title-5, .title-6 {
 	font-family: "Prata", serif;
 	font-weight: 400;
 	font-style: normal;
 	line-height: normal;
 }
 
-*, p, div, a, span, label, li {
+*, p, div, a, span, li {
 	font-family: "Poppins", sans-serif;
 	@include font-size(0.9375rem, 0.9375rem); //15px, 16px
 	line-height: 20px;
 
 	@include desktop-up {
-		line-height: 32px;
+		line-height: normal;
 	}
 }
 
@@ -35,7 +35,6 @@ a {
 	@include font-size(1.5rem, 2.25rem); //24px, 36px
 }
 
-
 .heading-3 {
 	@include font-size(1.5rem, 1.875rem); //24px, 30px
 	line-height: 120%;
@@ -45,8 +44,17 @@ a {
 	}
 }
 
+.title-3 { 
+	@include font-size(1.75rem, 2.25rem) //28px, 36px
+ }
+
+ .label {
+	 @include font-size(0.875rem) //14px
+ }
+
 .small {
-	@include font-size(0.875rem, 1rem); //14px, 16px
+	font-family: "Poppins", sans-serif;
+	@include font-size(0.75rem); //12px
 	line-height: normal;
 }
 

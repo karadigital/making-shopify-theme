@@ -1,0 +1,106 @@
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=tel],
+select,
+textarea, .select {
+  box-sizing: border-box;
+  padding: 10px 12px;
+  // background: $white-50;
+  outline: 1px solid $black-1;
+  border-radius: 8px;
+  border: none;
+  
+  @include font-size(1rem, 1rem);
+  // color: $black-500;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+  // &:-webkit-autofill {
+  //   -webkit-box-shadow: 0 0 0px 1000px $base-white inset !important;
+  // }
+
+  &::placeholder {
+    // font-size: 1rem;
+    line-height: 140%;
+    color: $light-dark;
+    font-weight: 300;
+  }
+
+  &:focus {
+    // outline: 1px solid $grey-600;
+    box-shadow: none;
+  }
+
+  // &:disabled, &:read-only {
+  //   color: $gray-500;
+  //   border: 1px solid $gray-300;
+  //   background-color: $gray-50;
+  // }
+}
+
+textarea {
+  &::placeholder {
+    font-size: 1rem;
+    // color: $black-500;
+  }
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=date],
+select {
+  height: 44px;
+  width: 100%;
+}
+select {
+  width: max-content;
+}
+label {
+  // margin: auto;
+  // width: 100%;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+}
+
+option {
+  // background-color: $white-50;
+  font-family: 'Inter', sans-serif;
+}
+
+select {
+  appearance: none;
+  // z-index: 2;
+  background: url("../images/chevron-down-black.svg") no-repeat right;
+  background-position: calc(100% - 0.5rem);
+  // padding-right: 2rem;
+  // width: 100%;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none; //If you don't want to see the increment / decrement button
+  margin: 0;
+}
+
+.input-with-helper {
+  position: relative;
+
+  .helper {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+    display: flex;
+    font-size: 1rem;
+  }
+}

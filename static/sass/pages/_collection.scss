@@ -1,0 +1,38 @@
+.collection {
+  &__banner {
+    height: 170px;
+    
+    @include desktop-up {
+      height: 450px;
+    }
+    img {
+      @include square(100%, $radius: 0);
+      object-fit: cover;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    row-gap: 4rem;
+
+    @include desktop-up {
+      row-gap: 6rem;
+    }
+  }
+  
+  &__item {
+    background: $grey-1;
+    padding: 1rem;
+    box-sizing: border-box;
+    img {
+      display: flex;
+  
+      margin: auto;
+      object-fit: contain;
+      height: 150px;
+      @include desktop-up {
+        height: 270px;
+      }
+    }
+  }
+}
