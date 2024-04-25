@@ -1,0 +1,22 @@
+.faq {
+  &__wrapper {
+    display: grid;
+    row-gap: 1rem;
+
+    @include desktop-up {
+      grid-template-columns: 2fr 1fr;
+      column-gap: 1.5rem;
+      align-items: start;
+    }
+  }
+  
+  &__form {
+    display: grid;
+    row-gap: 1rem;
+
+    @include desktop-up {
+      position: sticky;
+      top: 0;
+    }
+  }
+}

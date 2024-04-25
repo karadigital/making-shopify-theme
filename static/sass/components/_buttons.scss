@@ -19,7 +19,9 @@ button {
   color: $white;
   outline: none;
   cursor: pointer;
-
+  &--circle {
+    border-radius: 20px;
+  }
 }
 
 .chip {
