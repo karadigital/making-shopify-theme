@@ -1,7 +1,12 @@
 .chips {
   border-radius: 12px;
   background: $black-1;
-  color: $grey-1;
-  padding: 6px 10px;
   width: max-content;
+  padding: 2px 8px;
+
+  color: $grey-2;
+
+  @include desktop-up {
+    padding: 6px 10px;
+  }
 }

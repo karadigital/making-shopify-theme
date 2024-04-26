@@ -1,0 +1,14 @@
+.product__banner {
+	height: 170px;
+
+	@include desktop-up {
+		height: 250px;
+	}
+	@include monitor-up {
+		height: 400px;
+	}
+	img {
+		@include square(100%, $radius: 0);
+		object-fit: cover;
+	}
+}

@@ -1,16 +1,4 @@
 .collection {
-  &__banner {
-    height: 170px;
-    
-    @include desktop-up {
-      height: 450px;
-    }
-    img {
-      @include square(100%, $radius: 0);
-      object-fit: cover;
-    }
-  }
-
   &__wrapper {
     display: grid;
     row-gap: 4rem;
@@ -21,7 +9,7 @@
   }
   
   &__item {
-    background: $grey-1;
+    background: $grey-2;
     padding: 1rem;
     box-sizing: border-box;
     img {

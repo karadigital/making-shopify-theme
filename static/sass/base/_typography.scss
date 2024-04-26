@@ -45,11 +45,15 @@ a {
 }
 
 .title-3 { 
-	@include font-size(1.75rem, 2.25rem) //28px, 36px
+	@include font-size(1.75rem, 2.25rem); //28px, 36px
  }
 
+.subtitle {
+	@include font-size(1rem, 1.125rem); //16px, 18px
+}
+
  .label {
-	 @include font-size(0.875rem) //14px
+	@include font-size(0.875rem) //14px
  }
 
 .small {

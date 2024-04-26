@@ -9,16 +9,19 @@
 @import "base/spacing";
 @import "base/input";
 
-@import "components/chips";
-@import "components/product-card";
-@import "components/buttons";
-@import "components/footer";
 @import "components/accordion";
+@import "components/buttons";
+@import "components/chips";
+@import "components/footer";
+@import "components/product-card";
+@import "components/banners";
+@import "components/underline-effect";
 
 @import "layout/grid-layout";
 
 @import "pages/home";
-@import "pages/collection";
+@import "pages/collections";
+@import "pages/product-list";
 @import "pages/about-us";
 @import "pages/faq";
 @import "pages/contact-us";

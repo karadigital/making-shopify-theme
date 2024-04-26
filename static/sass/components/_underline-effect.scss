@@ -1,0 +1,55 @@
+.underline-effect {
+	&__text {
+		position: relative;
+	
+		width: max-content;
+	
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -3px;
+			width: 0;
+			height: 2px;
+			background-color: $gold;
+			border-radius: 1px;
+			
+			transition: width 0.25s ease-out;
+		}
+
+		&:hover::before {
+			content: '';
+			width: 75%;
+		}
+
+		&.active::before {
+			width: 75%;
+		}
+	}
+
+	&__card {
+		p {
+			position: relative;
+		
+			width: max-content;
+		
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -3px;
+				width: 0;
+				height: 2px;
+				background-color: $gold;
+				border-radius: 1px;
+				
+				transition: width 0.25s ease-out;
+			}
+		}
+
+		&:hover p::before {
+			width: 75%;
+		}
+	}
+}
+
