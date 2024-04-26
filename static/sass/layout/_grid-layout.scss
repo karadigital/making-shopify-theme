@@ -18,12 +18,13 @@
 	row-gap: 1.5rem;
 }
 
-.rg-84px {
-	row-gap: 5.25rem;
+.rg-32px {
+	row-gap: 2rem;
 }
 
-.rg-24px {
-	row-gap: 1.5rem;
+
+.rg-84px {
+	row-gap: 5.25rem;
 }
 
 .rg-dynamic {
@@ -62,10 +63,6 @@
 	@include desktop-up {
 		column-gap: 2rem;
 	}
-}
-
-.rg-32px {
-	row-gap: 2rem;
 }
 
 .order-sm-1-lg-2 {

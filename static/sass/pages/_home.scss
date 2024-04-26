@@ -9,6 +9,7 @@
 		object-fit: cover;
 	}
 }
+
 .collection__card {
 	p {
 		position: relative;
@@ -44,9 +45,7 @@
 // Testimonials
 .testimonials {
 	&__header img {
-		height: 60px;
-		aspect-ratio: 1;
-		border-radius: 50%;
+		@include square(60px, $radius: 50%);
 	}
 }
 
