@@ -9,4 +9,7 @@
   @include desktop-up {
     padding: 6px 10px;
   }
+  &--red {
+    background-color: $red-1;
+  }
 }

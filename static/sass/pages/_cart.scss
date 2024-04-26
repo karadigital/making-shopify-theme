@@ -1,0 +1,25 @@
+.cart {
+	&__section {
+		display: grid;
+		row-gap: 1rem;
+
+		h1 { grid-area: title; }
+		.cart__products { grid-area: products; }
+		.cart__summary { grid-area: summary; }
+
+		grid-template-areas:
+		"title"
+		"products"
+		"summary";
+
+		padding-bottom: 4rem;
+
+		@include desktop-up {
+			grid-template-areas:
+			"title title"
+			"products summary"
+			;
+			grid-template-columns: 2fr 1fr;
+		}
+	}
+}
