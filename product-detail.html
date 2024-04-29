@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cart</title>
+  <title>Product Detail</title>
 
   <link rel="stylesheet" href="./static/css/main.css">
 
@@ -11,94 +11,16 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
-  <!-- Content -->
-  <section class="section__wrapper section__paddin">
-    <div class="d-flex cg-8px text-grey-4 pb-5">Home / <span class="text-black">My Cart</span></div>
-  </section>
-  <section class="section__wrapper section__padding cart__section">
-    <h1 class="heading-2">My Cart</h1>
-    <div class="cart__list">
-      <div class="cart__header">
-        <p class="semi-bold">Product</p>
-        <p class="opacity-0">Blank</p>
-        <p class="semi-bold">Quantity</p>
-        <p class="semi-bold text-right">Subtotal</p>
+  <section class="section__wrapper section__padding pb-6">
+    <div class="d-flex cg-8px text-grey-4 pb-5">Home / <span class="text-black">Daphne Ring</span></div>
+    <div class="product-detail__section">
+      <div class="product-detail__info">
+        <p>A glass pearl punctuates this modern ring with a raised profile. Finished in high-polish gold.</p>
       </div>
-      <div class="cart__item">
-        <div class="product-img">
-          <img src="./static/image/product-template.png" alt="product img">
-        </div>
-        <p class="product-title">18K Gold Double Initial Custom Ring</p>
-        <div class="product-info d-grid rg-8px">
-          <div class="d-flex align-items-center cg-8px">
-            <p class="label text-light-dark line-through">$210.00</p>
-            <p class="label semi-bold">$240.000</p>
-          </div>
-          <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
-          <p class="small">Gemstone Quartz</p>
-          <p class="small">Size: 7</p>
-        </div>
-        <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$240.00</span> </p>
-        <div class="counter__wrapper d-flex align-items-center">
-          <div class="counter">
-            <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
-            <input type="text" placeholder="1" class="text-center">
-            <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
-          </div>
-          <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
-        </div>
-      </div>
-      <div class="cart__item">
-        <div class="product-img">
-          <img src="./static/image/product-template.png" alt="product img">
-        </div>
-        <p class="product-title">18K Gold Double Initial Custom Ring</p>
-        <div class="product-info d-grid rg-8px">
-          <div class="d-flex align-items-center cg-8px">
-            <p class="label text-light-dark line-through">$210.00</p>
-            <p class="label semi-bold">$240.000</p>
-          </div>
-          <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
-          <p class="small">Gemstone Quartz</p>
-          <p class="small">Size: 7</p>
-        </div>
-        <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$240.00</span> </p>
-        <div class="counter__wrapper d-flex align-items-center">
-          <div class="counter">
-            <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
-            <input type="text" placeholder="1" class="text-center">
-            <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
-          </div>
-          <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
-        </div>
-      </div>
-    </div>
-    <div class="cart__summary d-grid rg-16px rounded-8px border-light-dark px-3 py-3">
-      <div class="d-grid rg-8px">
-        <p>Spend $172.00 more for FREE shipping</p>
-        <div class="progress-bar">
-          <div class="progress-status"></div>
-        </div>
-      </div>
-      <div class="d-flex align-items-center justify-content-between">
-        <p>Savings</p>
-        <div class="text-red">-$120.00</div>
-      </div>
-      <div class="d-flex align-items-center justify-content-between">
-        <p class="semi-bold">Total</p>
-        <div class="heading-4 semi-bold">$480.00</div>
-      </div>
-      <div class="d-grid rg-8px">
-        <label for="order-text">Order Special Instructions</label>
-        <textarea name="" id="order-text" cols="10"></textarea>
-      </div>
-      <p class="label text-center">Tax included and shipping calculated at checkout</p>
-      <button type="submit" class="btn btn--circle w-100 mx-auto">Checkout</button>
-      <a href="" class="d-flex justify-content-center text-gold semi-bold">Continue shopping</a>
     </div>
   </section>
   <!-- You May Also Like -->
-  <section class="section__wrapper section__padding desktop-only d-grid rg-32px pb-5">
+  <section class="section__wrapper section__padding d-grid rg-32px pb-5">
     <h2 class="title-4 text-center pb-5">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
       <div class="d-grid rg-8px">
@@ -155,6 +77,18 @@
       </div>
     </div>
   </section>
+  <!-- Newsletter -->
+  <section class="bg-cream-2 py-6">
+    <div class="section__wrapper section__padding w-lg-65 w-xl-43 d-grid rg-16px">
+      <h2 class="title-3 text-center">Sign up for our newsletter</h2>
+      <p class="text-center">Sign up below and get early access to all our flash sales, as well as pre sale access to all our new products!</p>
+      <div class="d-flex align-items-center cg-16px justify-content-center w-lg-75 mx-auto">
+        <input type="text" placeholder="Email address...">
+        <button type="submit" class="btn">Join</button>
+      </div>
+      <p class="small text-center">By signing up you agree with our <a href="" class="small underline">Terms & Conditions</a> and <a href="" class="small underline">Privacy Policy.</a>  To opt out, click Unsubscribe in our emails</p>
+    </div>
+  </section>
   <!-- Footer -->
   <footer class="section__wrapper section__padding d-grid rg-24px cg-24px align-items-start py-4">
     <div class="d-grid rg-24px footer__header">
@@ -198,4 +132,46 @@
     <p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
   </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    // Add active class to the first tab
+    $(".product-list__left a:first").addClass("active");
+
+    // Tab switching functionality
+    $(".product-list__left a").click(function(event){
+        // Prevent default scrolling behavior
+        event.preventDefault();
+
+        // If the clicked tab is already active, return false
+        if($(this).hasClass("active")) return false;
+
+        // Remove the active class from all tabs
+        $(".product-list__left a").removeClass("active");
+        // Add the active class to the clicked tab
+        $(this).addClass("active");
+
+        // Hide all tab content
+        $(".tab__content > div").hide();
+        // Show the corresponding tab content
+        var tab_id = $(this).attr("href");
+        $(tab_id).show();
+    });
+
+    // Show all products when clicking "All Products" tab
+    $(".product-list__left a[href='#all']").click(function(event){
+        // Prevent default scrolling behavior
+        event.preventDefault();
+
+        // Remove active class from all tabs
+        $(".product-list__left a").removeClass("active");
+        // Add active class to "All Products" tab
+        $(this).addClass("active");
+
+        // Show all tab content
+        $(".tab__content > div").show();
+    });
+});
+</script>
 </html>

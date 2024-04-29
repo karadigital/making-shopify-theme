@@ -1,0 +1,10 @@
+.blog__card {
+	img {
+		height: 250px;
+		object-fit: cover;
+
+		@include desktop-up {
+			height: 300px;
+		}
+	}
+}
