@@ -16,19 +16,61 @@
     <div class="d-flex cg-8px text-grey-4 pb-5">Home / <span class="text-black">My Cart</span></div>
   </section>
   <section class="section__wrapper section__padding cart__section">
-    <h1 class="heading-2 pb-3">My Cart</h1>
-    <div class="cart__products">
-      <div>
-        <img src="" alt="product img">
-        <p>18K Gold Double Initial Custom Ring</p>
-        <p>Metal: 18KT YELLOW GOLD</p>
-        <p>Size: 7</p>
-        <p>$240.000</p>
-        <div class="counter__wrapper">
-          <div class="counter"></div>
-          <img src="" alt="">
+    <h1 class="heading-2">My Cart</h1>
+    <div class="cart__list">
+      <div class="cart__header">
+        <p class="semi-bold">Product</p>
+        <p class="opacity-0">Blank</p>
+        <p class="semi-bold">Quantity</p>
+        <p class="semi-bold text-right">Subtotal</p>
+      </div>
+      <div class="cart__item">
+        <div class="product-img">
+          <img src="./static/image/product-template.png" alt="product img">
         </div>
-
+        <p class="product-title">18K Gold Double Initial Custom Ring</p>
+        <div class="product-info d-grid rg-8px">
+          <div class="d-flex align-items-center cg-8px">
+            <p class="label text-light-dark line-through">$210.00</p>
+            <p class="label semi-bold">$240.000</p>
+          </div>
+          <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
+          <p class="small">Gemstone Quartz</p>
+          <p class="small">Size: 7</p>
+        </div>
+        <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$240.00</span> </p>
+        <div class="counter__wrapper d-flex align-items-center">
+          <div class="counter">
+            <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+            <input type="text" placeholder="1" class="text-center">
+            <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+          </div>
+          <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
+        </div>
+      </div>
+      <div class="cart__item">
+        <div class="product-img">
+          <img src="./static/image/product-template.png" alt="product img">
+        </div>
+        <p class="product-title">18K Gold Double Initial Custom Ring</p>
+        <div class="product-info d-grid rg-8px">
+          <div class="d-flex align-items-center cg-8px">
+            <p class="label text-light-dark line-through">$210.00</p>
+            <p class="label semi-bold">$240.000</p>
+          </div>
+          <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
+          <p class="small">Gemstone Quartz</p>
+          <p class="small">Size: 7</p>
+        </div>
+        <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$240.00</span> </p>
+        <div class="counter__wrapper d-flex align-items-center">
+          <div class="counter">
+            <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+            <input type="text" placeholder="1" class="text-center">
+            <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+          </div>
+          <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
+        </div>
       </div>
     </div>
     <div class="cart__summary d-grid rg-16px rounded-8px border-light-dark px-3 py-3">
@@ -39,8 +81,8 @@
         </div>
       </div>
       <div class="d-flex align-items-center justify-content-between">
-        <p>Discount</p>
-        <div class="chips chips--red">-$120.00</div>
+        <p>Savings</p>
+        <div class="text-red">-$120.00</div>
       </div>
       <div class="d-flex align-items-center justify-content-between">
         <p class="semi-bold">Total</p>
@@ -56,7 +98,7 @@
     </div>
   </section>
   <section class="section__wrapper section__padding desktop-only d-grid rg-32px pb-5">
-    <h2 class="title-4 text-center">You May Also Like</h2>
+    <h2 class="title-4 text-center pb-5">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
       <div class="d-grid rg-8px">
         <div class="product__img">

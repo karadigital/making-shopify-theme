@@ -1,25 +1,108 @@
 .cart {
 	&__section {
 		display: grid;
-		row-gap: 1rem;
+		row-gap: 2rem;
+    align-items: start;
 
 		h1 { grid-area: title; }
-		.cart__products { grid-area: products; }
+
+		.cart__list {
+			grid-area: list;
+
+			@include desktop-up {
+				border: 1px solid $grey-4;
+				border-radius: 12px;
+				overflow: hidden;
+			}
+		}
+
 		.cart__summary { grid-area: summary; }
 
 		grid-template-areas:
 		"title"
-		"products"
+		"list"
 		"summary";
 
-		padding-bottom: 4rem;
+		padding-bottom: 2rem;
 
 		@include desktop-up {
 			grid-template-areas:
 			"title title"
-			"products summary"
+			"list summary"
 			;
 			grid-template-columns: 2fr 1fr;
+			column-gap: 2rem;
+
+			padding-bottom: 4rem;
+		}
+	}
+
+	&__header {
+		display: none;
+
+		@include desktop-up {
+			display: grid;
+			grid-template-columns: 100px 2.5fr 1fr 1fr;
+			background-color: $cream-3;
+			padding: 1rem;
+			
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-areas:
+		"image title"
+		"image info"
+		"image qty"
+		"iamge subtotal"
+		;
+		row-gap: 8px;
+		column-gap: 8px;
+
+		border-bottom: 1px solid $grey-4;
+		padding: 1.5rem 0;
+
+		@include desktop-up {
+			grid-template-areas: 
+			"image title qty subtotal"
+			"image info qty subtotal"
+			"image info qty subtotal";
+			align-items: start;
+
+			padding: 1.5rem 1rem;
+			grid-template-columns: 100px 2.5fr 1fr 1fr;
+		}
+
+		.product-img {
+			grid-area: image;
+
+			background-color: $grey-1;
+			@include square(100px, $radius: 4px);
+
+			img {
+				@include square(100%, $radius: 0);
+				object-fit: cover;
+			}
+		}
+
+		.product-title { grid-area: title; }
+		.product-info { grid-area: info; }
+		.product-price {
+			grid-area: price;
+		}
+
+		.product-subtotal {
+			grid-area: subtotal;
+
+			@include desktop-up {
+				text-align: right;
+			}
+		}
+
+		.counter__wrapper {
+			grid-area: qty;
+			justify-content: space-between;
 		}
 	}
 }

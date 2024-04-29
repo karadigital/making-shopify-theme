@@ -22,6 +22,11 @@
 	row-gap: 2rem;
 }
 
+.rg-lg-32px {
+	@include desktop-up {
+		row-gap: 2rem;
+	}
+}	
 
 .rg-84px {
 	row-gap: 5.25rem;
