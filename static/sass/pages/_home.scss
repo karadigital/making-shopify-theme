@@ -58,11 +58,48 @@ Trust
 /*-------------------------------------------*\ 
 Featured
 \*-------------------------------------------*/
-.featured-main {
-	position: sticky;
-	top: 0;
-}
+.featured {
+	&__section {
+		position: relative;
 
+		display: grid;
+		grid-template-areas:
+		"title"
+		"main"
+		"product-list";
+		@include desktop-up {
+			grid-template-areas:
+			"title title"
+			"main product-list"
+			;
+			grid-template-columns: 1fr 2fr;
+			column-gap: 3%;
+		}
+	}
+
+	&__main {
+		grid-area: main;
+	}
+
+	&__title { grid-area: title; }
+	&__wrapper { grid-area: product-list; }
+	&__content {
+		@include desktop-up {
+			position: sticky;
+			top: 0;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		background-color: rgba(239,229,219, 0.5);
+		padding: 1rem;
+	}
+}
 /*-------------------------------------------*\ 
 Testimonials
 \*-------------------------------------------*/

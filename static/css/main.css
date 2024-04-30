@@ -1473,9 +1473,40 @@ Trust
 /*-------------------------------------------*\ 
 Featured
 \*-------------------------------------------*/
-.featured-main {
-  position: sticky;
-  top: 0;
+.featured__section {
+  position: relative;
+  display: grid;
+  grid-template-areas: "title" "main" "product-list";
+}
+@media (min-width: 1024px) {
+  .featured__section {
+    grid-template-areas: "title title" "main product-list";
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3%;
+  }
+}
+.featured__main {
+  grid-area: main;
+}
+.featured__title {
+  grid-area: title;
+}
+.featured__wrapper {
+  grid-area: product-list;
+}
+@media (min-width: 1024px) {
+  .featured__content {
+    position: sticky;
+    top: 0;
+  }
+}
+.featured__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(239, 229, 219, 0.5);
+  padding: 1rem;
 }
 
 /*-------------------------------------------*\ 
