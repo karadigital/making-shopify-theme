@@ -1,0 +1,10 @@
+.text-and-img {
+	&__text {
+		padding: 1.5rem 5%;
+	}
+	&__image {
+		@include desktop-up {
+			height: 500px;
+		}
+	}
+}

@@ -1,4 +1,6 @@
-// Collection Home
+/*-------------------------------------------*\ 
+Collection
+\*-------------------------------------------*/
 .collection-home__item {
 	img {
 		display: flex;
@@ -10,43 +12,151 @@
 	}
 }
 
-.collection__card {
-	// p {
-	// 	position: relative;
+/*-------------------------------------------*\ 
+Trust
+\*-------------------------------------------*/
+.trust {
+	&__section {
+		display: grid;
+		row-gap: 1rem;
 	
-	// 	width: max-content;
-	
-	// 	&::before {
-	// 		content: '';
-	// 		position: absolute;
-	// 		left: 0;
-	// 		bottom: 1px;
-	
-	// 		width: 0;
-	// 		height: 2px;
-	// 		background-color: $gold;
-	// 		border-radius: 1px;
-			
-	// 		transition: width 0.25s ease-out;
-	// 	}
-	// }
+		padding-top: 4rem;
+		padding-bottom: 4rem;
 
-	&:hover p::before {
-		content: '';
-		width: 75%;
+		grid-template-areas:
+		"header"
+		"img"
+		"left"
+		"right"
+		;
+
+		@include desktop-up {
+			grid-template-areas:
+			"header"
+			"img"
+			"left"
+			"right"
+			;
+			row-gap: 2rem;
+			column-gap: 5%;
+			align-items: center;
+		}
+	}
+
+	&__header { grid-area: header; }
+	&__left {
+		grid-area: left;
+	}
+	&__right { grid-area: right; }
+	&__img { 
+		grid-area: img;
+		@include desktop-up {
+			height: 450px;
+		}
 	}
 }
-
-// Featured Product
+/*-------------------------------------------*\ 
+Featured
+\*-------------------------------------------*/
 .featured-main {
 	position: sticky;
 	top: 0;
 }
 
-// Testimonials
+/*-------------------------------------------*\ 
+Testimonials
+\*-------------------------------------------*/
 .testimonials {
+	&__section {
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+		
+		.splide__track {
+			margin-bottom: 2rem;
+		}
+	}
+
 	&__header img {
 		@include square(60px, $radius: 50%);
 	}
 }
 
+.testimonials-progress__wrapper {
+	width: 40%;
+	margin: auto;
+	border-radius: 10px;
+    overflow: hidden;
+
+	@include desktop-up {
+		width: 20%;
+	}
+}
+
+.testimonials-slider-progress {
+	background: $grey-3;
+  }
+  
+  .testimonials-slider-progress-bar {
+	background: $gold;
+	height: 6px;
+	transition: width 400ms ease;
+	width: 0;
+  }
+  
+/*-------------------------------------------*\ 
+Hotspot
+\*-------------------------------------------*/
+.hotspot {
+	&__section {
+		display: grid;
+		row-gap: 2rem;
+		grid-template-areas:
+		"header"
+		"banner"
+		"card";
+
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+
+		@include desktop-up {
+			grid-template-areas:
+			"banner header"
+			"banner card"
+			;
+			grid-template-columns: 5fr 3fr;
+			column-gap: 3%;
+			align-items: start;
+
+			padding-top: 5.75rem;
+			padding-bottom: 5.75rem;
+		}
+
+		@include monitor-up {
+			grid-template-columns: 6.5fr 2.5fr;
+		}
+	}
+
+	&__header {
+		grid-area: header;
+		* { text-align: center; }
+	}
+
+	&__banner {
+		grid-area: banner;
+		height: 235px;
+		border-radius: 8px;
+		overflow: hidden;
+
+		@include desktop-up {
+			height: 500px;
+		}
+
+		@include monitor-up {
+			height: 625px;
+		}
+	}
+
+	&__card {
+		grid-area: card;
+	}
+}

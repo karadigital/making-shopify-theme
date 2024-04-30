@@ -79,11 +79,6 @@
 
 			background-color: $grey-1;
 			@include square(100px, $radius: 4px);
-
-			img {
-				@include square(100%, $radius: 0);
-				object-fit: cover;
-			}
 		}
 
 		.product-title { grid-area: title; }

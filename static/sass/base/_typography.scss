@@ -52,6 +52,10 @@ a {
 	}
 }
 
+.title-2 { 
+	@include font-size(2rem, 2.625rem); //32px, 42px
+ }
+
 .title-3 { 
 	@include font-size(1.75rem, 2.25rem); //28px, 36px
  }
@@ -93,6 +97,7 @@ Color
 .text-black { color: $black-2; }
 .text-gold { color: $gold; }
 .text-red { color: $red-1; }
+.text-white { color: $white; }
 
 /*-------------------------------------------*\ 
 Font Weight

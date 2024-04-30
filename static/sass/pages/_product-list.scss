@@ -38,15 +38,13 @@
 		position: relative;
 		
 		background-color: $grey-2;
+		border-radius: 8px;
 		height: 175px;
 
+		overflow: hidden;
+		
 		@include desktop-up {
 			height: 315px;
-		}
-
-		img {
-			@include square(100%, $radius: 0);
-			object-fit: cover;
 		}
 
 		.chips {

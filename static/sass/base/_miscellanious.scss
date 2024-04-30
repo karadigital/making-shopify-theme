@@ -9,12 +9,6 @@
 
 .w-50 { width: 50%; }
 
-.img-crisp {
-	// image-rendering: -moz-crisp-edges;         /* Firefox */
-	// image-rendering:   -o-crisp-edges;         /* Opera */
-	image-rendering: crisp-edges;	
-}
-
 .w-lg-75 {
 	@include desktop-up {
 		width: 75%;
@@ -117,3 +111,14 @@
   .opacity-0 {
 	opacity: 0;
   }
+
+.img-crisp {
+	// image-rendering: -moz-crisp-edges;         /* Firefox */
+	// image-rendering:   -o-crisp-edges;         /* Opera */
+	image-rendering: crisp-edges;	
+}
+
+.img-object-cover {
+	@include square(100%, $radius: 0);
+	object-fit: cover;
+}

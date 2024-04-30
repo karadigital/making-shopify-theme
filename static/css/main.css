@@ -183,7 +183,7 @@ a {
   padding-left: 5%;
   padding-right: 5%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .section__padding {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -236,6 +236,14 @@ a {
 
 .bg-cream-2 {
   background-color: #F7F4F2;
+}
+
+.bg-cream-3 {
+  background-color: #EFE5DB;
+}
+
+.bg-grey-3 {
+  background-color: #F3F3F3;
 }
 
 .bg-transparent {
@@ -324,6 +332,15 @@ a {
 @media (min-width: 1024px) {
   .heading-4 {
     line-height: normal;
+  }
+}
+
+.title-2 {
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  .title-2 {
+    font-size: 2.625rem;
   }
 }
 
@@ -416,6 +433,10 @@ Color
 
 .text-red {
   color: #E21A3F;
+}
+
+.text-white {
+  color: #FCFCFC;
 }
 
 /*-------------------------------------------*\ 
@@ -520,10 +541,6 @@ List Style
 
 .w-50 {
   width: 50%;
-}
-
-.img-crisp {
-  image-rendering: crisp-edges;
 }
 
 @media (min-width: 1024px) {
@@ -700,6 +717,16 @@ List Style
 
 .opacity-0 {
   opacity: 0;
+}
+
+.img-crisp {
+  image-rendering: crisp-edges;
+}
+
+.img-object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .mx-auto {
@@ -1023,14 +1050,20 @@ button {
   box-sizing: border-box;
   width: max-content;
   min-width: 100px;
-  min-height: 44px;
-  padding: 6px 20px;
+  min-height: 38px;
+  padding: 4px 16px;
   color: #FCFCFC;
   outline: none;
   cursor: pointer;
 }
 .btn--circle {
   border-radius: 20px;
+}
+@media (min-width: 1024px) {
+  .btn {
+    min-height: 44px;
+    padding: 6px 20px;
+  }
 }
 
 .chip {
@@ -1048,6 +1081,52 @@ button {
   }
 }
 
+/*-------------------------------------------*\ 
+Collection Card - Collection page
+\*-------------------------------------------*/
+.collection__card:hover p::before {
+  content: "";
+  width: 75%;
+}
+
+/*-------------------------------------------*\ 
+Hotspot Card - Home Page
+\*-------------------------------------------*/
+.hotspot__card {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+@media (min-width: 1024px) {
+  .hotspot__card {
+    display: grid;
+  }
+}
+.hotspot__card .btn {
+  margin-left: auto;
+}
+@media (min-width: 1024px) {
+  .hotspot__card .btn {
+    display: none;
+  }
+}
+.hotspot__img {
+  height: 60px;
+}
+@media (min-width: 1024px) {
+  .hotspot__img {
+    height: 255px;
+  }
+}
+@media (min-width: 1440px) {
+  .hotspot__img {
+    height: 390px;
+  }
+}
+
+/*-------------------------------------------*\ 
+Blog Card - Home Page
+\*-------------------------------------------*/
 .blog__card img {
   height: 250px;
   object-fit: cover;
@@ -1212,6 +1291,15 @@ footer .footer__copyright {
   width: 75%;
 }
 
+.text-and-img__text {
+  padding: 1.5rem 5%;
+}
+@media (min-width: 1024px) {
+  .text-and-img__image {
+    height: 500px;
+  }
+}
+
 .rg-8px {
   row-gap: 8px;
 }
@@ -1335,6 +1423,9 @@ footer .footer__copyright {
   }
 }
 
+/*-------------------------------------------*\ 
+Collection
+\*-------------------------------------------*/
 .collection-home__item img {
   display: flex;
   justify-content: center;
@@ -1343,20 +1434,138 @@ footer .footer__copyright {
   object-fit: cover;
 }
 
-.collection__card:hover p::before {
-  content: "";
-  width: 75%;
+/*-------------------------------------------*\ 
+Trust
+\*-------------------------------------------*/
+.trust__section {
+  display: grid;
+  row-gap: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  grid-template-areas: "header" "img" "left" "right";
+}
+@media (min-width: 1024px) {
+  .trust__section {
+    grid-template-areas: "header" "img" "left" "right";
+    row-gap: 2rem;
+    column-gap: 5%;
+    align-items: center;
+  }
+}
+.trust__header {
+  grid-area: header;
+}
+.trust__left {
+  grid-area: left;
+}
+.trust__right {
+  grid-area: right;
+}
+.trust__img {
+  grid-area: img;
+}
+@media (min-width: 1024px) {
+  .trust__img {
+    height: 450px;
+  }
 }
 
+/*-------------------------------------------*\ 
+Featured
+\*-------------------------------------------*/
 .featured-main {
   position: sticky;
   top: 0;
 }
 
+/*-------------------------------------------*\ 
+Testimonials
+\*-------------------------------------------*/
+.testimonials__section {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+.testimonials__section .splide__track {
+  margin-bottom: 2rem;
+}
 .testimonials__header img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.testimonials-progress__wrapper {
+  width: 40%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .testimonials-progress__wrapper {
+    width: 20%;
+  }
+}
+
+.testimonials-slider-progress {
+  background: #F3F3F3;
+}
+
+.testimonials-slider-progress-bar {
+  background: #CFB885;
+  height: 6px;
+  transition: width 400ms ease;
+  width: 0;
+}
+
+/*-------------------------------------------*\ 
+Hotspot
+\*-------------------------------------------*/
+.hotspot__section {
+  display: grid;
+  row-gap: 2rem;
+  grid-template-areas: "header" "banner" "card";
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+  .hotspot__section {
+    grid-template-areas: "banner header" "banner card";
+    grid-template-columns: 5fr 3fr;
+    column-gap: 3%;
+    align-items: start;
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+  }
+}
+@media (min-width: 1440px) {
+  .hotspot__section {
+    grid-template-columns: 6.5fr 2.5fr;
+  }
+}
+.hotspot__header {
+  grid-area: header;
+}
+.hotspot__header * {
+  text-align: center;
+}
+.hotspot__banner {
+  grid-area: banner;
+  height: 235px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .hotspot__banner {
+    height: 500px;
+  }
+}
+@media (min-width: 1440px) {
+  .hotspot__banner {
+    height: 625px;
+  }
+}
+.hotspot__card {
+  grid-area: card;
 }
 
 .collection__wrapper {
@@ -1419,17 +1628,14 @@ footer .footer__copyright {
 .product__img {
   position: relative;
   background-color: #FAFAFA;
+  border-radius: 8px;
   height: 175px;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .product__img {
     height: 315px;
   }
-}
-.product__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .product__img .chips {
   position: absolute;
@@ -1553,11 +1759,6 @@ footer .footer__copyright {
   width: 100px;
   height: 100px;
   border-radius: 4px;
-}
-.cart__item .product-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .cart__item .product-title {
   grid-area: title;

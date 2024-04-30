@@ -13,14 +13,19 @@ button {
   box-sizing: border-box;
   width: max-content;
   min-width: 100px;
-  min-height: 44px;
-  padding: 6px 20px;
+  min-height: 38px;
+  padding: 4px 16px;
 
   color: $white;
   outline: none;
   cursor: pointer;
   &--circle {
     border-radius: 20px;
+  }
+
+  @include desktop-up {
+    min-height: 44px;
+    padding: 6px 20px;
   }
 }
 

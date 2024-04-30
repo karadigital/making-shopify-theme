@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-
+  <!-- CSS -->
   <link rel="stylesheet" href="./static/css/main.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
@@ -131,82 +132,126 @@
     </div>
   </section>
   <!-- Store -->
-  <section class="section__wrapper">
-    <div class="d-grid">
+  <section class="section__wrapper d-grid cols-lg-2 align-items-center bg-grey-3">
+    <div class="text-and-img__text d-grid rg-8px order-sm-2-lg-1 w-lg-75">
       <p class="text-gold">Stores & Services</p>
       <h2 class="heading-1 medium">Our Latest Stores</h2>
-      <p class="">Experience the extraordinary at new Kara & Co. stores around the world.</p>
-      <a href="" class="btn"></a>
+      <p class="subtitle">Experience the extraordinary at new Kara & Co. stores around the world.</p>
+      <a href="" class="btn">LEARN MORE</a>
     </div>
-    <img src="" alt="">
+    <div class="text-and-img__image d-flex order-sm-1-lg-2">
+      <img src="./static/image/store-template.png" alt="store image" class="img-object-cover">
+    </div>
   </section>
   <!-- Trust badge -->
-  <section class="section__wrapper">
-    <div>
+  <section class="section__wrapper section__padding section__padding--big trust__section bg-black-2">
+    <div class="trust__header d-grid rg-8px">
       <p class="text-gold text-center">Our Oath</p>
-      <h2>This We Promise You</h2>
+      <h2 class="title-2 text-white text-center">This We Promise You</h2>
     </div>
-    <div class="trust__left">
-      <div>
+    <div class="trust__left d-grid rg-16px cols-lg-3 cg-16px align-items-start">
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">01</h3>
-        <p class="subtitle bold text-white">Beautiful Collection</p>
+        <p class="subtitle semi-bold text-white">Beautiful Collection</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
-      <div>
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">02</h3>
-        <p class="subtitle bold text-white">Beautiful Collection</p>
+        <p class="subtitle semi-bold text-white">Beautiful Collection</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
-      <div>
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">03</h3>
-        <p class="subtitle bold text-white">Beautiful Collection</p>
+        <p class="subtitle semi-bold text-white">Beautiful Collection</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
     </div>
-    <div class="trust__img"></div>
-    <div class="trust__right">
-      <div>
+    <div class="trust__img">
+      <img src="./static/image/trust-template.png" alt="Image that support this section" class="img-object-cover">
+    </div>
+    <div class="trust__right d-grid rg-16px cols-lg-3 cg-16px align-items-start">
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">04</h3>
-        <p class="subtitle bold text-white">Low Price Guarantee</p>
+        <p class="subtitle semi-bold text-white">Low Price Guarantee</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
-      <div>
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">05</h3>
-        <p class="subtitle bold text-white">100% Satisfaction Guarantee</p>
+        <p class="subtitle semi-bold text-white">100% Satisfaction Guarantee</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
-      <div>
+      <div class="d-grid rg-8px">
         <h3 class="title-3 text-gold">06</h3>
-        <p class="subtitle bold text-white">World Class Service</p>
+        <p class="subtitle semi-bold text-white">World Class Service</p>
         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adi</p>
       </div>
     </div>
   </section>
-  <section class="trust__section">
-    <div class="trust__item">
-      <img src="" alt="heart icon">
+  
+  <section class="section__wrapper section__padding d-grid align-items-start rg-32px cols-lg-4 cg-16px bg-cream-3 py-5">
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/heart.svg" alt="heart icon" class="d-flex mx-auto">
       <p class="text-center">Free 30 Days Returns</p>
     </div>
-    <div class="trust__item">
-      <img src="" alt="heart icon">
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/truck.svg" alt="truck icon" class="d-flex mx-auto">
       <p class="text-center">Free shipping on orders over $100</p>
     </div>
-    <div class="trust__item">
-      <img src="" alt="heart icon">
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/diamond.svg" alt="diamond icon" class="d-flex mx-auto">
       <p class="text-center">Cruelty free</p>
     </div>
-    <div class="trust__item">
-      <img src="" alt="heart icon">
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/lock.svg" alt="lock icon" class="d-flex mx-auto">
       <p class="text-center">Secure payment</p>
     </div>
   </section>
   <!-- Testimonials -->
-  <section class="section__wrapper testimonials__wrapper">
+  <section id="testimonials-slider" class="section__wrapper section__padding d-grid rg-32px testimonials__section splide">
     <h2 class="title-4">Testimonials</h2>
-    <div class="testimonials__item">
-      <div class="testimonials__header">
-        <img src="" alt="avatar">
-        <p>Marley Jane</p>
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="testimonials__item d-grid rg-16px">
+            <div class="testimonials__header d-flex align-items-center cg-8px">
+              <img src="./static/image/testimonials-template.png" alt="avatar">
+              <p>Marley Jane</p>
+            </div>
+            <p> As an industry expert with deep knowledge and understanding of this space, I cannot say enough good things about this company and products as they are modern, clean, with sophisticated designs, quality materials and top level support.</p>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="testimonials__item d-grid rg-16px">
+            <div class="testimonials__header d-flex align-items-center cg-8px">
+              <img src="./static/image/testimonials-template.png" alt="avatar">
+              <p>Marley Jane</p>
+            </div>
+            <p> As an industry expert with deep knowledge and understanding of this space, I cannot say enough good things about this company and products as they are modern, clean, with sophisticated designs, quality materials and top level support.</p>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="testimonials__item d-grid rg-16px">
+            <div class="testimonials__header d-flex align-items-center cg-8px">
+              <img src="./static/image/testimonials-template.png" alt="avatar">
+              <p>Marley Jane</p>
+            </div>
+            <p> As an industry expert with deep knowledge and understanding of this space, I cannot say enough good things about this company and products as they are modern, clean, with sophisticated designs, quality materials and top level support.</p>
+          </div>
+        </li>
+        <li class="splide__slide">
+          <div class="testimonials__item d-grid rg-16px">
+            <div class="testimonials__header d-flex align-items-center cg-8px">
+              <img src="./static/image/testimonials-template.png" alt="avatar">
+              <p>Marley Jane</p>
+            </div>
+            <p> As an industry expert with deep knowledge and understanding of this space, I cannot say enough good things about this company and products as they are modern, clean, with sophisticated designs, quality materials and top level support.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="testimonials-progress__wrapper">
+      <div class="testimonials-slider-progress">
+        <div class="testimonials-slider-progress-bar"></div>
       </div>
     </div>
   </section>
@@ -234,26 +279,27 @@
     </div>
   </section>
   <!-- Hotspot -->
-  <section class="section__wrapper">
-    <div>
-      <div>
-        <p class="label text-gold">Premium Jewelry</p>
-        <h2 class="title-4">Bring Quality Jewellry into Your Home</h2>
-      </div>
-      <div>
-        <div>
-          <img src="" alt="">
-        </div>
-        <div>
-          <p class="label">Daphne Ring</p>
-          <div class="d-flex align-items-center">
-            <p>$150.00</p>
-            <p class="subtitle bold">$120.00</p> 
-          </div>
-        </div>
-      </div>
+  <section class="section__wrapper section__padding hotspot__section">
+    <div class="hotspot__header d-grid rg-8px">
+      <p class="label text-gold">Premium Jewelry</p>
+      <h2 class="title-4">Bring Quality Jewellry into Your Home</h2>
     </div>
-    <img src="" alt="">
+    <div class="hotspot__card">
+      <div class="hotspot__img">
+        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+      </div>
+      <div class="product__text d-grid rg-8px">
+        <p class="label">Polar Watch</p>
+        <div class="d-flex align-items-center cg-8px">
+          <p class="label text-light-dark line-through">$210.00</p>
+          <p class="subtitle semi-bold">$180.00</p>
+        </div>
+      </div>
+      <div class="btn">View</div>
+    </div>
+    <div class="hotspot__banner">
+      <img src="./static/image/hotspot-template.png" alt="banner" class="img-object-cover">
+    </div>
   </section>
   <!-- Blog Home -->
   <section class="section__wrapper section__padding blog__wrapper d-grid rg-32px">
@@ -347,4 +393,42 @@
     <p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
   </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+</script>
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+    let testimonialsSlider = new Splide( '#testimonials-slider', {
+      type       : "loop",
+      gap        : "5%",
+      rewind     : false,
+      pagination : false,
+      isNavigation: false,
+      perPage: 3,
+      perMove: 1,
+      arrows: false,
+      drag: true,
+      breakpoints: {
+        640: {
+          drag: true,
+          perPage: 1,
+        },
+      }
+    });
+
+    var testimonialBar = testimonialsSlider.root.querySelector( '.testimonials-slider-progress-bar' );
+
+    // Updates the bar width whenever the carousel moves:
+    testimonialsSlider.on( 'mounted move', function () {
+      var end  = testimonialsSlider.Components.Controller.getEnd() + 1;
+      var rate = Math.min( ( testimonialsSlider.index + 1 ) / end, 1 );
+      testimonialBar.style.width = String( 100 * rate ) + '%';
+    } );
+
+    testimonialsSlider.mount();
+  });
+</script>
 </html>

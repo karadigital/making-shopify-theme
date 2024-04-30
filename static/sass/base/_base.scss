@@ -48,10 +48,16 @@ a {
   padding-left: 5%;
   padding-right: 5%;
 
-  @include desktop-up {
-    padding-left: 5rem;
-    padding-right: 5rem;
+  // @include desktop-up {
+	// 	padding-left: 3%;
+	// 	padding-right: 3%;
+	// }
+
+	@include monitor-up {
+		padding-left: 5rem;
+		padding-right: 5rem;
   }
+
   &--big {
 	@include monitor-up {
 		padding-left: 7.5rem;
