@@ -19,6 +19,13 @@ button {
   color: $white;
   outline: none;
   cursor: pointer;
+  
+  &--white {
+    background-color: $white;
+    color: $black-1;
+    outline: 1px solid $black-1;
+  }
+
   &--circle {
     border-radius: 20px;
   }

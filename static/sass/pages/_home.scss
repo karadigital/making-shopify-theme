@@ -1,12 +1,72 @@
 /*-------------------------------------------*\ 
+Banner
+\*-------------------------------------------*/
+.banner {
+	&__section {
+		min-height: 360px;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+
+		@include desktop-up {
+			display: grid;
+			grid-template-columns: 4fr 5fr;
+			align-items: start;
+		}
+	}
+
+	&-img {
+		background-color: $grey-1;
+		box-shadow: 0px 4px 4px rgba($color: #B2A9A2, $alpha: 0.25);
+	}
+
+	&-img__1 {
+		height: 150px;
+		width: 110px;
+	}
+	&-img__2 {
+		height: 140px;
+		width: 105px;
+	}
+	&-img__3 {
+		height: 180px;
+		width: 135px;
+	}
+	&-img__4 {
+		height: 140px;
+		width: 160px;
+	}
+
+	&-img__5 {
+		@include square(54px, $radius: 0);
+	}
+}
+/*-------------------------------------------*\ 
+About
+\*-------------------------------------------*/
+.about {
+	&__section {
+		min-height: 475px;
+		overflow: hidden;
+	}
+
+	&-title {
+		font-family: "Prata", serif;
+		@include font-size(5.25rem, 6.25rem); //84px, 100px
+		line-height: normal;
+		color: rgba($color: #000000, $alpha: 0.2);
+	}
+}
+
+/*-------------------------------------------*\ 
 Collection
 \*-------------------------------------------*/
-.collection-home__item {
-	img {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+.collection-home {
+	&__section {
+		padding-top: 3.5rem;
+		padding-bottom: 4.5rem;
+	}
 
+	&__item img {
 		height: 160px;
 		object-fit: cover;
 	}
@@ -44,14 +104,27 @@ Trust
 	}
 
 	&__header { grid-area: header; }
-	&__left {
-		grid-area: left;
-	}
+	&__left { grid-area: left; }
 	&__right { grid-area: right; }
+
 	&__img { 
 		grid-area: img;
 		@include desktop-up {
 			height: 450px;
+		}
+	}
+}
+
+/*-------------------------------------------*\ 
+Video
+\*-------------------------------------------*/
+.video {
+	&__section {
+		background-color: rgba($color: #000000, $alpha: 0.5);
+		min-height: 530px;
+		
+		@include desktop-up {
+			min-height: 450px;
 		}
 	}
 }
@@ -131,14 +204,14 @@ Testimonials
 
 .testimonials-slider-progress {
 	background: $grey-3;
-  }
+}
   
-  .testimonials-slider-progress-bar {
+.testimonials-slider-progress-bar {
 	background: $gold;
 	height: 6px;
 	transition: width 400ms ease;
 	width: 0;
-  }
+}
   
 /*-------------------------------------------*\ 
 Hotspot

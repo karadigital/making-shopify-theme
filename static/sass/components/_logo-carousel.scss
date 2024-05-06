@@ -1,17 +1,16 @@
 .logo__carousel {
+
+	display: flex;
 	background-color: $black-2;
 	padding: 1.5rem 0;
+
 	overflow: hidden;
 	white-space: nowrap;
-	display: flex;
-	&:hover .logo__list {
-		animation-play-state: paused;
-	}
 
 	.logo__list {
-		// display: inline-block;
 		display: flex;
 		align-items: center;
+		
 		animation: 25s logo-slide infinite linear;
 	}
 

@@ -51,6 +51,9 @@ a {
 		line-height: normal;
 	}
 }
+.title-1 {
+	@include font-size(2rem, 3.75rem); //32px 60px
+}
 
 .title-2 { 
 	@include font-size(2rem, 2.625rem); //32px, 42px
