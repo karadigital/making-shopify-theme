@@ -98,6 +98,10 @@
 		.counter__wrapper {
 			grid-area: qty;
 			justify-content: space-between;
+			
+			.counter {
+				outline: 1px solid $light-dark;
+			}
 		}
 	}
 }

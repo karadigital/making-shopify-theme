@@ -4,7 +4,6 @@
 	align-items: center;
 
 	width: max-content;
-	outline: 1px solid $light-dark;
 	border-radius: 4px;
 	img {
 		width: 16px;
@@ -14,7 +13,7 @@
 	input {
 		outline: none;
 		box-shadow: none;
-    background: transparent;
+    	background: transparent;
 		height: 36px;
 	}
 }

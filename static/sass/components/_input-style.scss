@@ -1,0 +1,54 @@
+.input-styled {
+	position: relative;
+	display: flex;
+	
+	input {
+		position: absolute;
+		top: 0;
+		@include square(0.1px, $radius: 0);
+	}
+
+	&__circle {
+		label {
+			position: relative;
+
+			@include square(26px, $radius: 50%);
+			background-color: $gold;
+
+			cursor: pointer;
+		}
+
+		&:nth-child(2) label {
+			background-color: $grey-4;
+		}
+		
+		#gold:checked + label::after, #silver:checked + label::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include square(28px, $radius: 50%);
+		}
+
+		#gold:checked + label::after {
+			outline: 1px solid $gold;
+		}
+		#silver:checked + label::after {
+			outline: 1px solid $grey-4;
+		}
+	}
+
+	&__square {
+
+		label {
+			outline: 1px solid $grey-4;
+			padding: 10px 16px;
+			cursor: pointer;
+		}
+		
+		input[type="radio"]:checked + label {
+			outline: 2px solid $gold;
+		}
+	}
+}

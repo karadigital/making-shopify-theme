@@ -246,6 +246,10 @@ a {
   background-color: #F3F3F3;
 }
 
+.bg-gold {
+  background-color: #CFB885;
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -997,7 +1001,6 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   display: flex;
   justify-content: space-between;
-  background-color: #FCFCFC;
   padding: 1rem 0;
   cursor: pointer;
 }
@@ -1063,9 +1066,10 @@ button {
   box-sizing: border-box;
   width: max-content;
   min-width: 100px;
-  min-height: 38px;
+  min-height: 46px;
   padding: 4px 16px;
   color: #FCFCFC;
+  font-weight: 500;
   outline: none;
   cursor: pointer;
 }
@@ -1176,7 +1180,6 @@ Blog Card - Home Page
   grid-template-columns: 24px 52px 24px;
   align-items: center;
   width: max-content;
-  outline: 1px solid #958F8F;
   border-radius: 4px;
 }
 .counter img {
@@ -1265,6 +1268,15 @@ footer .footer__copyright {
   border-radius: 3px;
 }
 
+.text-and-img__text {
+  padding: 1.5rem 5%;
+}
+@media (min-width: 1024px) {
+  .text-and-img__image {
+    height: 500px;
+  }
+}
+
 .underline-effect__text {
   position: relative;
   width: max-content;
@@ -1306,13 +1318,50 @@ footer .footer__copyright {
   width: 75%;
 }
 
-.text-and-img__text {
-  padding: 1.5rem 5%;
+.input-styled {
+  position: relative;
+  display: flex;
 }
-@media (min-width: 1024px) {
-  .text-and-img__image {
-    height: 500px;
-  }
+.input-styled input {
+  position: absolute;
+  top: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+.input-styled__circle label {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #CFB885;
+  cursor: pointer;
+}
+.input-styled__circle:nth-child(2) label {
+  background-color: #C4C4C4;
+}
+.input-styled__circle #gold:checked + label::after, .input-styled__circle #silver:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.input-styled__circle #gold:checked + label::after {
+  outline: 1px solid #CFB885;
+}
+.input-styled__circle #silver:checked + label::after {
+  outline: 1px solid #C4C4C4;
+}
+.input-styled__square label {
+  outline: 1px solid #C4C4C4;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.input-styled__square input[type=radio]:checked + label {
+  outline: 2px solid #CFB885;
 }
 
 .rg-8px {
@@ -1762,6 +1811,97 @@ Hotspot
   top: 10px;
 }
 
+.product__section {
+  display: grid;
+  row-gap: 1.5rem;
+  grid-template-areas: "gallery" "info" "description";
+}
+@media (min-width: 1024px) {
+  .product__section {
+    grid-template-areas: "gallery info" "description .";
+    grid-template-columns: 5fr 4fr;
+    column-gap: 2rem;
+    align-items: start;
+  }
+}
+.product__description {
+  grid-area: description;
+}
+.product__info {
+  grid-area: info;
+  animation: fade-in 0.2s ease-in;
+}
+.product__info hr {
+  border: 1px solid #958F8F;
+}
+@media (min-width: 1024px) {
+  .product__info {
+    position: sticky;
+    top: 1rem;
+  }
+}
+.product__info--modal {
+  position: sticky;
+  top: 3rem;
+  animation: fade-top-in 0.8s cubic-bezier(0.29, 0.47, 0.28, 0.95) forwards;
+}
+
+.product-gallery {
+  grid-area: gallery;
+  display: grid;
+  row-gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .product-gallery {
+    grid-template-columns: 1fr 4fr;
+    column-gap: 1rem;
+    align-items: start;
+  }
+}
+
+#product-gallery__image-list .splide__slide {
+  height: 280px !important;
+}
+@media (min-width: 1024px) {
+  #product-gallery__image-list .splide__slide {
+    height: 510px !important;
+  }
+}
+@media (min-width: 1024px) {
+  #product-gallery__image-list .splide__list {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+}
+
+.product-single__thumbnails {
+  display: flex;
+  column-gap: 8px;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .product-single__thumbnails {
+    position: sticky;
+    top: 1rem;
+    display: grid;
+    row-gap: 1rem;
+  }
+}
+.product-single__thumbnails-item {
+  width: 60px !important;
+  height: 60px !important;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .product-single__thumbnails-item {
+    width: 100% !important;
+    height: 104px !important;
+  }
+}
+.product-single__thumbnails-item.is-active {
+  outline: 2px solid #39302C;
+}
+
 .cart__section {
   display: grid;
   row-gap: 2rem;
@@ -1847,6 +1987,9 @@ Hotspot
 .cart__item .counter__wrapper {
   grid-area: qty;
   justify-content: space-between;
+}
+.cart__item .counter__wrapper .counter {
+  outline: 1px solid #958F8F;
 }
 
 .about__item {

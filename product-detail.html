@@ -6,22 +6,236 @@
   <title>Product Detail</title>
 
   <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
-  <section class="section__wrapper section__padding pb-6">
-    <div class="d-flex cg-8px text-grey-4 pb-5">Home / <span class="text-black">Daphne Ring</span></div>
-    <div class="product-detail__section">
-      <div class="product-detail__info">
+  <section class="section__wrapper section__padding pb-5">
+    <div class="d-flex cg-8px text-grey-4 pb-5"><a href="./index.html">Home</a> / <span class="text-black">Daphne Ring</span></div>
+    <div class="product__section">
+      <div class="product-gallery">
+        <div class="splide order-sm-1-lg-2" id="product-gallery__image-list">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="./static/image/img-template-1.png" alt="image template only" class="img-object-cover"></li>
+              <li class="splide__slide"><img src="./static/image/img-template-2.png" alt="image template only" class="img-object-cover"></li>
+              <li class="splide__slide"><img src="./static/image/img-template-3.png" alt="image template only" class="img-object-cover"></li>
+              <li class="splide__slide"><img src="./static/image/img-template-4.png" alt="image template only" class="img-object-cover"></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="product-single__thumbnails order-sm-2-lg-1">
+          <a href="#product-gallery__image-list-slide01" class="product-single__thumbnails-item"><img src="./static/image/img-template-1.png" alt="image template only" class="img-object-cover"></a>
+          <a href="#product-gallery__image-list-slide02" class="product-single__thumbnails-item"><img src="./static/image/img-template-2.png" alt="image template only" class="img-object-cover"></a>
+          <a href="#product-gallery__image-list-slide03" class="product-single__thumbnails-item"><img src="./static/image/img-template-3.png" alt="image template only" class="img-object-cover"></a>
+          <a href="#product-gallery__image-list-slide04" class="product-single__thumbnails-item"><img src="./static/image/img-template-4.png" alt="image template only" class="img-object-cover"></a>
+        </ul>
+
+      </div>
+      <div class="product__description">
         <p>A glass pearl punctuates this modern ring with a raised profile. Finished in high-polish gold.</p>
+        
+        <div class="d-grid align-items-start rg-32px cols-sm-2 cols-lg-4 cg-16px py-3">
+          <div class="trust__item d-grid rg-8px">
+            <img src="./static/image/heart.svg" alt="heart icon" class="d-flex mx-auto">
+            <p class="small text-center">Free 30 Days Returns</p>
+          </div>
+          <div class="trust__item d-grid rg-8px">
+            <img src="./static/image/truck.svg" alt="truck icon" class="d-flex mx-auto">
+            <p class="small text-center">Free shipping on orders over $100</p>
+          </div>
+          <div class="trust__item d-grid rg-8px">
+            <img src="./static/image/diamond.svg" alt="diamond icon" class="d-flex mx-auto">
+            <p class="small text-center">Cruelty free</p>
+          </div>
+          <div class="trust__item d-grid rg-8px">
+            <img src="./static/image/lock.svg" alt="lock icon" class="d-flex mx-auto">
+            <p class="small text-center">Secure payment</p>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <input type="radio" name="accordion-faq" id="accordion-1">
+          <label class="semi-bold" for="accordion-1"><span>MATERIALS</span>
+            <div>
+              <img src="./static/image/plus.svg" alt="plus icon" class="plus">
+              <img src="./static/image/minus.svg" alt="minus icon" class="minus">
+            </div>
+          </label>
+          <div class="accordion__content">
+            <p>
+              ion-plated gold brassglass pearlfinish: high-polish
+              product measurements:measurements taken from size 7 -
+              length: 12.3mm / 0.48"
+              height: 10.9mm / 0.43"
+              glass pearl: 7.9mm / 0.31"
+              weight: 8.9g / 0.31ozstyle: JB476
+              imported
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <input type="radio" name="accordion-faq" id="accordion-2">
+          <label class="semi-bold" for="accordion-2"><span>CARE</span>
+            <div>
+              <img src="./static/image/plus.svg" alt="plus icon" class="plus">
+              <img src="./static/image/minus.svg" alt="minus icon" class="minus">
+            </div>
+          </label>
+          <div class="accordion__content">
+            <p>
+              Yes! Check out our stores <a href="" target="_blank">Here</a>
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <input type="radio" name="accordion-faq" id="accordion-3">
+          <label class="semi-bold" for="accordion-3"><span>SHIPPING & RETURN POLICY</span>
+            <div>
+              <img src="./static/image/plus.svg" alt="plus icon" class="plus">
+              <img src="./static/image/minus.svg" alt="minus icon" class="minus">
+            </div>
+          </label>
+          <div class="accordion__content">
+            <p>
+              You can use Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum expedita assumenda aliquid officiis mollitia corrupti quidem accusantium, iure maiores reprehenderit sed voluptas quae porro voluptate, laboriosam suscipit perspiciatis, provident at.
+            </p>
+          </div>
+        </div>
+        <div class="accordion__item">
+          <input type="radio" name="accordion-faq" id="accordion-4">
+          <label class="semi-bold" for="accordion-4"><span>PACKAGING</span>
+            <div>
+              <img src="./static/image/plus.svg" alt="plus icon" class="plus">
+              <img src="./static/image/minus.svg" alt="minus icon" class="minus">
+            </div>
+          </label>
+          <div class="accordion__content">
+            <p>
+              You can use Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum expedita assumenda aliquid officiis mollitia corrupti quidem accusantium, iure maiores reprehenderit sed voluptas quae porro voluptate, laboriosam suscipit perspiciatis, provident at.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="product__info d-grid rg-16px">
+        <p class="label">RING</p>
+        <div>
+          <h1 class="title-4">Daphne Ring</h1>
+          <div class="d-flex align-items-center cg-8px">
+            <p class="label text-light-dark line-through">$210.00 USD</p>
+            <p class="subtitle semi-bold">$180.00 USD</p>
+          </div>
+        </div>
+        <hr class="w-100 bg-light-dark">
+        <div class="d-grid rg-8px">
+          <p id>COLOR: <span id="colorValue">18KT YELLOW GOLD</span></p>
+          <div class="d-flex cg-16px">
+            <div class="position-relative input-styled input-styled__circle">
+              <input type="radio" name="color" id="gold" value="GOLD" checked>
+              <label for="gold"></label>
+            </div>
+            <div class="position-relative input-styled input-styled__circle">
+              <input type="radio" name="color" id="silver" value="SILVER">
+              <label for="silver"></label>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid rg-16px">
+          <p>GEMSTONE: <span id="gemstoneValue">GREEN EMERALD</span></p>
+          <div class="d-flex cg-16px rg-16px flex-wrap">
+            <div class="position-relative input-styled input-styled__square">
+              <input type="radio" name="gemstone" id="green-emerald" value="GREEN EMERALD" checked>
+              <label for="green-emerald">
+              GREEN EMERALD
+              </label>
+            </div>
+
+            <div class="position-relative input-styled input-styled__square">
+              <input type="radio" name="gemstone" id="blue-sapphire" value="BLUE SAPPHIRE">
+              <label for="blue-sapphire">
+              BLUE SAPPHIRE
+              </label>
+            </div>
+            <div class="position-relative input-styled input-styled__square">
+              <input type="radio" name="gemstone" id="pink-sapphire" value="PINK SAPPHIRE">
+              <label for="pink-sapphire">
+              PINK SAPPHIRE
+              </label>
+            </div>
+            <div class="position-relative input-styled input-styled__square">
+              <input type="radio" name="gemstone" id="black-diamond" value="BLACK DIAMOND">
+              <label for="black-diamond">
+              BLACK DIAMOND
+              </label>
+            </div>
+            <div class="position-relative input-styled input-styled__square">
+              <input type="radio" name="gemstone" id="white-diamond" value="WHITE DIAMOND">
+              <label for="white-diamond">
+              WHITE DIAMOND
+              </label>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between cg-16px">
+            <p class="small">Size: <span id="sizeValue">5</span></p>
+            <p class="small cursor-pointer">Sizing guide</p>
+          </div>
+          <div class="d-flex justify-content-between cg-16px">
+            <div class="d-flex cg-16px">
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-5" value="5" checked>
+                <label for="size-5">
+                5
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-6" value="6">
+                <label for="size-6">
+                6
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-7" value="7">
+                <label for="size-7">
+                7
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-8" value="8">
+                <label for="size-8">
+                8
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-9" value="9">
+                <label for="size-9">
+                9
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid rg-16px">
+            <p class="small">Quantity</p>
+            <div class="d-flex cg-16px justify-content-between">
+              <div class="counter">
+                <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+                <input type="text" placeholder="1" class="text-center">
+                <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+              </div>
+              <div class="btn btn--white w-100"><img src="./static/image/shopping-cart.svg" alt="cart icon"> ADD TO CART</div>
+            </div>
+            <a href="" class="btn w-100">BUY IT NOW</a>
+          </div>
+        </div>
       </div>
     </div>
+
   </section>
+
   <!-- You May Also Like -->
   <section class="section__wrapper section__padding d-grid rg-32px pb-5">
-    <h2 class="title-4 text-center pb-5">You May Also Like</h2>
+    <h2 class="title-4 text-center">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
       <div class="d-grid rg-8px">
         <div class="product__img">
@@ -131,47 +345,80 @@
     </div>
     <p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // Update color name when click on radio
+      $('input[name="color"]').change(function() {
+        var selectedColor = $(this).val();
+        $('#colorValue').text('18KT ' + selectedColor);
+      });
+  
+      // Update gemstone name when click on radio
+      $('input[name="gemstone"]').change(function() {
+        var selectedGemstone = $(this).val();
+        $('#gemstoneValue').text(selectedGemstone);
+      });
+  
+      // Update jewelry size when click on radio
+      $('input[name="size"]').change(function() {
+        var selectedSize = $(this).val();
+        $('#sizeValue').text(selectedSize);
+      });
+  
+    });
+  </script>
+  <script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var productGallery = new Splide( '#product-gallery__image-list', {
+        type       : 'fade',
+        heightRatio: 0.5,
+        pagination : false,
+        arrows     : false,
+        cover      : true,
+        destroy    : true,
+        breakpoints: {
+          375: {
+            destroy: false,
+          }
+        }
+      } );
+  
+      // To connect the thumbnail and product gallery
+      var thumbnails = document.getElementsByClassName( 'product-single__thumbnails-item' );
+      var currentThumbnail; // Declare currentThumbnail globally
+  
+      for ( var i = 0; i < thumbnails.length; i++ ) {
+        initThumbnail( thumbnails[ i ], i );
+      }
+  
+      function initThumbnail( thumbnail, index ) {
+        thumbnail.addEventListener( 'click', function (event) {
+          if (window.innerWidth <= 767) {
+            event.preventDefault(); // Prevent default behavior only on mobile
+          }
+          productGallery.go( index );
+          updateActiveThumbnail(thumbnail);
+        });
+      }
+  
+      function updateActiveThumbnail(thumbnail) {
+        if (currentThumbnail) {
+          currentThumbnail.classList.remove('is-active');
+        }
+        thumbnail.classList.add('is-active');
+        currentThumbnail = thumbnail;
+      }
+  
+      productGallery.on('mounted move', function() {
+        var visibleIndex = productGallery.index;
+        var thumbnail = thumbnails[visibleIndex];
+        updateActiveThumbnail(thumbnail);
+      });
+  
+      productGallery.mount();
+    });
+  </script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    // Add active class to the first tab
-    $(".product-list__left a:first").addClass("active");
-
-    // Tab switching functionality
-    $(".product-list__left a").click(function(event){
-        // Prevent default scrolling behavior
-        event.preventDefault();
-
-        // If the clicked tab is already active, return false
-        if($(this).hasClass("active")) return false;
-
-        // Remove the active class from all tabs
-        $(".product-list__left a").removeClass("active");
-        // Add the active class to the clicked tab
-        $(this).addClass("active");
-
-        // Hide all tab content
-        $(".tab__content > div").hide();
-        // Show the corresponding tab content
-        var tab_id = $(this).attr("href");
-        $(tab_id).show();
-    });
-
-    // Show all products when clicking "All Products" tab
-    $(".product-list__left a[href='#all']").click(function(event){
-        // Prevent default scrolling behavior
-        event.preventDefault();
-
-        // Remove active class from all tabs
-        $(".product-list__left a").removeClass("active");
-        // Add active class to "All Products" tab
-        $(this).addClass("active");
-
-        // Show all tab content
-        $(".tab__content > div").show();
-    });
-});
-</script>
 </html>

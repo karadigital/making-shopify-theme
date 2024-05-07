@@ -13,10 +13,11 @@ button {
   box-sizing: border-box;
   width: max-content;
   min-width: 100px;
-  min-height: 38px;
+  min-height: 46px;
   padding: 4px 16px;
 
   color: $white;
+  font-weight: 500;
   outline: none;
   cursor: pointer;
   
