@@ -31,7 +31,7 @@
 
     @include desktop-up {
       position: sticky;
-      top: 1rem;
+      top: calc(80px + 1rem); //height of nav + white space
     }
 
     &--modal {
@@ -80,7 +80,7 @@
 
   @include desktop-up {
     position: sticky;
-    top: 1rem;
+    top: calc(80px + 1rem); //height of nav + white space
 
     display: grid;
     row-gap: 1rem;

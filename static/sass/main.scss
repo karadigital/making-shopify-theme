@@ -9,14 +9,17 @@
 @import "base/spacing";
 @import "base/input";
 
+@import "components/navbar";
+@import "components/footer";
+
 @import "components/accordion";
 @import "components/banners";
 @import "components/buttons";
 @import "components/cards";
 @import "components/chips";
 @import "components/counter";
-@import "components/footer";
 @import "components/logo-carousel";
+@import "components/modals";
 @import "components/product-card";
 @import "components/progress-bar";
 @import "components/text-and-image";

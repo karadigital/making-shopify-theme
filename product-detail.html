@@ -5,15 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Detail</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="./static/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
-  <section class="section__wrapper section__padding pb-5">
-    <div class="d-flex cg-8px text-grey-4 pb-5"><a href="./index.html">Home</a> / <span class="text-black">Daphne Ring</span></div>
+  <nav>
+    <div class="section__wrapper section__padding">
+      <div class="nav-mobile__wrapper">
+        <img src="./static/image/hamburger.svg" alt="hamburger icon">
+        <img src="./static/image/kara-logo.svg" alt="company logo">
+        <div class="d-flex align-items-center cg-8px">
+          <img src="./static/image/search.svg" alt="search icon">
+          <div class="d-flex">
+            <img src="./static/image/shopping-cart.svg" alt="">
+            <p class="small counter-text">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav-desktop__wrapper">
+        <img src="./static/image/kara-logo.svg" alt="company logo">
+        <div class="d-flex cg-32px">
+          <a href="#">Shops</a>
+          <a href="#">Jewelry</a>
+          <a href="#">About Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+          <a href="#">News</a>
+        </div>
+        <div class="d-flex align-items-center cg-8px">
+          <img src="./static/image/search.svg" alt="search icon">
+          <div class="d-flex">
+            <img src="./static/image/shopping-cart.svg" alt="">
+            <p class="small counter-text">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section__wrapper section__padding section__padding--big pt-4 pb-5">
+    <div class="desktop-only">
+      <div class="d-flex cg-8px text-grey-4 pb-5"><a href="./index.html">Home</a> / <span class="text-black">Daphne Ring</span></div>
+    </div>
     <div class="product__section">
       <div class="product-gallery">
         <div class="splide order-sm-1-lg-2" id="product-gallery__image-list">
@@ -179,7 +216,7 @@
           </div>
           <div class="d-flex justify-content-between cg-16px">
             <p class="small">Size: <span id="sizeValue">5</span></p>
-            <p class="small cursor-pointer">Sizing guide</p>
+            <p class="small cursor-pointer underline-effect__text" onclick="openModal('modal-sizing-guide', 'open')">Sizing guide</p>
           </div>
           <div class="d-flex justify-content-between cg-16px">
             <div class="d-flex cg-16px">
@@ -345,6 +382,18 @@
     </div>
     <p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
   </footer>
+
+  <!-- Modal -->
+
+  <div id="modal-sizing-guide" class="modal__wrapper">
+    <div class="modal__content">
+      <div class="modal__header">
+        <p class="bold font-neutral-900">Request time off</p>
+        <img src="" onclick="openModal('modal-sizing-guide','close')" alt="close-icon" class="cursor-pointer">
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
@@ -366,7 +415,6 @@
         var selectedSize = $(this).val();
         $('#sizeValue').text(selectedSize);
       });
-  
     });
   </script>
   <script>
@@ -419,6 +467,25 @@
   
       productGallery.mount();
     });
+  </script>
+  <script>
+    openModal = (id,str) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      if(id === 'create-location-based') {
+        if($("#custom-calendar").is(':checked')) id = "custom-calendar-event";
+      }
+
+      if (str === 'open') {
+        $('#'+id).addClass('visible');
+        $("body").css("overflow", "hidden");
+        prevModal = id;
+      } else {
+        $('#'+id).removeClass('visible');
+        $("body").css("overflow", "auto");
+      }
+    }
   </script>
 </body>
 </html>
