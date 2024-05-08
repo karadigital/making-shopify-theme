@@ -11,7 +11,8 @@
 	// width: 100%;
 	// height: 100%;
 	// opacity: 1;
-	transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+	// transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+	
 	&.visible {
 		width: 100%;
 		height: 100%;
@@ -20,27 +21,59 @@
 	}
 }
 
-.modal__content {
+.product--dots {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	z-index: 2;
 	transform: translate(-50%, -50%);
 
 	display: grid;
 	align-content: baseline;
+
 	box-sizing: border-box;
-	width: 100%;
-	height: 100vh;
-  overflow: hidden;
+	width: 90%;
 	background-color: $white;
-	max-height: unset;
-
-	z-index: 2;
-
+	border-radius: 12px;
+	
+	// transition: transform .6s cubic-bezier(.7,0,.2,1);
 	@include desktop-up {
-		height: max-content;
-		max-height: 90%;
-		width: 450px;
-		border-radius: 12px;
+		width: 90%;
+		max-width: 80rem;
+
+		overflow: hidden;
+		height: 40rem;
 	}
+
+	&--big {
+		@include desktop-up {
+			width: 450px;
+		}
+	}
+}
+
+.quick-view__img {
+	overflow:hidden;  /* code added to prevent scroll */
+	height: 100%;
+}
+
+.modal-product__info {
+	position: relative; /* Ensure positioning context for sticky */
+	overflow: auto;
+	padding: 1rem 1rem 3rem 1rem;
+	min-height: 100%; /* Ensure a minimum height */
+}
+
+.product-more {
+	position: sticky;
+    bottom: 0;
+    left: 0;
+	z-index: 1;
+
+	padding: 1rem;
+}
+
+.modal-product__content {
+	overflow: scroll;
+	height: 100%;
 }

@@ -13,7 +13,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
-  <nav>
+  <!-- <nav>
     <div class="section__wrapper section__padding">
       <div class="nav-mobile__wrapper">
         <img src="./static/image/hamburger.svg" alt="hamburger icon">
@@ -165,7 +165,7 @@
             <p class="subtitle semi-bold">$180.00 USD</p>
           </div>
         </div>
-        <hr class="w-100 bg-light-dark">
+        <hr class="my-0 w-100 bg-light-dark">
         <div class="d-grid rg-8px">
           <p id>COLOR: <span id="colorValue">18KT YELLOW GOLD</span></p>
           <div class="d-flex cg-16px">
@@ -268,10 +268,10 @@
       </div>
     </div>
 
-  </section>
+  </section> -->
 
   <!-- You May Also Like -->
-  <section class="section__wrapper section__padding d-grid rg-32px pb-5">
+  <!-- <section class="section__wrapper section__padding d-grid rg-32px pb-5">
     <h2 class="title-4 text-center">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
       <div class="d-grid rg-8px">
@@ -327,9 +327,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!-- Newsletter -->
-  <section class="bg-cream-2 py-6">
+  <!-- <section class="bg-cream-2 py-6">
     <div class="section__wrapper section__padding w-lg-65 w-xl-43 d-grid rg-16px">
       <h2 class="title-3 text-center">Sign up for our newsletter</h2>
       <p class="text-center">Sign up below and get early access to all our flash sales, as well as pre sale access to all our new products!</p>
@@ -339,7 +339,7 @@
       </div>
       <p class="small text-center">By signing up you agree with our <a href="" class="small underline">Terms & Conditions</a> and <a href="" class="small underline">Privacy Policy.</a>  To opt out, click Unsubscribe in our emails</p>
     </div>
-  </section>
+  </section> -->
   <!-- Footer -->
   <footer class="section__wrapper section__padding d-grid rg-24px cg-24px align-items-start py-4">
     <div class="d-grid rg-24px footer__header">
@@ -385,12 +385,96 @@
 
   <!-- Modal -->
 
-  <div id="modal-sizing-guide" class="modal__wrapper">
-    <div class="modal__content">
-      <div class="modal__header">
-        <p class="bold font-neutral-900">Request time off</p>
-        <img src="" onclick="openModal('modal-sizing-guide','close')" alt="close-icon" class="cursor-pointer">
-      </div>
+  <div id="modal-sizing-guide" class="modal__wrapper visible">
+    <div class="product--dots d-grid cols-lg-2 align-items-start">
+        <div class="quick-view__img">
+          <img src="./static/image/img-template-1.png" alt="image template" class="img-object-cover">
+        </div>
+        <div class="modal-product__content">
+
+          <div class="d-grid rg-16px align-items-start modal-product__info">
+            <div class="d-grid rg-8px">
+              <div class="d-flex justify-content-between">
+                <h2 class="heading-4">Large Bali Harmony Ball</h2>
+                <img src="./static/image/close.svg" onclick="openModal('modal-sizing-guide','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
+              </div>
+              <div class="d-flex align-items-center cg-8px">
+                <p class="label text-light-dark line-through">$210.00</p>
+                <p class="subtitle semi-bold">$180.00</p>
+                <div class="chips small">Sale</div>
+              </div>
+            </div>
+            <p class="">Handcrafted with traditional methods, the Harmony Ball Collection includes earrings and necklaces, adorned with the beautiful golden spheres known in Spain as ‘llamadores de Angeles’ which directly translates as ‘angel callers’ - inspired by the delicate subtle sound of the balls, scarcely audible but to the wearer. The Harmony Balls have a healing quality and create the harmonising sound their name derives from. The Harmony Balls have an intricate design and are created from sterling silver, plated in 18kt gold.
+            </p>
+            <hr class="w-100">
+            <div class="d-grid rg-8px">
+              <p id>COLOR: <span id="colorValue">18KT YELLOW GOLD</span></p>
+              <div class="d-flex cg-16px">
+                <div class="position-relative input-styled input-styled__circle">
+                  <input type="radio" name="color" id="gold" value="GOLD" checked>
+                  <label for="gold"></label>
+                </div>
+                <div class="position-relative input-styled input-styled__circle">
+                  <input type="radio" name="color" id="silver" value="SILVER">
+                  <label for="silver"></label>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between cg-16px">
+              <p class="small">Size: <span id="sizeValue">5</span></p>
+            </div>
+            <div class="d-flex justify-content-between cg-16px">
+              <div class="d-flex cg-16px">
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-5" value="5" checked>
+                  <label for="size-5">
+                  5
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-6" value="6">
+                  <label for="size-6">
+                  6
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-7" value="7">
+                  <label for="size-7">
+                  7
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-8" value="8">
+                  <label for="size-8">
+                  8
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-9" value="9">
+                  <label for="size-9">
+                  9
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <p class="small">Quantity</p>
+              <div class="d-flex cg-16px justify-content-between">
+                <div class="counter">
+                  <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+                  <input type="text" placeholder="1" class="text-center">
+                  <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+                </div>
+                <div class="btn btn--white w-100"><img src="./static/image/shopping-cart.svg" alt="cart icon"> ADD TO CART</div>
+              </div>
+              <a href="" class="btn w-100">BUY IT NOW</a>
+            </div>
+            <a href="./product-detail.html" class="d-flex justify-content-between product-more position-sticky">
+              <p class="medium">View Full Details</p>
+              <img src="./static/image/arrow-narrow-right.svg" alt="arrow icon">
+            </a>
+          </div>
+        </div>
     </div>
   </div>
 
@@ -469,22 +553,25 @@
     });
   </script>
   <script>
-    openModal = (id,str) => {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-
-      if(id === 'create-location-based') {
-        if($("#custom-calendar").is(':checked')) id = "custom-calendar-event";
-      }
-
+    openModal = (id, str) => {
       if (str === 'open') {
-        $('#'+id).addClass('visible');
+        $('#' + id).addClass('visible');
         $("body").css("overflow", "hidden");
-        prevModal = id;
+
+        // Add event listener to close modal when clicking outside of product--dots
+        $('#' + id).on('click', function(event) {
+          if ($(event.target).hasClass('modal__wrapper')) {
+            closeModal(id);
+          }
+        });
       } else {
-        $('#'+id).removeClass('visible');
-        $("body").css("overflow", "auto");
+        closeModal(id);
       }
+    }
+    
+    closeModal = (id) => {
+      $('#' + id).removeClass('visible');
+      $("body").css("overflow", "auto");
     }
   </script>
 </body>

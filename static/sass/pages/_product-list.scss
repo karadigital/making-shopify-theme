@@ -52,5 +52,19 @@
 			right: 10px;
 			top: 10px;
 		}
+
+		&--home {
+			@include desktop-up {
+				height: 280px;
+			}
+
+			@include monitor-up {
+				height: 315px;
+			}
+		}
 	}
+}
+
+.product-more {
+	backdrop-filter: blur(12px);
 }
