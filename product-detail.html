@@ -13,8 +13,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
-  <!-- <nav>
-    <div class="section__wrapper section__padding">
+  <nav>
+    <!-- <div class="section__wrapper section__padding">
       <div class="nav-mobile__wrapper">
         <img src="./static/image/hamburger.svg" alt="hamburger icon">
         <img src="./static/image/kara-logo.svg" alt="company logo">
@@ -29,7 +29,70 @@
       <div class="nav-desktop__wrapper">
         <img src="./static/image/kara-logo.svg" alt="company logo">
         <div class="d-flex cg-32px">
-          <a href="#">Shops</a>
+          <div class="mega-menu__container">
+            <a href="#">Shops</a>
+            <div class="section__wrapper section__padding mega-menu__wrapper">
+              <div class="nav-desktop__mega-menu">
+                <div class="d-grid rg-16px">
+                  <div class="d-grid rg-8px">
+                    <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                    <p class="semi-bold">Rings</p>
+                  </div>
+                  <div class="d-grid rg-8px">
+                    <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                    <a href="./product-detail.html">Chunky Doune Rings</a>
+                    <a href="./product-detail.html">Maeve Hoop Rings</a>
+                    <a href="./product-detail.html">Florence Earrings</a>
+                  </div>
+                </div>
+                <div class="d-grid rg-16px">
+                  <div class="d-grid rg-8px">
+                    <img src="./static/image/img-template-2.png" alt="" class="w-100">
+                    <p class="semi-bold">Bracelets</p>
+                  </div>
+                  <div class="d-grid rg-8px">
+                    <a href="./product-detail.html">Sofia Bracelet</a>
+                    <a href="./product-detail.html">Gia Bangle</a>
+                    <a href="./product-detail.html">Celeste  Bracelet</a>
+                    <a href="./product-detail.html">Maeve Bangle</a>
+                  </div>
+                </div>
+                <div class="d-grid rg-16px">
+                  <div class="d-grid rg-8px">
+                    <img src="./static/image/img-template-3.png" alt="" class="w-100">
+                    <p class="semi-bold">Earrings</p>
+                  </div>
+                  <div class="d-grid rg-8px">
+                    <div class="d-grid rg-8px">
+                      <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                      <a href="./product-detail.html">Chunky Doune Hoops</a>
+                      <a href="./product-detail.html">Tome Hoops - Large</a>
+                      <a href="./product-detail.html">Maeve Hoop Earrings</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-grid rg-16px">
+                  <div class="d-grid rg-8px">
+                    <img src="./static/image/img-template-4.png" alt="" class="w-100">
+                    <p class="semi-bold">There's More</p>
+                  </div>
+                  <div class="d-grid rg-8px">
+                    <a href="./collections.html">All Collections</a>
+                    <a href="./collections.html">Jewelry Sets</a>
+                    <a href="./collections.html">Gift Card</a>
+                    <a href="./collections.html">Size Guideline</a>
+                  </div>
+                </div>
+                <div class="d-grid rg-16px">
+                  <div class="d-grid rg-8px">
+                    <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                    <p class="text-center">20% off</p>
+                    <a href="" class="text-center">Shop the sale</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="#">Jewelry</a>
           <a href="#">About Us</a>
           <a href="#">FAQ</a>
@@ -44,9 +107,98 @@
           </div>
         </div>
       </div>
+    </div> -->
+    <div class="wrapper">
+      <img src="./static/image/kara-logo.svg" alt="company logo">
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#" class="desktop-item">Dropdown Menu</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <ul class="drop-menu">
+            <li><a href="#">Drop menu 1</a></li>
+            <li><a href="#">Drop menu 2</a></li>
+            <li><a href="#">Drop menu 3</a></li>
+            <li><a href="#">Drop menu 4</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Mega Menu</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Mega Menu</label>
+          <div class="mega-box">
+            <div class="nav-desktop__mega-menu">
+              <div class="d-grid rg-16px">
+                <div class="d-grid rg-8px">
+                  <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                  <p class="semi-bold">Rings</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                  <a href="./product-detail.html">Chunky Doune Rings</a>
+                  <a href="./product-detail.html">Maeve Hoop Rings</a>
+                  <a href="./product-detail.html">Florence Earrings</a>
+                </div>
+              </div>
+              <div class="d-grid rg-16px">
+                <div class="d-grid rg-8px">
+                  <img src="./static/image/img-template-2.png" alt="" class="w-100">
+                  <p class="semi-bold">Bracelets</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <a href="./product-detail.html">Sofia Bracelet</a>
+                  <a href="./product-detail.html">Gia Bangle</a>
+                  <a href="./product-detail.html">Celeste  Bracelet</a>
+                  <a href="./product-detail.html">Maeve Bangle</a>
+                </div>
+              </div>
+              <div class="d-grid rg-16px">
+                <div class="d-grid rg-8px">
+                  <img src="./static/image/img-template-3.png" alt="" class="w-100">
+                  <p class="semi-bold">Earrings</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <div class="d-grid rg-8px">
+                    <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                    <a href="./product-detail.html">Chunky Doune Hoops</a>
+                    <a href="./product-detail.html">Tome Hoops - Large</a>
+                    <a href="./product-detail.html">Maeve Hoop Earrings</a>
+                  </div>
+                </div>
+              </div>
+              <div class="d-grid rg-16px">
+                <div class="d-grid rg-8px">
+                  <img src="./static/image/img-template-4.png" alt="" class="w-100">
+                  <p class="semi-bold">There's More</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <a href="./collections.html">All Collections</a>
+                  <a href="./collections.html">Jewelry Sets</a>
+                  <a href="./collections.html">Gift Card</a>
+                  <a href="./collections.html">Size Guideline</a>
+                </div>
+              </div>
+              <div class="d-grid rg-16px">
+                <div class="d-grid rg-8px">
+                  <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                  <p class="text-center">20% off</p>
+                  <a href="" class="text-center">Shop the sale</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
   </nav>
-
+  
   <section class="section__wrapper section__padding section__padding--big pt-4 pb-5">
     <div class="desktop-only">
       <div class="d-flex cg-8px text-grey-4 pb-5"><a href="./index.html">Home</a> / <span class="text-black">Daphne Ring</span></div>
@@ -268,10 +420,10 @@
       </div>
     </div>
 
-  </section> -->
+  </section>
 
   <!-- You May Also Like -->
-  <!-- <section class="section__wrapper section__padding d-grid rg-32px pb-5">
+  <section class="section__wrapper section__padding d-grid rg-32px pb-5">
     <h2 class="title-4 text-center">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
       <div class="d-grid rg-8px">
@@ -327,9 +479,9 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- Newsletter -->
-  <!-- <section class="bg-cream-2 py-6">
+  <section class="bg-cream-2 py-6">
     <div class="section__wrapper section__padding w-lg-65 w-xl-43 d-grid rg-16px">
       <h2 class="title-3 text-center">Sign up for our newsletter</h2>
       <p class="text-center">Sign up below and get early access to all our flash sales, as well as pre sale access to all our new products!</p>
@@ -339,7 +491,7 @@
       </div>
       <p class="small text-center">By signing up you agree with our <a href="" class="small underline">Terms & Conditions</a> and <a href="" class="small underline">Privacy Policy.</a>  To opt out, click Unsubscribe in our emails</p>
     </div>
-  </section> -->
+  </section>
   <!-- Footer -->
   <footer class="section__wrapper section__padding d-grid rg-24px cg-24px align-items-start py-4">
     <div class="d-grid rg-24px footer__header">
@@ -385,7 +537,7 @@
 
   <!-- Modal -->
 
-  <div id="modal-sizing-guide" class="modal__wrapper visible">
+  <div id="modal-sizing-guide" class="modal__wrapper">
     <div class="product--dots d-grid cols-lg-2 align-items-start">
         <div class="quick-view__img">
           <img src="./static/image/img-template-1.png" alt="image template" class="img-object-cover">
