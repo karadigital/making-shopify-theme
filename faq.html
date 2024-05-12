@@ -11,9 +11,106 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
+  <nav>
+    <div class="wrapper section__padding nav__wrapper">
+      <input type="radio" name="slider" id="close-btn" class="d-none">
+      <label for="menu-btn" class="menu-btn mobile-only"><img src="./static/image/hamburger.svg" alt="hamburger icon"></label>
+      <a href="./index.html"><img src="./static/image/kara-logo.svg" alt="company logo"></a>
+      <input type="radio" name="slider" id="menu-btn" class="d-none" >
+      <ul class="nav-links">
+        <label for="close-btn" class="close-btn mobile-only"><img src="./static/image/close.svg" alt="close icon"></label>
+        <li>
+          <a href="#" class="desktop-only medium">Shops</a>
+          <input type="checkbox" id="showMega" class="desktop-only d-none">
+          <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
+          <div class="mega-box section__padding nav-desktop__mega-menu">
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                <p class="semi-bold">Rings</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                <a href="./product-detail.html">Chunky Doune Rings</a>
+                <a href="./product-detail.html">Maeve Hoop Rings</a>
+                <a href="./product-detail.html">Florence Earrings</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-2.png" alt="" class="w-100">
+                <p class="semi-bold">Bracelets</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./product-detail.html">Sofia Bracelet</a>
+                <a href="./product-detail.html">Gia Bangle</a>
+                <a href="./product-detail.html">Celeste  Bracelet</a>
+                <a href="./product-detail.html">Maeve Bangle</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-3.png" alt="" class="w-100">
+                <p class="semi-bold">Earrings</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <div class="d-grid rg-8px">
+                  <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                  <a href="./product-detail.html">Chunky Doune Hoops</a>
+                  <a href="./product-detail.html">Tome Hoops - Large</a>
+                  <a href="./product-detail.html">Maeve Hoop Earrings</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-4.png" alt="" class="w-100">
+                <p class="semi-bold">There's More</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./collections.html">All Collections</a>
+                <a href="./collections.html">Jewelry Sets</a>
+                <a href="./collections.html">Gift Card</a>
+                <a href="./collections.html">Size Guideline</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                <p class="text-center">20% off</p>
+                <a href="" class="text-center">Shop the sale</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="desktop-only medium">Jewellry</a>
+          <input type="checkbox" id="showDrop" class="d-none">
+          <label for="showDrop" class="mobile-item mobile-only medium">Jewellry</label>
+          <ul class="drop-menu">
+            <li><a href="#">Drop menu 1</a></li>
+            <li><a href="#">Drop menu 2</a></li>
+            <li><a href="#">Drop menu 3</a></li>
+            <li><a href="#">Drop menu 4</a></li>
+          </ul>
+        </li>
+        <li><a href="./about-us.html" class="medium">About Us</a></li>
+        <li><a href="./faq.html" class="medium">FAQ</a></li>
+        <li><a href="./contact-us.html" class="medium">Contact Us</a></li>
+        <li><a href="#" class="medium">News</a></li>
+      </ul>
+      <div class="d-flex align-items-center cg-8px">
+        <img src="./static/image/search.svg" alt="search icon">
+        <div class="d-flex">
+          <img src="./static/image/shopping-cart.svg" alt="">
+          <p class="small counter-text">0</p>
+        </div>
+      </div>
+    </div>
+  </nav>
   <!-- Content -->
   <section class="section__wrapper section__padding pb-5">
-    <div class="d-flex cg-8px text-grey-4 pb-5">Home / <span class="text-black">FAQ</span></div>
+    <div class="d-flex cg-8px text-grey-4 pb-5 pt-3">Home / <span class="text-black">FAQ</span></div>
     <h1 class="title-3 text-center pb-5">FAQ</h1>
     <div class="faq__wrapper">
       <div class="faq__content rounded-8px border-light-dark px-3 py-3">
@@ -193,9 +290,9 @@
     <div class="d-grid rg-10px footer__link">
       <p class="label semi-bold">LINKS</p>
       <a href="" class="label">Search</a>
-      <a href="" class="label">FAQ</a>
-      <a href="" class="label">About</a>
-      <a href="" class="label">Contact</a>
+      <a href="./faq.html" class="label">FAQ</a>
+      <a href="./about-us.html" class="label">About Us</a>
+      <a href="./contact-us.html" class="label">Contact</a>
       <a href="" class="label">Privacy Policy</a>
     </div>
     <div class="d-grid rg-10px footer__info">
