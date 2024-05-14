@@ -98,6 +98,14 @@
 	overflow: hidden;
   }
 
+  .overflow-scroll {
+	overflow: scroll;
+  }
+
+  .overflow-auto {
+	overflow: auto;
+  }
+
   .cursor-pointer {
 	cursor: pointer;
   }
@@ -111,6 +119,14 @@
 
   .border-light-dark {
 	border: 1px solid $light-dark;
+  }
+
+  .border-bottom-grey-4 {
+	border-bottom: 1px solid $grey-4;
+  }
+
+  .border-bottom-light-dark {
+	border-bottom: 1px solid $light-dark;
   }
 
   .opacity-0 {

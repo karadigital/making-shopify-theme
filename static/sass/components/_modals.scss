@@ -21,47 +21,77 @@
 	}
 }
 
-.product--dots {
+.modal__content {
 	position: absolute;
-	top: 50%;
 	left: 50%;
+	bottom: 0;
 	z-index: 2;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%) translateZ(0);
 
 	display: grid;
 	align-content: baseline;
 
-	box-sizing: border-box;
-	width: 90%;
+	height: 90%;
+	width: 100%;
 	background-color: $white;
-	border-radius: 12px;
-	
-	// transition: transform .6s cubic-bezier(.7,0,.2,1);
+	box-sizing: border-box;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+
+	overflow: scroll;
+
 	@include desktop-up {
+		bottom: unset;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 40rem;
 		width: 90%;
 		max-width: 80rem;
-
-		overflow: hidden;
-		height: 40rem;
+		border-radius: 16px;
 	}
 
-	&--big {
+	&--small {
 		@include desktop-up {
 			width: 450px;
+		}
+	}
+	&--cart {
+		height: 100%;
+		border-radius: unset;
+		@include desktop-up {
+			top: 0;
+			right: 0;
+			left: unset;
+			width: 360px;
+			height: 100vh;
+			transform: none;
+			border-radius: unset;
 		}
 	}
 }
 
 .quick-view__img {
-	overflow:hidden;  /* code added to prevent scroll */
-	height: 100%;
+	display: flex;
+	height: 300px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	overflow: hidden;
+	@include desktop-up {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 0;
+		height: 100%;
+	}
 }
 
 .modal-product__info {
 	position: relative; /* Ensure positioning context for sticky */
-	overflow: auto;
-	padding: 1rem 1rem 3rem 1rem;
+	// padding: 1rem 1rem 3rem 1rem;
 	min-height: 100%; /* Ensure a minimum height */
+	padding: 1rem;
+	
+	@include desktop-up {
+		overflow: auto;
+	}
 }
 
 .product-more {
@@ -73,7 +103,9 @@
 	padding: 1rem;
 }
 
-.modal-product__content {
-	overflow: scroll;
-	height: 100%;
+.modal__text {
+	@include desktop-up {
+		overflow: scroll;
+		height: 100%;
+	}
 }

@@ -63,15 +63,17 @@
 		border-bottom: 1px solid $grey-4;
 		padding: 1.5rem 0;
 
-		@include desktop-up {
-			grid-template-areas: 
-			"image title qty subtotal"
-			"image info qty subtotal"
-			"image info qty subtotal";
-			align-items: start;
-
-			padding: 1.5rem 1rem;
-			grid-template-columns: 100px 2.5fr 1fr 1fr;
+		&--table {
+			@include desktop-up {
+				grid-template-areas: 
+				"image title qty subtotal"
+				"image info qty subtotal"
+				"image info qty subtotal";
+				align-items: start;
+	
+				padding: 1.5rem 1rem;
+				grid-template-columns: 100px 2.5fr 1fr 1fr;
+			}
 		}
 
 		.product-img {
@@ -82,7 +84,7 @@
 		}
 
 		.product-title { grid-area: title; }
-		.product__info { grid-area: info; }
+		.product-item__info { grid-area: info; }
 		.product-price {
 			grid-area: price;
 		}
@@ -104,4 +106,15 @@
 			}
 		}
 	}
+}
+
+.side-cart__footer {
+	position: sticky;
+	bottom: 0;
+	display: grid;
+	row-gap: 1rem;
+
+	padding: 1rem;
+	background: $cream-3;
+	border-top: 1px solid $grey-4;
 }

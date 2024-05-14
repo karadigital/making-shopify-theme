@@ -98,6 +98,10 @@
 	}
 }
 
+.cols-sm-3 {
+	grid-template-columns: repeat(3,minmax(0,1fr));
+}
+
 .cols-lg-3 {
 	@include desktop-up {
 		grid-template-columns: repeat(3,minmax(0,1fr));
