@@ -1,0 +1,23 @@
+.progress-bar-slider__wrapper {
+	width: 40%;
+	margin: auto;
+	border-radius: 3px;
+    overflow: hidden;
+
+	@include desktop-up {
+		width: 20%;
+	}
+}
+
+.progress-bar-slider {
+	background: $grey-3;
+	border-radius: 3px;
+}
+  
+.progress-status-slider {
+	background: $gold;
+	height: 6px;
+	border-radius: 3px;
+	transition: width 400ms ease;
+	width: 0;
+}

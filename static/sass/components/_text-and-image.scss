@@ -1,6 +1,9 @@
 .text-and-img {
 	&__text {
 		padding: 1.5rem 5%;
+		@include monitor-up {
+			padding: 1.5rem 5rem;
+		}
 	}
 	&__image {
 		@include desktop-up {

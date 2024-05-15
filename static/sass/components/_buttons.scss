@@ -27,6 +27,12 @@ button {
     outline: 1px solid $black-1;
   }
 
+  &--transparent {
+    background-color: transparent;
+    color: $black-1;
+    outline: 1px solid $white;
+  }
+
   &--circle {
     border-radius: 20px;
   }

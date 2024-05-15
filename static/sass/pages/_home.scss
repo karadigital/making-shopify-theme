@@ -191,27 +191,6 @@ Testimonials
 	}
 }
 
-.testimonials-progress__wrapper {
-	width: 40%;
-	margin: auto;
-	border-radius: 10px;
-    overflow: hidden;
-
-	@include desktop-up {
-		width: 20%;
-	}
-}
-
-.testimonials-slider-progress {
-	background: $grey-3;
-}
-  
-.testimonials-slider-progress-bar {
-	background: $gold;
-	height: 6px;
-	transition: width 400ms ease;
-	width: 0;
-}
   
 /*-------------------------------------------*\ 
 Hotspot

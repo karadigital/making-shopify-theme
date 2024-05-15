@@ -15,22 +15,6 @@
 			cursor: pointer;
 		}
 	}
-
-	&__left {
-		display: grid;
-		
-		@include desktop-up {
-			position: sticky;
-			top: 0;
-			
-			display: grid;
-			row-gap: 32px;
-		}
-		a {
-			position: relative;
-			width: max-content;
-		}
-	}
 }
 
 .product {
@@ -61,6 +45,10 @@
 			@include monitor-up {
 				height: 315px;
 			}
+		}
+
+		&--kit {
+			height: 285px;
 		}
 	}
 }

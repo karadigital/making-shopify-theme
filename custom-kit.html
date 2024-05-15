@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Custom Kit</title>
+	
+		<!-- CSS -->
+		<link rel="stylesheet" href="./static/css/main.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
+	</head>
+<body>
+	<nav>
+    <div class="wrapper section__padding nav__wrapper">
+      <input type="radio" name="slider" id="close-btn" class="d-none">
+      <label for="menu-btn" class="menu-btn mobile-only"><img src="./static/image/hamburger.svg" alt="hamburger icon"></label>
+      <a href="./index.html"><img src="./static/image/kara-logo.svg" alt="company logo"></a>
+      <input type="radio" name="slider" id="menu-btn" class="d-none" >
+      <ul class="nav-links">
+        <label for="close-btn" class="close-btn mobile-only"><img src="./static/image/close.svg" alt="close icon"></label>
+        <li>
+          <a href="#" class="desktop-only">Shops</a>
+          <input type="checkbox" id="showMega" class="desktop-only d-none">
+          <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
+          <div class="mega-box section__padding nav-desktop__mega-menu">
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                <p class="semi-bold">Rings</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                <a href="./product-detail.html">Chunky Doune Rings</a>
+                <a href="./product-detail.html">Maeve Hoop Rings</a>
+                <a href="./product-detail.html">Florence Earrings</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-2.png" alt="" class="w-100">
+                <p class="semi-bold">Bracelets</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./product-detail.html">Sofia Bracelet</a>
+                <a href="./product-detail.html">Gia Bangle</a>
+                <a href="./product-detail.html">Celeste  Bracelet</a>
+                <a href="./product-detail.html">Maeve Bangle</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-3.png" alt="" class="w-100">
+                <p class="semi-bold">Earrings</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <div class="d-grid rg-8px">
+                  <a href="./product-detail.html">Nouveaux Puff Earrings</a>
+                  <a href="./product-detail.html">Chunky Doune Hoops</a>
+                  <a href="./product-detail.html">Tome Hoops - Large</a>
+                  <a href="./product-detail.html">Maeve Hoop Earrings</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-4.png" alt="" class="w-100">
+                <p class="semi-bold">There's More</p>
+              </div>
+              <div class="d-grid rg-8px">
+                <a href="./collections.html">All Collections</a>
+                <a href="./collections.html">Jewelry Sets</a>
+                <a href="./collections.html">Gift Card</a>
+                <a href="./collections.html">Size Guideline</a>
+              </div>
+            </div>
+            <div class="d-grid rg-16px">
+              <div class="d-grid rg-8px">
+                <img src="./static/image/img-template-1.png" alt="" class="w-100">
+                <p class="text-center">20% off</p>
+                <a href="" class="text-center">Shop the sale</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="desktop-only">Jewellry</a>
+          <input type="checkbox" id="showDrop" class="d-none">
+          <label for="showDrop" class="mobile-item mobile-only medium">Jewellry</label>
+          <ul class="drop-menu">
+            <li><a href="./custom-kit.html">Custom Jewellry</a></li>
+            <li><a href="#">Drop menu 2</a></li>
+            <li><a href="#">Drop menu 3</a></li>
+            <li><a href="#">Drop menu 4</a></li>
+          </ul>
+        </li>
+        <li><a href="./about-us.html">About Us</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./contact-us.html">Contact Us</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+      <div class="d-flex align-items-center cg-8px">
+        <img src="./static/image/search.svg" alt="search icon">
+        <div class="d-flex">
+          <img src="./static/image/shopping-cart.svg" alt="">
+          <p class="small counter-text">0</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+	<section class="section__wrapper d-grid cols-lg-2 align-items-center bg-grey-3">
+		<div class="text-and-img__text d-grid rg-8px order-sm-2-lg-1 w-lg-75">
+			<p class="text-gold">CURATED BY YOU</p>
+			<h1 class="heading-1 medium">BUILD YOUR OWN JEWELRY KIT</h1>
+			<p class="subtitle">A magical beauty gift box of chosen-by-you jewelry icons! Build your own jewelry kit and enjoy a magical 10% off!</p>
+		</div>
+		<div class="text-and-img__image d-flex order-sm-1-lg-2">
+			<img src="./static/image/store-template.png" alt="store image" class="img-object-cover">
+		</div>
+	</section>
+	<section class="section__wrapper section__padding kit__section">
+    <div class="d-flex flex-direction-column rg-48px">
+      <!-- First kit -->
+      <div class="d-flex flex-direction-column rg-24px">
+        <div class="d-flex cg-8px align-items-center">
+          <h2 class="title heading-2 text-center d-flex justify-content-center align-items-center bg-gold">1.</h2>
+          <h2 class="heading-4 semi-bold">Select your First Item</h2>
+        </div>
+        <div class="overflow-hidden tabs__wrapper">
+          <div class="py-3">
+            <a href="#product-watch-slider" data-slider="#product-watch-slider" class="tab-link underline-effect__text active">Watches</a>
+            <a href="#product-earrings-slider" data-slider="#product-earrings-slider" class="tab-link underline-effect__text">Earrings</a>
+            <a href="#product-rings-slider" data-slider="#product-rings-slider" class="tab-link underline-effect__text">Rings</a>
+          </div>
+        </div>
+        <div class="tabs__content">
+          <div id="product-watch-slider" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+          <div id="product-earrings-slider" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Earrings</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+          <div id="product-rings-slider" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Rings</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second kit -->
+      <div class="d-flex flex-direction-column rg-24px">
+        <div class="d-flex cg-8px align-items-center">
+          <h2 class="title heading-2 text-center d-flex justify-content-center align-items-center bg-gold">2.</h2>
+          <h2 class="heading-4 semi-bold">Select your Second Item</h2>
+        </div>
+        <div class="overflow-hidden tabs__wrapper">
+          <div class="py-3">
+            <a href="#product-watch-slider-2" data-slider="#product-watch-slider-2" class="tab-link underline-effect__text active">Watches</a>
+            <a href="#product-earrings-slider-2" data-slider="#product-earrings-slider-2" class="tab-link underline-effect__text">Earrings</a>
+            <a href="#product-rings-slider-2" data-slider="#product-rings-slider-2" class="tab-link underline-effect__text">Rings</a>
+          </div>
+        </div>
+        <div class="tabs__content">
+          <div id="product-watch-slider-2" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+          <div id="product-earrings-slider-2" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Earrings</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+          <div id="product-rings-slider-2" class="splide splide-slider">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Rings</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">CHOOSE ...</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--white w-100">SELECT</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="d-grid rg-32px pb-1 px-1">
+                    <div class="d-grid rg-8px">
+                      <div class="product__img product__img--kit">
+                        <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+                        <div class="chips small">Sold Out</div>
+                      </div>
+                      <div class="product__text d-grid rg-8px">
+                        <p class="label">Polar Watch</p>
+                        <div class="d-flex align-items-center cg-8px">
+                          <p class="label text-light-dark line-through">$210.00</p>
+                          <p class="subtitle semi-bold">$180.00</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn btn--transparent w-100">OUT OF STOCK</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <img src="./static/image/arrow-left-gold.svg" alt="arrow left icon">
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <img src="./static/image/arrow-right-gold.svg" alt="arrow right icon">
+              </button>
+            </div>
+            <div class="progress-bar-slider__wrapper pt-4">
+              <div class="progress-bar-slider">
+                <div class="progress-status-slider"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid rg-16px bg-cream-3 rounded-8px py-3 px-3 kit__summary">
+      <h3 class="subtitle semi-bold text-center pb-3 border-bottom-light-dark">YOUR SET</h3>
+      <div class="kit__list">
+        <div id="custom-kit-1" class="kit__item added-product">
+          <div class="kit__img">
+            <img src="./static/image/product-template.png" alt="" class="img-object-cover">
+          </div>
+          <div class="w-100 desktop-only">
+            <div class="d-flex justify-content-between cg-8px">
+              <p class="label semi-bold">Small Diamond Knot Ring</p>
+              <img src="./static/image/close.svg" alt="close icon">
+            </div>
+            <div class="d-flex justify-content-between cg-8px">
+              <p class="small">Gold, Green Emerald</p>
+              <small class="text-right">$32.00</small>
+            </div>
+          </div>
+        </div>
+        <div id="custom-kit-2" class="kit__item">
+        </div>
+        <div id="custom-kit-3" class="kit__item">
+        </div>
+      </div>
+      <div class="btn btn--circle w-100">Add More Items -<span>$0</span></div>
+    </div>
+	</section>	
+	<!-- Trust badge -->
+	<section class="section__wrapper section__padding d-grid align-items-start rg-32px cols-lg-4 cg-16px bg-cream-3 py-5">
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/heart.svg" alt="heart icon" class="d-flex mx-auto">
+      <p class="text-center">Free 30 Days Returns</p>
+    </div>
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/truck.svg" alt="truck icon" class="d-flex mx-auto">
+      <p class="text-center">Free shipping on orders over $100</p>
+    </div>
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/diamond.svg" alt="diamond icon" class="d-flex mx-auto">
+      <p class="text-center">Cruelty free</p>
+    </div>
+    <div class="trust__item d-grid rg-8px">
+      <img src="./static/image/lock.svg" alt="lock icon" class="d-flex mx-auto">
+      <p class="text-center">Secure payment</p>
+    </div>
+  </section>
+	<!-- Footer -->
+	<footer class="section__wrapper section__padding d-grid rg-24px cg-24px align-items-start py-4">
+		<div class="d-grid rg-24px footer__header">
+			<img src="./static/image/kara-logo.svg" alt="company logo">
+			<p class="label">Your one stop solutions on everything jewellry</p>
+			<div class="d-flex align-items-center cg-16px">
+				<a href="" target="_blank"><img src="./static/image/facebook-logo.svg" alt="facebook logo"></a>
+				<a href="" target="_blank"><img src="./static/image/instagram-logo.svg" alt="instagram logo"></a>
+				<a href="" target="_blank"><img src="./static/image/pinterest-logo.svg" alt="pinterest logo"></a>
+			</div>
+		</div>
+		<div class="d-grid rg-10px footer__link">
+			<p class="label semi-bold">LINKS</p>
+			<a href="" class="label">Search</a>
+			<a href="./faq.html" class="label">FAQ</a>
+			<a href="./about-us.html" class="label">About Us</a>
+			<a href="./contact-us.html" class="label">Contact</a>
+			<a href="" class="label">Privacy Policy</a>
+		</div>
+		<div class="d-grid rg-10px footer__info">
+			<p class="label semi-bold">CONTACT INFO</p>
+			<p class="label">Lorem, City, Indonesia</p>
+			<p class="label">mail@template.com</p>
+			<p class="label">021-1234567</p>
+		</div>
+		<div class="d-grid rg-10px footer__newsletter">
+			<p class="label semi-bold">NEWSLETTER</p>
+			<form method="" action="" class="input-with-helper">
+				<input type="text" placeholder="Email address..."/>
+				<button type="submit" class="bg-transparent helper cursor-pointer">
+					<img src="./static/image/arrow-narrow-right.svg" alt="arrow right icon">
+				</button>
+			</form>
+			<div class="d-flex cg-8px align-items-center">
+				<img src="./static/image/master-card.svg" alt="master card icon">
+				<img src="./static/image/visa.svg" alt="visa icon">
+				<img src="./static/image/google-pay.svg" alt="google pay icon">
+				<img src="./static/image/shop-pay.svg" alt="shop pay icon">
+			</div>
+		</div>
+		<p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
+	</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+  // Cache the tab and content selectors
+  const $tabs = $(".tabs__wrapper a");
+  const $content = $(".tabs__content > div");
+
+  // Add active class to the first tab and show its content, hide the others
+  $tabs.first().addClass("active");
+  $content.hide().first().show();
+
+  // Tab switching functionality
+  $tabs.click(function(event) {
+    // Prevent default scrolling behavior
+    event.preventDefault();
+
+    // If the clicked tab is already active, return false
+    if ($(this).hasClass("active")) return false;
+
+    // Remove the active class from all tabs
+    $tabs.removeClass("active");
+    // Add the active class to the clicked tab
+    $(this).addClass("active");
+
+    // Hide all tab content
+    $content.hide();
+    // Show the corresponding tab content
+    const tab_id = $(this).attr("href");
+    $(tab_id).show();
+  });
+
+  // Initialize Splide sliders
+  $(".splide").each(function() {
+    initializeSplideSlider(this);
+  });
+});
+
+function initializeSplideSlider(selector) {
+  let slider = new Splide(selector, {
+    // type       : "loop",
+    gap        : "3%",
+    // autoWidth: true,
+    // padding: {
+    //   left : 'calc(24px + 1rem)', // Ensure enough padding on the left
+    //   right: 'calc(24px + 1rem)'  // Ensure enough padding on the right
+    // },
+    // rewind     : false,
+    pagination : false,
+    isNavigation: false,
+    perPage: 3,
+    perMove: 1,
+    arrows: true,
+    // drag: true,
+    breakpoints: {
+      640: {
+        // drag: true,
+        perPage: 1,
+        perMove: 1,
+        gap    : "5%",
+      },
+    }
+  });
+
+  var progressBar = slider.root.querySelector('.progress-status-slider');
+  if (progressBar) {
+    // Updates the bar width whenever the carousel moves:
+    slider.on('mounted move', function () {
+      var end = slider.Components.Controller.getEnd() + 1;
+      var rate = Math.min((slider.index + 1) / end, 1);
+      progressBar.style.width = String(100 * rate) + '%';
+    });
+  }
+
+  slider.mount();
+  return slider;
+}
+  </script>
+</body>
+</html>

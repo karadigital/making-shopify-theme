@@ -9,7 +9,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
+</head>
 <body>
   <nav>
     <div class="wrapper section__padding nav__wrapper">
@@ -88,7 +89,7 @@
           <input type="checkbox" id="showDrop" class="d-none">
           <label for="showDrop" class="mobile-item mobile-only medium">Jewellry</label>
           <ul class="drop-menu">
-            <li><a href="#">Drop menu 1</a></li>
+            <li><a href="./custom-kit.html">Custom Jewellry</a></li>
             <li><a href="#">Drop menu 2</a></li>
             <li><a href="#">Drop menu 3</a></li>
             <li><a href="#">Drop menu 4</a></li>
@@ -116,16 +117,18 @@
         <img src="./static/image/collection-banner-img.png" alt="banner" class="w-100">
       </div>
       <div class="product-list__wrapper">
-        <div class="product-list__left">
-          <a id="tab-1" href="#all" class="underline-effect__text active">All products</a>
-          <a id="tab-2" href="#watches" class="underline-effect__text">Watches</a>
-          <a id="tab-3" href="#earrings" class="underline-effect__text">Earrings</a>
-          <a id="tab-4" href="#rings" class="underline-effect__text">Rings</a>
-          <a id="tab-5" href="#pendants" class="underline-effect__text">Pendants</a>
-          <a id="tab-6" href="#anklets" class="underline-effect__text">Anklets</a>
-          <a id="tab-7" href="#bracelets" class="underline-effect__text">Bracelets</a>
+        <div class="tabs__wrapper tabs__wrapper--product">
+          <div class="">
+            <a id="tab-1" href="#all" class="whitespace-nowrap underline-effect__text active">All products</a>
+            <a id="tab-2" href="#watches" class="underline-effect__text">Watches</a>
+            <a id="tab-3" href="#earrings" class="underline-effect__text">Earrings</a>
+            <a id="tab-4" href="#rings" class="underline-effect__text">Rings</a>
+            <a id="tab-5" href="#pendants" class="underline-effect__text">Pendants</a>
+            <a id="tab-6" href="#anklets" class="underline-effect__text">Anklets</a>
+            <a id="tab-7" href="#bracelets" class="underline-effect__text">Bracelets</a>
+          </div>
         </div>
-        <div class="product-list__right">
+        <div class="">
           <div class="d-flex align-items-center justify-content-between pb-3">
             <p>12 Products</p>
             <select name="" id="" class="cursor-pointer">
@@ -137,7 +140,7 @@
               <option value="">Price, High to Low</option>
             </select>
           </div>
-          <div class="tab__content">
+          <div class="tabs__content">
             <div id="watches" aria-labelledby="tab-2">
               <div class="d-grid cols-sm-2 cols-lg-3 cg-sm-16px cg-lg-32px rg-32px">
                 <a href="./product-detail.html" class="d-grid rg-8px">
@@ -294,10 +297,10 @@
 <script>
   $(document).ready(function(){
     // Add active class to the first tab
-    $(".product-list__left a:first").addClass("active");
+    $(".tabs__wrapper a:first").addClass("active");
 
     // Tab switching functionality
-    $(".product-list__left a").click(function(event){
+    $(".tabs__wrapper a").click(function(event){
         // Prevent default scrolling behavior
         event.preventDefault();
 
@@ -305,29 +308,29 @@
         if($(this).hasClass("active")) return false;
 
         // Remove the active class from all tabs
-        $(".product-list__left a").removeClass("active");
+        $(".tabs__wrapper a").removeClass("active");
         // Add the active class to the clicked tab
         $(this).addClass("active");
 
         // Hide all tab content
-        $(".tab__content > div").hide();
+        $(".tabs__content > div").hide();
         // Show the corresponding tab content
         var tab_id = $(this).attr("href");
         $(tab_id).show();
     });
 
     // Show all products when clicking "All Products" tab
-    $(".product-list__left a[href='#all']").click(function(event){
+    $(".tabs__wrapper a[href='#all']").click(function(event){
         // Prevent default scrolling behavior
         event.preventDefault();
 
         // Remove active class from all tabs
-        $(".product-list__left a").removeClass("active");
+        $(".tabs__wrapper a").removeClass("active");
         // Add active class to "All Products" tab
         $(this).addClass("active");
 
         // Show all tab content
-        $(".tab__content > div").show();
+        $(".tabs__content > div").show();
     });
 });
 </script>

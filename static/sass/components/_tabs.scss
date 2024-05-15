@@ -1,0 +1,38 @@
+.tabs__wrapper {
+    margin: 0 -1rem;
+    padding: 0.5rem 1rem;
+    background: $grey-3;
+
+    overflow: hidden;
+    @include desktop-up {
+        margin: 0;
+    }
+
+    & > div {
+        display: flex;
+        column-gap: 2rem;
+        overflow: auto;
+    }
+
+    &--product {
+        @include desktop-up {
+            position: sticky;
+            top: calc(70px + 1rem);
+            background: $white;
+            
+            & > div {
+                display: grid;
+                row-gap: 32px;
+            }
+        }
+    }
+    
+	a {
+		position: relative;
+		width: max-content;
+        color: $light-dark;
+        &.active {
+            color: $black-1;
+        }
+	}
+}
