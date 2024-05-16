@@ -112,7 +112,7 @@
   </nav>
   <!-- Banner -->
   <section class="section__wrapper section__padding banner__section">
-    <div class="d-grid rg-16px">
+    <div class="d-grid rg-16px banner__text">
       <h1 class="title-1">Elevate Your Style: Explore Now</h1>
       <a href="" class="btn btn--circle btn--white">
         Shop Now
@@ -139,16 +139,16 @@
   </section>
 
   <!-- About -->
-  <section class="section__wrapper section__padding">
-    <p class="about-title">About</p>
-    <div class="d-grid rg-32px">
+  <section class="section__wrapper section__padding about__section">
+    <p class="about-title about-title--left" id="text-1">About</p>
+    <div class="position-relative z-index-1 d-grid rg-32px w-lg-75 justify-self-center">
       <h2 class="title-2 text-center">A thoughtful approach to jewelry making, which blends timeless shapes with contemporary twists.</h2>
       <a href="" class="btn btn--circle btn--white mx-auto">
         Shop Now
         <img src="./static/image/arrow-narrow-right.svg" alt="arrow right icon">
       </a>
     </div>
-    <p class="about-title">Jewelry</p>
+    <p class="about-title about-title--right text-right" id="text-2">Jewelry</p>
   </section>
   <!-- Collection home -->
   <section class="section__wrapper section__padding collection-home__section d-grid cols-sm-2 cols-lg-6 rg-16px cg-16px">
@@ -200,7 +200,7 @@
       </div>
     </div>
     <div class="featured__wrapper d-grid rg-16px cg-sm-16px cg-lg-32px cols-sm-2 cols-lg-3">
-      <div class="d-grid rg-8px">
+      <a href="./product-detail.html" class="d-grid rg-8px">
         <div class="product__img product__img--home">
           <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
           <div class="chips small">Sold Out</div>
@@ -212,8 +212,8 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
+      </a>
+      <a href="./product-detail.html" class="d-grid rg-8px">
         <div class="product__img product__img--home">
           <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
           <div class="chips small">Sold Out</div>
@@ -225,8 +225,8 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
+      </a>
+      <a href="./product-detail.html" class="d-grid rg-8px">
         <div class="product__img product__img--home">
           <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
           <div class="chips small">Sold Out</div>
@@ -238,8 +238,8 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
+      </a>
+      <a href="./product-detail.html" class="d-grid rg-8px">
         <div class="product__img product__img--home">
           <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
           <div class="chips small">Sold Out</div>
@@ -251,7 +251,7 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
   <!-- Store -->
@@ -609,7 +609,8 @@
       </div>
     </div>
   </div>
-  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.6.0.js"
@@ -618,6 +619,7 @@
   </script>
   <script>
     document.addEventListener( 'DOMContentLoaded', function () {
+      // Initialize Splide for the testimonials slider
       let testimonialsSlider = new Splide( '#testimonials-slider', {
         type       : "loop",
         gap        : "5%",
@@ -643,12 +645,39 @@
         var end  = testimonialsSlider.Components.Controller.getEnd() + 1;
         var rate = Math.min( ( testimonialsSlider.index + 1 ) / end, 1 );
         testimonialBar.style.width = String( 100 * rate ) + '%';
-      } );
+      });
   
       testimonialsSlider.mount();
+
+      // Register GSAP ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      let tl = gsap.timeline({
+      defaults: { duration: 0.5 }, // Adjust the duration of individual animations
+    });
+
+    // Add animations to the timeline
+    tl.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust y and opacity as needed
+      .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
+
+      ScrollTrigger.create({
+          trigger: ".about__section",
+          start: "top 15%",
+          end: "top 10%",
+          scrub: 1,
+          pin: true,
+          markers: true,
+          animation: tl,
+          toggleActions: "play none none none", // On desktop, play animation but do not pin
+          // Disable pinning on desktop (screen width > 1024px)
+          pinSpacing: false, // Prevent ScrollTrigger from adding spacing for pinned elements
+          // Add a media query to disable pinning above a certain screen width
+          media: "(min-width: 1025px)",
+        })
     });
   </script>
   <script>
+    // Modals
     openModal = (id, str) => {
       if (str === 'open') {
         $('#' + id).addClass('visible');

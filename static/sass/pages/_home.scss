@@ -3,9 +3,13 @@ Banner
 \*-------------------------------------------*/
 .banner {
 	&__section {
-		min-height: 360px;
+		position: relative;
 		padding-top: 3rem;
 		padding-bottom: 3rem;
+		height: 850px;
+		background: url("../image/banner-bg-mobile.png") no-repeat;
+		background-position: right;
+		background-size: cover;
 
 		@include desktop-up {
 			display: grid;
@@ -14,29 +18,63 @@ Banner
 		}
 	}
 
+	&__text {
+		position: sticky;
+		top: 5vh;
+		z-index: 1;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 100%;
+		height: 90vh;
+	}
+
 	&-img {
+		position: absolute;
+
 		background-color: $grey-1;
 		box-shadow: 0px 4px 4px rgba($color: #B2A9A2, $alpha: 0.25);
 	}
 
 	&-img__1 {
-		height: 150px;
-		width: 110px;
+		top: 1rem;
+		left: 1rem;
+
+		height: 200px;
+		width: 145px;
 	}
+
 	&-img__2 {
+		right: 1rem;
+		top: 120px;
+
 		height: 140px;
 		width: 105px;
 	}
 	&-img__3 {
+		bottom: 1rem;
+		right: 1rem;
+
 		height: 180px;
 		width: 135px;
 	}
+
 	&-img__4 {
+		right: 20px;
+		bottom: 140px;
+		transform: translateX(-50%);
+
 		height: 140px;
 		width: 160px;
 	}
 
 	&-img__5 {
+		top: 50%;
+		right: 70px;
+
+		transform: translateY(-50%);
 		@include square(54px, $radius: 0);
 	}
 }
@@ -45,15 +83,42 @@ About
 \*-------------------------------------------*/
 .about {
 	&__section {
-		min-height: 475px;
 		overflow: hidden;
+		@include desktop-up {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+
+			min-height: 40vh;
+
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			box-sizing: border-box;
+		}
 	}
 
 	&-title {
 		font-family: "Prata", serif;
-		@include font-size(5.25rem, 6.25rem); //84px, 100px
+		@include font-size(5rem, 6.25rem); //80px, 100px
+		color: rgba($color: $black-1, $alpha: 0.1);
 		line-height: normal;
-		color: rgba($color: #000000, $alpha: 0.2);
+		
+		@include desktop-up {
+			position: absolute;
+		}
+
+		&--left {
+			@include desktop-up {
+				top: 1rem;
+			}
+		}
+
+		&--right {
+			@include desktop-up {
+				bottom: 1rem;
+				right: 0;
+			}
+		}
 	}
 }
 
