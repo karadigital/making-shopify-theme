@@ -119,21 +119,21 @@
         <img src="./static/image/arrow-narrow-right.svg" alt="arrow right icon">
       </a>
     </div>
-    <div>
+    <div class="banner-img__list">
       <div class="banner-img banner-img__1 rounded-16px">
-        <img src="./static/image/product-template.png" alt="product-template" class="img-object-cover">
+        <img src="./static/image/img-template-1.png" alt="product-template1" class="img-object-cover">
       </div>
       <div class="banner-img banner-img__2 rounded-16px">
-        <img src="./static/image/product-template.png" alt="product-template" class="img-object-cover">
+        <img src="./static/image/img-template-2.png" alt="product-template2" class="img-object-cover">
       </div>
       <div class="banner-img banner-img__3 rounded-16px">
-        <img src="./static/image/product-template.png" alt="product-template" class="img-object-cover">
+        <img src="./static/image/product-template.png" alt="product-template3" class="img-object-cover">
       </div>
       <div class="banner-img banner-img__4 rounded-16px">
-        <img src="./static/image/product-template.png" alt="product-template" class="img-object-cover">
+        <img src="./static/image/img-template-3.png" alt="product-template4" class="img-object-cover">
       </div>
       <div class="banner-img banner-img__5 rounded-16px">
-        <img src="./static/image/product-template.png" alt="product-template" class="img-object-cover">
+        <img src="./static/image/img-template-4.png" alt="product-template5" class="img-object-cover">
       </div>
     </div>
   </section>
@@ -144,7 +144,7 @@
     <div class="position-relative z-index-1 d-grid rg-32px w-lg-75 justify-self-center">
       <h2 class="title-2 text-center">A thoughtful approach to jewelry making, which blends timeless shapes with contemporary twists.</h2>
       <a href="" class="btn btn--circle btn--white mx-auto">
-        Shop Now
+        About Us
         <img src="./static/image/arrow-narrow-right.svg" alt="arrow right icon">
       </a>
     </div>
@@ -651,30 +651,54 @@
 
       // Register GSAP ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
+      
+      let mm = gsap.matchMedia();
 
-      let tl = gsap.timeline({
-      defaults: { duration: 0.5 }, // Adjust the duration of individual animations
+        mm.add({
+          isMobile: "(max-width: 500px)",
+          isDesktop: "(min-width: 501px)",
+
+        }, (context) => {
+          let{isMobile, isDesktop} = (context.conditions);
+
+          if (isMobile) {
+            // Define mobile-specific animations with ScrollTrigger properties
+            console.log("is mobile")
+            let tlMobile = gsap.timeline({
+              defaults: { duration: 0.5 }, // Adjust the duration of individual animations
+              scrollTrigger: {
+                trigger: ".about__section",
+                start: "top 15%",
+                end: "top 10%",
+                scrub: 1,
+                pin: true,
+                markers: false,
+              }
+            });
+            
+            tlMobile.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust x and opacity as needed
+                  .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
+
+          } else {
+            console.log('is desktop');
+            let tlDesktop = gsap.timeline({
+              defaults: { duration: 0.5 }, // Adjust the duration of individual animations
+              scrollTrigger: {
+                trigger: ".about__section",
+                start: "top center",
+                end: "bottom center",
+                scrub: true,
+                markers: false,
+              }
+            });
+
+            tlDesktop.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust x and opacity as needed
+               .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
+          };
+
+        });
     });
 
-    // Add animations to the timeline
-    tl.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust y and opacity as needed
-      .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
-
-      ScrollTrigger.create({
-          trigger: ".about__section",
-          start: "top 15%",
-          end: "top 10%",
-          scrub: 1,
-          pin: true,
-          markers: true,
-          animation: tl,
-          toggleActions: "play none none none", // On desktop, play animation but do not pin
-          // Disable pinning on desktop (screen width > 1024px)
-          pinSpacing: false, // Prevent ScrollTrigger from adding spacing for pinned elements
-          // Add a media query to disable pinning above a certain screen width
-          media: "(min-width: 1025px)",
-        })
-    });
   </script>
   <script>
     // Modals

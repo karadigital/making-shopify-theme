@@ -1902,18 +1902,28 @@ Banner
 \*-------------------------------------------*/
 .banner__section {
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  height: 850px;
   background: url("../image/banner-bg-mobile.png") no-repeat;
   background-position: right;
   background-size: cover;
+  padding-block: 3rem;
+  height: 850px;
 }
 @media (min-width: 1024px) {
   .banner__section {
     display: grid;
     grid-template-columns: 4fr 5fr;
     align-items: start;
+    background-size: cover;
+    background: url("../image/banner-bg-desktop.png") no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 1110px;
+  }
+}
+@media (min-width: 1024px) {
+  .banner-img__list {
+    position: relative;
+    height: 100%;
   }
 }
 .banner__text {
@@ -1926,10 +1936,16 @@ Banner
   width: 100%;
   height: 90vh;
 }
+@media (min-width: 1024px) {
+  .banner__text {
+    height: unset;
+  }
+}
 .banner-img {
   position: absolute;
   background-color: #FCFBF9;
   box-shadow: 0px 4px 4px rgba(178, 169, 162, 0.25);
+  overflow: hidden;
 }
 .banner-img__1 {
   top: 1rem;
@@ -1937,17 +1953,44 @@ Banner
   height: 200px;
   width: 145px;
 }
+@media (min-width: 1024px) {
+  .banner-img__1 {
+    top: 50px;
+    right: 1rem;
+    left: unset;
+    height: 340px;
+    width: 250px;
+  }
+}
 .banner-img__2 {
-  right: 1rem;
   top: 120px;
+  right: 1rem;
   height: 140px;
   width: 105px;
 }
+@media (min-width: 1024px) {
+  .banner-img__2 {
+    top: 170px;
+    right: 410px;
+    height: 320px;
+    width: 230px;
+  }
+}
 .banner-img__3 {
-  bottom: 1rem;
-  right: 1rem;
-  height: 180px;
-  width: 135px;
+  top: 50%;
+  right: 70px;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+}
+@media (min-width: 1024px) {
+  .banner-img__3 {
+    top: unset;
+    bottom: 10%;
+    right: 430px;
+    width: 120px;
+    height: 120px;
+  }
 }
 .banner-img__4 {
   right: 20px;
@@ -1956,12 +1999,30 @@ Banner
   height: 140px;
   width: 160px;
 }
+@media (min-width: 1024px) {
+  .banner-img__4 {
+    right: 0;
+    bottom: 1rem;
+    transform: unset;
+    height: 360px;
+    width: 310px;
+  }
+}
 .banner-img__5 {
-  top: 50%;
-  right: 70px;
-  transform: translateY(-50%);
-  width: 54px;
-  height: 54px;
+  bottom: 1rem;
+  right: 1rem;
+  height: 180px;
+  width: 135px;
+}
+@media (min-width: 1024px) {
+  .banner-img__5 {
+    top: 50%;
+    right: 180px;
+    bottom: unset;
+    transform: translateY(-50%);
+    height: 400px;
+    width: 300px;
+  }
 }
 
 /*-------------------------------------------*\ 
@@ -1972,12 +2033,12 @@ About
 }
 @media (min-width: 1024px) {
   .about__section {
+    position: relative;
     display: grid;
     align-items: center;
     justify-content: center;
-    min-height: 40vh;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    min-height: 20vh;
+    padding-block: 4rem;
     box-sizing: border-box;
   }
 }

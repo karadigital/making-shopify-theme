@@ -4,20 +4,31 @@ Banner
 .banner {
 	&__section {
 		position: relative;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-		height: 850px;
+
 		background: url("../image/banner-bg-mobile.png") no-repeat;
 		background-position: right;
 		background-size: cover;
+
+		padding-block: 3rem;
+		height: 850px;
 
 		@include desktop-up {
 			display: grid;
 			grid-template-columns: 4fr 5fr;
 			align-items: start;
+
+			background-size: cover;background: url("../image/banner-bg-desktop.png") no-repeat;
+			background-position: right;
+			background-size: cover;
+			height: 1110px;
 		}
 	}
-
+	&-img__list {
+		@include desktop-up {
+			position: relative;
+			height: 100%;
+		}
+	}
 	&__text {
 		position: sticky;
 		top: 5vh;
@@ -29,6 +40,10 @@ Banner
 
 		width: 100%;
 		height: 90vh;
+
+		@include desktop-up {
+			height: unset;
+		}
 	}
 
 	&-img {
@@ -36,6 +51,7 @@ Banner
 
 		background-color: $grey-1;
 		box-shadow: 0px 4px 4px rgba($color: #B2A9A2, $alpha: 0.25);
+		overflow: hidden;
 	}
 
 	&-img__1 {
@@ -44,21 +60,48 @@ Banner
 
 		height: 200px;
 		width: 145px;
+
+		@include desktop-up {
+			top: 50px;
+			right: 1rem;
+			left: unset;
+
+			height: 340px;
+			width: 250px;
+		}
 	}
 
 	&-img__2 {
-		right: 1rem;
 		top: 120px;
+		right: 1rem;
 
 		height: 140px;
 		width: 105px;
-	}
-	&-img__3 {
-		bottom: 1rem;
-		right: 1rem;
 
-		height: 180px;
-		width: 135px;
+		@include desktop-up {
+			top: 170px;
+			right: 410px;
+			// transform: translateX(-50%);
+
+			height: 320px;
+			width: 230px;
+		}
+	}
+	
+	&-img__3 {
+		top: 50%;
+		right: 70px;
+
+		transform: translateY(-50%);
+		@include square(54px, $radius: 0);
+
+		@include desktop-up {
+			top: unset;
+			bottom: 10%;
+			right: calc(310px + 120px);
+
+			@include square(120px, $radius: 0);
+		}
 	}
 
 	&-img__4 {
@@ -68,15 +111,34 @@ Banner
 
 		height: 140px;
 		width: 160px;
+
+		@include desktop-up {
+			right: 0;
+			bottom: 1rem;
+			transform: unset;
+
+			height: 360px;
+			width: 310px;
+		}
 	}
 
 	&-img__5 {
-		top: 50%;
-		right: 70px;
+		bottom: 1rem;
+		right: 1rem;
 
-		transform: translateY(-50%);
-		@include square(54px, $radius: 0);
+		height: 180px;
+		width: 135px;
+
+		@include desktop-up {
+			top: 50%;
+			right: 180px;
+			bottom: unset;
+			transform: translateY(-50%);
+			height: 400px;
+			width: 300px;
+		}
 	}
+
 }
 /*-------------------------------------------*\ 
 About
@@ -85,14 +147,15 @@ About
 	&__section {
 		overflow: hidden;
 		@include desktop-up {
+			position: relative;
+			
 			display: grid;
 			align-items: center;
 			justify-content: center;
 
-			min-height: 40vh;
+			min-height: 20vh;
 
-			padding-top: 2rem;
-			padding-bottom: 2rem;
+			padding-block: 4rem;
 			box-sizing: border-box;
 		}
 	}
