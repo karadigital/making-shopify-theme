@@ -518,7 +518,7 @@
 
   <!-- Modal -->
 
-  <div id="modal-sizing-guide" class="modal__wrapper">
+  <div id="modal-quick-view" class="modal__wrapper">
     <div class="modal__content d-grid cols-lg-2 align-items-start">
       <div class="quick-view__img">
         <img src="./static/image/img-template-1.png" alt="template" class="img-object-cover">
@@ -528,7 +528,7 @@
           <div class="d-grid rg-8px">
             <div class="d-flex justify-content-between">
               <h2 class="heading-4">Large Bali Harmony Ball</h2>
-              <img src="./static/image/close.svg" onclick="openModal('modal-sizing-guide','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
+              <img src="./static/image/close.svg" onclick="openModal('modal-quick-view','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
             </div>
             <div class="d-flex align-items-center cg-8px">
               <p class="label text-light-dark line-through">$210.00</p>
@@ -617,111 +617,9 @@
     integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous">
   </script>
-  <script>
-    document.addEventListener( 'DOMContentLoaded', function () {
-      // Initialize Splide for the testimonials slider
-      let testimonialsSlider = new Splide( '#testimonials-slider', {
-        type       : "loop",
-        gap        : "5%",
-        rewind     : false,
-        pagination : false,
-        isNavigation: false,
-        perPage: 3,
-        perMove: 1,
-        arrows: false,
-        drag: true,
-        breakpoints: {
-          640: {
-            drag: true,
-            perPage: 1,
-          },
-        }
-      });
-  
-      var testimonialBar = testimonialsSlider.root.querySelector( '.progress-status-slider' );
-  
-      // Updates the bar width whenever the carousel moves:
-      testimonialsSlider.on( 'mounted move', function () {
-        var end  = testimonialsSlider.Components.Controller.getEnd() + 1;
-        var rate = Math.min( ( testimonialsSlider.index + 1 ) / end, 1 );
-        testimonialBar.style.width = String( 100 * rate ) + '%';
-      });
-  
-      testimonialsSlider.mount();
 
-      // Register GSAP ScrollTrigger plugin
-      gsap.registerPlugin(ScrollTrigger);
-      
-      let mm = gsap.matchMedia();
-
-        mm.add({
-          isMobile: "(max-width: 500px)",
-          isDesktop: "(min-width: 501px)",
-
-        }, (context) => {
-          let{isMobile, isDesktop} = (context.conditions);
-
-          if (isMobile) {
-            // Define mobile-specific animations with ScrollTrigger properties
-            console.log("is mobile")
-            let tlMobile = gsap.timeline({
-              defaults: { duration: 0.5 }, // Adjust the duration of individual animations
-              scrollTrigger: {
-                trigger: ".about__section",
-                start: "top 15%",
-                end: "top 10%",
-                scrub: 1,
-                pin: true,
-                markers: false,
-              }
-            });
-            
-            tlMobile.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust x and opacity as needed
-                  .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
-
-          } else {
-            console.log('is desktop');
-            let tlDesktop = gsap.timeline({
-              defaults: { duration: 0.5 }, // Adjust the duration of individual animations
-              scrollTrigger: {
-                trigger: ".about__section",
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-                markers: false,
-              }
-            });
-
-            tlDesktop.from("#text-1", { xPercent: -50, opacity: 0 }) // Adjust x and opacity as needed
-               .from("#text-2", { xPercent: 50, opacity: 0 }, 0);
-          };
-
-        });
-    });
-
-  </script>
-  <script>
-    // Modals
-    openModal = (id, str) => {
-      if (str === 'open') {
-        $('#' + id).addClass('visible');
-        $("body").css("overflow", "hidden");
-
-        // Add event listener to close modal when clicking outside of modal__content
-        $('#' + id).on('click', function(event) {
-          if ($(event.target).hasClass('modal__wrapper')) {
-            closeModal(id);
-          }
-        });
-      } else {
-        closeModal(id);
-      }
-    }
-    
-    closeModal = (id) => {
-      $('#' + id).removeClass('visible');
-      $("body").css("overflow", "auto");
-    }
-  </script>
+  <script src="./static/js/modal.js"></script>
+  <script src="./static/js/testimonials-slider.js"></script>
+  <script src="./static/js/gsap-animation.js"></script>
 </body>
 </html>
