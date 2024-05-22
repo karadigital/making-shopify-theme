@@ -18,7 +18,7 @@
         @include desktop-up {
             position: sticky;
             top: calc(70px + 1rem);
-            background: $white;
+            background: transparent;
             
             & > div {
                 display: grid;

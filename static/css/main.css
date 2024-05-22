@@ -1589,9 +1589,70 @@ Blog Card - Home Page
   }
 }
 
-.discount {
-  color: #958F8F;
-  text-decoration-line: line-through;
+.product-card:hover .btn {
+  display: flex;
+}
+
+.product-secondary__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.product-card:hover .product__img .product-secondary__img {
+  opacity: 1;
+}
+
+.product-card:hover .btn {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.product-card:hover .product__img .product-first__img {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.product__img {
+  position: relative;
+  background-color: #FAFAFA;
+  border-radius: 8px;
+  height: 175px;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .product__img {
+    height: 315px;
+  }
+}
+.product__img .chips {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.product__img .btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  width: calc(100% - 2rem);
+  opacity: 0;
+  transition: opacity 0.25 ease-in-out;
+}
+@media (min-width: 1024px) {
+  .product__img--home {
+    height: 280px;
+  }
+}
+@media (min-width: 1440px) {
+  .product__img--home {
+    height: 315px;
+  }
+}
+.product__img--kit {
+  height: 285px;
 }
 
 .progress-bar {
@@ -1668,7 +1729,7 @@ Blog Card - Home Page
   .tabs__wrapper--product {
     position: sticky;
     top: calc(70px + 1rem);
-    background: #FCFCFC;
+    background: transparent;
   }
   .tabs__wrapper--product > div {
     display: grid;
@@ -2131,6 +2192,13 @@ Video
     min-height: 450px;
   }
 }
+.video__section iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 
 /*-------------------------------------------*\ 
 Featured
@@ -2278,37 +2346,6 @@ Hotspot
     align-items: start;
     cursor: pointer;
   }
-}
-
-.product__img {
-  position: relative;
-  background-color: #FAFAFA;
-  border-radius: 8px;
-  height: 175px;
-  overflow: hidden;
-}
-@media (min-width: 1024px) {
-  .product__img {
-    height: 315px;
-  }
-}
-.product__img .chips {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-@media (min-width: 1024px) {
-  .product__img--home {
-    height: 280px;
-  }
-}
-@media (min-width: 1440px) {
-  .product__img--home {
-    height: 315px;
-  }
-}
-.product__img--kit {
-  height: 285px;
 }
 
 .product-more {

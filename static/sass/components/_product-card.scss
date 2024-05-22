@@ -1,4 +1,73 @@
-.discount {
-  color: $light-dark;
-  text-decoration-line: line-through;
+.product-card:hover .btn {
+  display: flex;
+}
+
+.product-secondary__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.product-card:hover .product__img .product-secondary__img {
+  opacity: 1;
+}
+
+.product-card:hover .btn {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.product-card:hover .product__img .product-first__img {
+  // display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.product__img {
+  position: relative;
+  
+  background-color: $grey-2;
+  border-radius: 8px;
+  height: 175px;
+
+  overflow: hidden;
+  
+  @include desktop-up {
+    height: 315px;
+  }
+
+  .chips {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+
+    width: calc(100% - 2rem);
+
+    opacity: 0;
+    transition: opacity 0.25 ease-in-out;
+  }
+
+  &--home {
+    @include desktop-up {
+      height: 280px;
+    }
+
+    @include monitor-up {
+      height: 315px;
+    }
+  }
+
+  &--kit {
+    height: 285px;
+  }
 }

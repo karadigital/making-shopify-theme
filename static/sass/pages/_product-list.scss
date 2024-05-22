@@ -17,42 +17,6 @@
 	}
 }
 
-.product {
-	&__img {
-		position: relative;
-		
-		background-color: $grey-2;
-		border-radius: 8px;
-		height: 175px;
-
-		overflow: hidden;
-		
-		@include desktop-up {
-			height: 315px;
-		}
-
-		.chips {
-			position: absolute;
-			right: 10px;
-			top: 10px;
-		}
-
-		&--home {
-			@include desktop-up {
-				height: 280px;
-			}
-
-			@include monitor-up {
-				height: 315px;
-			}
-		}
-
-		&--kit {
-			height: 285px;
-		}
-	}
-}
-
 .product-more {
 	backdrop-filter: blur(12px);
 }

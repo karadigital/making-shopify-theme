@@ -255,6 +255,12 @@ Video
 		@include desktop-up {
 			min-height: 450px;
 		}
+		iframe {
+			position: absolute;
+			@include square(100%, $radius: 0);
+			object-fit: cover;
+			z-index: -1;
+		}
 	}
 }
 /*-------------------------------------------*\ 
