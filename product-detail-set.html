@@ -22,7 +22,7 @@
       <ul class="nav-links">
         <label for="close-btn" class="close-btn mobile-only"><img src="./static/image/close.svg" alt="close icon"></label>
         <li>
-          <a href="#" class="desktop-only">Shops</a>
+          <span class="desktop-only cursor-pointer">Shops</span>
           <input type="checkbox" id="showMega" class="desktop-only d-none">
           <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
           <div class="mega-box section__padding nav-desktop__mega-menu">
@@ -86,7 +86,7 @@
           </div>
         </li>
         <li>
-          <a href="#" class="desktop-only">Jewellry</a>
+          <span class="desktop-only cursor-pointer">Jewellry</span>
           <input type="checkbox" id="showDrop" class="d-none">
           <label for="showDrop" class="mobile-item mobile-only medium">Jewellry</label>
           <ul class="drop-menu">
@@ -250,10 +250,12 @@
   <section class="section__wrapper section__padding d-grid rg-32px pb-5">
     <h2 class="title-4 text-center">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product template" class="img-object-cover">
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -262,11 +264,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product template" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -275,11 +279,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product template" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -288,11 +294,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product template" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -301,7 +309,7 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
   <!-- Newsletter -->
@@ -454,6 +462,7 @@
       <div class="btn w-100" onclick="openModal('modal-side-cart', 'open')">Add Set to Cart</div>
     </div>
   </div>
+  <!-- Make into component and add prod counter to top right corner  -->
   <div id="modal-side-cart" class="modal__wrapper">
     <div class="modal__content modal__content--cart">
       <div class="d-flex justify-content-between px-3 py-3 pb-2 border-bottom-grey-4">
@@ -534,7 +543,10 @@
           <div class="heading-4 semi-bold">$480.00</div>
         </div>
         <p class="label text-center text-light-dark">Tax included and shipping calculated at checkout</p>
-
+        <div class="d-flex cg-16px">
+          <a href="./cart.html" class="btn btn--white w-100">View Cart</a>
+          <div class="btn w-100">Checkout</div>
+        </div>
       </div>
     </div>
   </div>

@@ -21,7 +21,7 @@
       <ul class="nav-links">
         <label for="close-btn" class="close-btn mobile-only"><img src="./static/image/close.svg" alt="close icon"></label>
         <li>
-          <a href="#" class="desktop-only">Shops</a>
+          <span class="desktop-only cursor-pointer">Shops</span>
           <input type="checkbox" id="showMega" class="desktop-only d-none">
           <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
           <div class="mega-box section__padding nav-desktop__mega-menu">
@@ -85,7 +85,7 @@
           </div>
         </li>
         <li>
-          <a href="#" class="desktop-only">Jewellry</a>
+          <span class="desktop-only cursor-pointer">Jewellry</span>
           <input type="checkbox" id="showDrop" class="d-none">
           <label for="showDrop" class="mobile-item mobile-only medium">Jewellry</label>
           <ul class="drop-menu">
@@ -110,8 +110,8 @@
     </div>
   </nav>
   <!-- Content -->
-  <section class="section__wrapper section__paddin">
-    <div class="d-flex cg-8px text-grey-4 pb-5 pt-3">Home / <span class="text-black">My Cart</span></div>
+  <section class="section__wrapper section__padding">
+    <div class="d-flex cg-8px text-grey-4 pb-5 pt-3"><a href="./index.html">Home</a> / <span class="text-black">My Cart</span></div>
   </section>
   <section class="section__wrapper section__padding cart__section">
     <h1 class="heading-2">My Cart</h1>
@@ -192,17 +192,19 @@
       </div>
       <p class="label text-center">Tax included and shipping calculated at checkout</p>
       <button type="submit" class="btn btn--circle w-100 mx-auto">Checkout</button>
-      <a href="" class="d-flex justify-content-center text-gold semi-bold">Continue shopping</a>
+      <a href="./product-list.html" class="d-flex justify-content-center text-gold semi-bold">Continue shopping</a>
     </div>
   </section>
   <!-- You May Also Like -->
   <section class="section__wrapper section__padding desktop-only d-grid rg-32px pb-5">
     <h2 class="title-4 text-center pb-5">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -211,11 +213,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -224,11 +228,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -237,11 +243,13 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
-      <div class="d-grid rg-8px">
-        <div class="product__img">
-          <img src="./static/image/product-template.png" alt="product image" class="img-object-cover">
+      </a>
+      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img img-object-cover">
           <div class="chips small">Sold Out</div>
+          <div class="btn">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
           <p class="label">Polar Watch</p>
@@ -250,7 +258,7 @@
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
   <!-- Footer -->

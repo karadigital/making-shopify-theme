@@ -1,4 +1,6 @@
 .accordion__item {
+	position: relative;
+
 	border-bottom: 1px solid $grey-4;
 	border-radius: 3px;
 
@@ -22,28 +24,30 @@
 	}
 
 	.accordion__content {
-		max-height: 0;
+		// max-height: 0;
 
-		opacity: 0;
-		overflow: hidden;
-		transition: all 0.75s ease; /* Adjusted transition timing */
+		// opacity: 0;
+		// overflow: hidden;
+		display: none;
+		// transition: all 0.75s ease; /* Adjusted transition timing */
 		
 		p { 
 			padding-bottom: 1rem;
 		}
 	}
 
-	input {
+	input[type="radio"] {
 		position: absolute;
 		top: 0;
 		width: 0.1px;
 		opacity: 0;
 	}
 
-	input:checked ~ .accordion__content {
-		max-height: 100vh;
+	input:checked + label + .accordion__content {
+		display: block;
 		opacity: 1;
 	}
+
 	input:checked + label div {
 		.minus {display: block;}
 		.plus { display: none;}
