@@ -11,10 +11,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Prata&display=swap" rel="stylesheet"></head>
 <body>
   <nav>
-    <div class="wrapper section__padding nav__wrapper">
+    <div class="section__wrapper section__padding nav__wrapper">
       <input type="radio" name="slider" id="close-btn" class="d-none">
       <label for="menu-btn" class="menu-btn mobile-only"><img src="./static/image/hamburger.svg" alt="hamburger icon"></label>
       <a href="./index.html"><img src="./static/image/kara-logo.svg" alt="company logo"></a>
@@ -368,7 +368,7 @@
   </footer>
 
   <!-- Modal -->
-
+  <!-- Modal custom-set -->
   <div id="modal-custom-set" class="modal__wrapper">
     <div class="modal__content modal__content--small d-grid rg-24px py-4 px-4">
       <img src="./static/image/close.svg" onclick="openModal('modal-custom-set','close')" alt="close icon" class="close-modal cursor-pointer ml-auto d-flex">
@@ -460,6 +460,9 @@
       </div>
       <p>Set Price: <span class="semi-bold">$257,990.00</span></p>
       <div class="btn w-100" onclick="openModal('modal-side-cart', 'open')">Add Set to Cart</div>
+      <!-- After loading, change to this code -->
+      <!-- <div class="btn w-100">Added to Cart</div> -->
+      <!-- And immediately the modal-side-cart is open-->
     </div>
   </div>
   <!-- Make into component and add prod counter to top right corner  -->
