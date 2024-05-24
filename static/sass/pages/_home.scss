@@ -292,6 +292,7 @@ Featured
 	&__title { grid-area: title; }
 	&__wrapper { grid-area: product-list; }
 	&__content {
+		position: relative;
 		@include desktop-up {
 			position: sticky;
 			top: 0;
@@ -308,6 +309,7 @@ Featured
 		padding: 1rem;
 	}
 }
+
 /*-------------------------------------------*\ 
 Testimonials
 \*-------------------------------------------*/
@@ -380,7 +382,7 @@ Hotspot
 		}
 	}
 
-	&__card {
+	&-card {
 		grid-area: card;
 	}
 }

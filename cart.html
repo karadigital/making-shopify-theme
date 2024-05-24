@@ -113,6 +113,7 @@
   <section class="section__wrapper section__padding">
     <div class="d-flex cg-8px text-grey-4 pb-5 pt-3"><a href="./index.html">Home</a> / <span class="text-black">My Cart</span></div>
   </section>
+  
   <section class="section__wrapper section__padding cart__section">
     <h1 class="heading-2">My Cart</h1>
     <div class="cart__list">
@@ -197,70 +198,71 @@
   </section>
   <!-- You May Also Like -->
   <section class="section__wrapper section__padding desktop-only d-grid rg-32px pb-5">
-    <h2 class="title-4 text-center pb-5">You May Also Like</h2>
+    <h2 class="title-4 text-center">You May Also Like</h2>
     <div class="d-grid rg-16px cg-16px cols-sm-2 cols-lg-4">
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="section__wrapper section__padding d-grid rg-24px cg-24px align-items-start py-4">
     <div class="d-grid rg-24px footer__header">
@@ -303,5 +305,204 @@
     </div>
     <p class="label footer__copyright">@2024 Store name. All Rights Reserved</p>
   </footer>
+
+  <!-- Modal quick view -->
+  <div id="modal-quick-view" class="modal__wrapper">
+    <div class="modal__content d-grid cols-lg-2 align-items-start">
+      <div id="quick-view-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide quick-view__img">
+              <img src="./static/image/trust-template.png" alt="template only" class="img-object-cover">
+            </li>
+            <li class="splide__slide quick-view__img">
+              <img src="./static/image/trust-template.png" alt="template only" class="img-object-cover">
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="quick-view__text">
+        <div class="d-grid rg-16px align-items-start modal-product__info">
+          <div class="d-grid rg-8px">
+            <div class="d-flex justify-content-between">
+              <h2 class="heading-4">Large Bali Harmony Ball</h2>
+              <img src="./static/image/close.svg" onclick="openModal('modal-quick-view','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
+            </div>
+            <div class="d-flex align-items-center cg-8px">
+              <p class="label text-light-dark line-through">$210.00</p>
+              <p class="subtitle semi-bold">$180.00</p>
+              <div class="chips small">Sale</div>
+            </div>
+          </div>
+          <p class="light">Handcrafted with traditional methods, the Harmony Ball Collection includes earrings and necklaces, adorned with the beautiful golden spheres known in Spain as ‘llamadores de Angeles’ which directly translates as ‘angel callers’ - inspired by the delicate subtle sound of the balls, scarcely audible but to the wearer. The Harmony Balls have a healing quality and create the harmonising sound their name derives from. The Harmony Balls have an intricate design and are created from sterling silver, plated in 18kt gold.
+          </p>
+          <hr class="w-100">
+          <div class="d-grid rg-8px">
+            <p id>COLOR: <span id="colorValue">18KT YELLOW GOLD</span></p>
+            <div class="d-flex cg-16px">
+              <div class="position-relative input-styled input-styled__circle">
+                <input type="radio" name="color" id="gold" value="GOLD" checked>
+                <label for="gold"></label>
+              </div>
+              <div class="position-relative input-styled input-styled__circle">
+                <input type="radio" name="color" id="silver" value="SILVER">
+                <label for="silver"></label>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between cg-16px">
+            <p class="small">Size: <span id="sizeValue">5</span></p>
+          </div>
+          <div class="d-flex justify-content-between cg-16px">
+            <div class="d-flex cg-16px">
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-5" value="5" checked>
+                <label for="size-5">
+                5
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-6" value="6">
+                <label for="size-6">
+                6
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-7" value="7">
+                <label for="size-7">
+                7
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-8" value="8">
+                <label for="size-8">
+                8
+                </label>
+              </div>
+              <div class="position-relative input-styled input-styled__square">
+                <input type="radio" name="size" id="size-9" value="9">
+                <label for="size-9">
+                9
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid rg-16px">
+            <p class="small">Quantity</p>
+            <div class="d-flex cg-16px justify-content-between">
+              <div class="counter">
+                <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+                <input type="text" placeholder="1" class="text-center">
+                <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+              </div>
+              <div class="btn btn--white w-100" onclick="openModal('modal-side-cart', 'open')"><img src="./static/image/shopping-cart.svg" alt="cart icon"> ADD TO CART</div>
+            </div>
+            <a href="" class="btn w-100">BUY IT NOW</a>
+          </div>
+        </div>
+        <a href="./product-detail.html" class="d-flex justify-content-between quick-view__more position-sticky">
+          <p class="medium">View Full Details</p>
+          <img src="./static/image/arrow-narrow-right.svg" alt="arrow icon">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal side cart -->
+  <!-- Make into component and add prod counter to top right corner  -->
+  <div id="modal-side-cart" class="modal__wrapper">
+    <div class="modal__content modal__content--cart">
+      <div class="d-flex justify-content-between px-3 py-3 pb-2 border-bottom-grey-4">
+        <h2 class="subtitle semi-bold">Shopping Cart</h2>
+        <img src="./static/image/close.svg" onclick="openModal('modal-side-cart','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
+      </div>
+      <div class="border-bottom-grey-4 px-3 py-4 pb-3">
+        <div class="d-grid rg-8px">
+          <p>Spend $172.00 more for FREE shipping</p>
+          <div class="progress-bar">
+            <div class="progress-status"></div>
+          </div>
+        </div>
+      </div>
+      <div class="px-3">
+        <div class="cart__item">
+          <div class="product-img">
+            <img src="./static/image/product-template.png" alt="product img" class="d-flex img-object-cover">
+          </div>
+          <p class="product-title">18K Gold Double Initial Custom Ring</p>
+          <div class="product-item__info d-grid rg-8px">
+            <div class="d-flex align-items-center cg-8px">
+              <p class="label text-light-dark line-through">$210.00</p>
+              <p class="label semi-bold">$180.000</p>
+            </div>
+            <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
+            <p class="small">Gemstone Quartz</p>
+            <p class="small">Size: 7</p>
+            <p class="small">Product Set: Layered Necklace Set</p>
+          </div>
+          <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
+          <div class="counter__wrapper d-flex align-items-center">
+            <div class="counter">
+              <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+              <input type="text" placeholder="1" class="text-center">
+              <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+            </div>
+            <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
+          </div>
+        </div>
+        <div class="cart__item">
+          <div class="product-img">
+            <img src="./static/image/product-template.png" alt="product img" class="d-flex img-object-cover">
+          </div>
+          <p class="product-title">18K Gold Double Initial Custom Ring</p>
+          <div class="product-item__info d-grid rg-8px">
+            <div class="d-flex align-items-center cg-8px">
+              <p class="label text-light-dark line-through">$210.00</p>
+              <p class="label semi-bold">$180.000</p>
+            </div>
+            <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
+            <p class="small">Gemstone Quartz</p>
+            <p class="small">Size: 7</p>
+            <p class="small">Product Set: Layered Necklace Set</p>
+          </div>
+          <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
+          <div class="counter__wrapper d-flex align-items-center">
+            <div class="counter">
+              <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
+              <input type="text" placeholder="1" class="text-center">
+              <img src="./static/image/plus.svg" alt="plus icon" class="cursor-pointer">
+            </div>
+            <img src="./static/image/trash-grey.svg" alt="trash icon" class="cursor-pointer">
+          </div>
+        </div>
+        <div class="d-grid rg-8px py-4">
+          <label for="order-text">Order Special Instructions</label>
+          <textarea name="" id="order-text" cols="10"></textarea>
+        </div>
+      </div>
+      <div class="side-cart__footer">
+        <div class="d-flex align-items-center justify-content-between">
+          <p>Savings</p>
+          <div class="text-red">-$120.00</div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between pb-2 border-bottom-light-dark">
+          <p class="">Subtotal</p>
+          <div class="heading-4 semi-bold">$480.00</div>
+        </div>
+        <p class="label text-center text-light-dark">Tax included and shipping calculated at checkout</p>
+        <div class="d-flex cg-16px">
+          <a href="./cart.html" class="btn btn--white w-100">View Cart</a>
+          <div class="btn w-100">Checkout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/modal.js"></script>
+  <script src="./static/js/quickview-link.js"></script>
+  <script src="./static/js/quickview-slider.js"></script>
 </body>
 </html>

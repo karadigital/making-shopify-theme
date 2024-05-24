@@ -11,7 +11,7 @@ Collection Card - Collection page
 Hotspot Card - Home Page
 \*-------------------------------------------*/
 .hotspot {
-	&__card {
+	&-card {
 		display: flex;
 		align-items: center;
 		column-gap: 8px;
@@ -36,6 +36,14 @@ Hotspot Card - Home Page
 		}
 		@include monitor-up {
 			height: 390px;
+		}
+
+		.btn {
+			display: none;
+
+			@include desktop-up {
+				display: flex;
+			}
 		}
 	}
 }

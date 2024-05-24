@@ -1376,21 +1376,21 @@ Collection Card - Collection page
 /*-------------------------------------------*\ 
 Hotspot Card - Home Page
 \*-------------------------------------------*/
-.hotspot__card {
+.hotspot-card {
   display: flex;
   align-items: center;
   column-gap: 8px;
 }
 @media (min-width: 1024px) {
-  .hotspot__card {
+  .hotspot-card {
     display: grid;
   }
 }
-.hotspot__card .btn {
+.hotspot-card .btn {
   margin-left: auto;
 }
 @media (min-width: 1024px) {
-  .hotspot__card .btn {
+  .hotspot-card .btn {
     display: none;
   }
 }
@@ -1405,6 +1405,14 @@ Hotspot Card - Home Page
 @media (min-width: 1440px) {
   .hotspot__img {
     height: 390px;
+  }
+}
+.hotspot__img .btn {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .hotspot__img .btn {
+    display: flex;
   }
 }
 
@@ -1530,6 +1538,20 @@ Blog Card - Home Page
     width: 450px;
   }
 }
+.modal__content--newsletter {
+  top: 50%;
+  bottom: unset;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: 90%;
+  border-radius: 16px;
+}
+@media (min-width: 1024px) {
+  .modal__content--newsletter {
+    max-width: 780px;
+    height: 380px;
+  }
+}
 .modal__content--cart {
   height: 100%;
   border-radius: unset;
@@ -1539,26 +1561,37 @@ Blog Card - Home Page
     top: 0;
     right: 0;
     left: unset;
+    transform: none;
     width: 360px;
     height: 100vh;
-    transform: none;
     border-radius: unset;
   }
 }
 
 .quick-view__img {
-  display: flex;
   height: 300px;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
   overflow: hidden;
 }
 @media (min-width: 1024px) {
   .quick-view__img {
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
+    height: 40rem;
+  }
+}
+@media (min-width: 1024px) {
+  .quick-view__text {
+    overflow: auto;
     height: 100%;
   }
+}
+.quick-view__more {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1rem;
+  backdrop-filter: blur(12px);
 }
 
 .modal-product__info {
@@ -1572,21 +1605,6 @@ Blog Card - Home Page
   }
 }
 
-.product-more {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .modal__text {
-    overflow: auto;
-    height: 100%;
-  }
-}
-
 .product-card {
   position: relative;
 }
@@ -1596,18 +1614,24 @@ Blog Card - Home Page
 }
 
 .product-secondary__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.25s ease-in-out;
-  opacity: 0;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .product-secondary__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+  }
 }
 
 .product-card:hover .product__img .product-secondary__img {
   opacity: 1;
 }
 
-.product-card:hover .btn {
+.product-card:hover .btn, .hotspot-card:hover .btn {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
 }
@@ -1635,15 +1659,6 @@ Blog Card - Home Page
   right: 10px;
   top: 10px;
 }
-.product__img .btn {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem;
-  width: calc(100% - 2rem);
-  opacity: 0;
-  transition: opacity 0.25 ease-in-out;
-}
 @media (min-width: 1024px) {
   .product__img--home {
     height: 280px;
@@ -1656,6 +1671,23 @@ Blog Card - Home Page
 }
 .product__img--kit {
   height: 285px;
+}
+
+@media (min-width: 1024px) {
+  .product-card .btn, .hotspot-card .btn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    width: calc(100% - 2rem);
+    opacity: 0;
+    transition: opacity 0.25 ease-in-out;
+  }
+}
+
+.product-card .btn {
+  display: none;
 }
 
 .progress-bar {
@@ -2227,6 +2259,9 @@ Featured
 .featured__wrapper {
   grid-area: product-list;
 }
+.featured__content {
+  position: relative;
+}
 @media (min-width: 1024px) {
   .featured__content {
     position: sticky;
@@ -2305,7 +2340,7 @@ Hotspot
     height: 625px;
   }
 }
-.hotspot__card {
+.hotspot-card {
   grid-area: card;
 }
 
@@ -2357,10 +2392,6 @@ Hotspot
     align-items: start;
     cursor: pointer;
   }
-}
-
-.product-more {
-  backdrop-filter: blur(12px);
 }
 
 .product__section {
@@ -2752,6 +2783,20 @@ Hotspot
 }
 .splide .splide__arrow--prev {
   left: 0;
+}
+.splide .splide__pagination__page {
+  background: #FCFCFC;
+  outline: 1px solid #CFB885;
+}
+.splide .splide__pagination__page.is-active {
+  background: #CFB885;
+  transform: scale(1);
+}
+.splide .splide__track--nav > .splide__list > .splide__slide {
+  border: none;
+}
+.splide .splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */

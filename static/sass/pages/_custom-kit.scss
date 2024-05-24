@@ -78,4 +78,19 @@
 	.splide__arrow--prev {
 		left: 0;
 	}
+	
+	.splide__pagination__page {
+		background: $white;
+		outline: 1px solid $gold;
+		&.is-active {
+			background: $gold;
+			transform: scale(1);
+		}
+	}
+	.splide__track--nav>.splide__list>.splide__slide {
+		border: none;
+		&.is-active {
+			border: none;
+		}
+	}
 }

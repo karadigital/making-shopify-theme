@@ -7,19 +7,23 @@
 }
 
 .product-secondary__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  transition: opacity 0.25s ease-in-out;
-  opacity: 0;
+  display: none;
+  @include desktop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    display: block;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+  }
 }
 
 .product-card:hover .product__img .product-secondary__img {
   opacity: 1;
 }
 
-.product-card:hover .btn {
+.product-card:hover .btn, .hotspot-card:hover .btn {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
 }
@@ -50,18 +54,6 @@
     top: 10px;
   }
 
-  .btn {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-
-    width: calc(100% - 2rem);
-
-    opacity: 0;
-    transition: opacity 0.25 ease-in-out;
-  }
-
   &--home {
     @include desktop-up {
       height: 280px;
@@ -75,4 +67,26 @@
   &--kit {
     height: 285px;
   }
+}
+
+.product-card, .hotspot-card {
+  .btn {
+
+    @include desktop-up {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      
+      display: flex;
+      width: calc(100% - 2rem);
+  
+      opacity: 0;
+      transition: opacity 0.25 ease-in-out;
+    }
+  }
+}
+
+.product-card .btn {
+  display: none; // So the customer won't press the button on mobile
 }

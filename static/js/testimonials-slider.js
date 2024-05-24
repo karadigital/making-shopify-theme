@@ -8,10 +8,12 @@ let testimonialsSlider = new Splide( '#testimonials-slider', {
     perMove: 1,
     arrows: false,
     drag: true,
+    autoplay: false,
     breakpoints: {
         640: {
         drag: true,
         perPage: 1,
+        autoplay: true,
         },
     }
     });

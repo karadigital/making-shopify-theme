@@ -39,7 +39,7 @@
 	border-top-right-radius: 16px;
 
 	overflow: auto;
-
+	
 	@include desktop-up {
 		bottom: unset;
 		top: 50%;
@@ -55,6 +55,21 @@
 			width: 450px;
 		}
 	}
+
+	&--newsletter {
+		top: 50%;
+		bottom: unset;
+		transform: translate(-50%, -50%);
+		
+		height: max-content;
+		width: 90%;
+		border-radius: 16px;
+		@include desktop-up {
+			max-width: 780px;
+			height: 380px;
+		}
+	}
+
 	&--cart {
 		height: 100%;
 		border-radius: unset;
@@ -62,50 +77,56 @@
 			top: 0;
 			right: 0;
 			left: unset;
+			transform: none;
+
 			width: 360px;
 			height: 100vh;
-			transform: none;
 			border-radius: unset;
 		}
 	}
 }
 
-.quick-view__img {
-	display: flex;
-	height: 300px;
-	border-top-left-radius: 16px;
-	border-top-right-radius: 16px;
-	overflow: hidden;
-	@include desktop-up {
-		border-top-right-radius: 0;
-		border-bottom-left-radius: 0;
-		height: 100%;
+.quick-view {
+	&__img {
+		// display: flex;
+
+		height: 300px;
+		// border-top-left-radius: 16px;
+		// border-top-right-radius: 16px;
+	
+		overflow: hidden;
+		@include desktop-up {
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 0;
+			height: 40rem;
+		}
+	}
+
+	&__text {
+		@include desktop-up {
+			overflow: auto;
+			height: 100%;
+		}
+	}
+
+	&__more {
+		position: sticky;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	
+		padding: 1rem;
+		backdrop-filter: blur(12px);
 	}
 }
 
 .modal-product__info {
 	position: relative; /* Ensure positioning context for sticky */
-	// padding: 1rem 1rem 3rem 1rem;
+	
 	min-height: 100%; /* Ensure a minimum height */
 	padding: 1rem;
 	
 	@include desktop-up {
 		overflow: auto;
-	}
-}
-
-.product-more {
-	position: sticky;
-    bottom: 0;
-    left: 0;
-	z-index: 1;
-
-	padding: 1rem;
-}
-
-.modal__text {
-	@include desktop-up {
-		overflow: auto;
-		height: 100%;
 	}
 }

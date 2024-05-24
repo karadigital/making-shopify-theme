@@ -114,7 +114,7 @@
   <section class="section__wrapper section__padding banner__section">
     <div class="d-grid rg-16px banner__text">
       <h1 class="title-1">Elevate Your Style: Explore Now</h1>
-      <a href="" class="btn btn--circle btn--white">
+      <a href="./collections.html" class="btn btn--circle btn--white">
         Shop Now
         <img src="./static/image/arrow-narrow-right.svg" alt="arrow right icon">
       </a>
@@ -191,7 +191,7 @@
   </section>
 
   <!-- Featured Products -->
-  <section class="position-relative section__wrapper section__padding d-grid rg-32px featured__section py-5">
+  <section class="position-relative section__wrapper section__padding rg-32px featured__section py-5">
     <h2 class="title-3 text-center featured__title">Featured Products</h2>
     <div class="featured__main">
       <div class="featured__content">
@@ -219,51 +219,51 @@
           </div>
         </div>
       </div>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
-      <a href="./product-detail.html" class="product-card d-grid rg-8px">
-        <div class="product__img product__img--home">
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
           <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
           <div class="chips small">Sold Out</div>
-          <div class="btn">Quick View</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
         </div>
         <div class="product__text d-grid rg-8px">
-          <p class="label">Polar Watch</p>
+          <a href="./product-detail.html" class="label">Polar Watch</a>
           <div class="d-flex align-items-center cg-8px">
             <p class="label text-light-dark line-through">$210.00</p>
             <p class="subtitle semi-bold">$180.00</p>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   </section>
   <!-- Store -->
@@ -419,9 +419,10 @@
       <p class="label text-gold">Premium Jewelry</p>
       <h2 class="title-4">Bring Quality Jewellry into Your Home</h2>
     </div>
-    <div class="hotspot__card">
-      <div class="hotspot__img">
+    <div class="hotspot-card">
+      <div class="hotspot__img position-relative cursor-pointer" onclick="navigateToProductPage()">
         <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+        <div class="btn" onclick="handleQuickViewClick(event)">View</div>
       </div>
       <div class="product__text d-grid rg-8px">
         <p class="label">Polar Watch</p>
@@ -430,7 +431,7 @@
           <p class="subtitle semi-bold">$180.00</p>
         </div>
       </div>
-      <div class="btn">View</div>
+      <div class="btn mobile-only" onclick="handleQuickViewClick(event)">View</div>
     </div>
     <div class="hotspot__banner">
       <img src="./static/image/hotspot-template.png" alt="banner" class="d-flex img-object-cover">
@@ -530,17 +531,18 @@
 
   <!-- Modal -->
   <!-- Modal newsletter -->
-  <div id="modal-newsletter" class="modal__wrapper visible">
-    <div class="modal__content d-grid cols-lg-2 align-items-start">
-      <div class="w-100 h-100">
-        <img src="./static/image/img-template-1.png" alt="template image" class="d-flex img-object-cover">
+  <!-- Display when customer open the home for the first time -->
+  <div id="modal-newsletter" class="modal__wrapper">
+    <div class="modal__content modal__content--newsletter d-grid cols-lg-2 align-items-start">
+      <div class="w-100 h-100 desktop-only">
+        <img src="./static/image/trust-template.png" alt="template image" class="d-flex img-object-cover">
       </div>
-      <div class="d-grid rg-24px">
+      <div class="d-grid rg-24px py-3 px-3">
         <img src="./static/image/close.svg" onclick="openModal('modal-newsletter','close')" alt="close icon" class="cursor-pointer ml-auto d-flex">
         <p class="title-4">Sign up and get 20% off your first order</p>
-        <div class="d-flex align-items-center cg-16px justify-content-center w-100 mx-auto">
+        <div class="d-grid rg-16px d-flex-md align-items-center cg-16px w-100 mx-auto">
           <input type="text" placeholder="Email address...">
-          <button type="submit" class="btn">Join</button>
+          <button type="submit" class="btn w-100">Join</button>
         </div>
         <p class="label text-dark-light">Subscribe to our newsletter and be the first to hear about our new arrivals, special promotions and online exclusives.</p>
         <div class="d-flex align-items-center cg-16px">
@@ -554,10 +556,23 @@
   <!-- Modal quick view -->
   <div id="modal-quick-view" class="modal__wrapper">
     <div class="modal__content d-grid cols-lg-2 align-items-start">
-      <div class="quick-view__img">
+      <!-- <div class="quick-view__img">
         <img src="./static/image/img-template-1.png" alt="template" class="d-flex img-object-cover">
+      </div> -->
+      <div id="quick-view-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide quick-view__img">
+              <img src="./static/image/trust-template.png" alt="template only" class="img-object-cover">
+            </li>
+            <li class="splide__slide quick-view__img">
+              <img src="./static/image/trust-template.png" alt="template only" class="img-object-cover">
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="modal__text">
+
+      <div class="quick-view__text">
         <div class="d-grid rg-16px align-items-start modal-product__info">
           <div class="d-grid rg-8px">
             <div class="d-flex justify-content-between">
@@ -636,7 +651,7 @@
             <a href="" class="btn w-100">BUY IT NOW</a>
           </div>
         </div>
-        <a href="./product-detail.html" class="d-flex justify-content-between product-more position-sticky">
+        <a href="./product-detail.html" class="d-flex justify-content-between quick-view__more position-sticky">
           <p class="medium">View Full Details</p>
           <img src="./static/image/arrow-narrow-right.svg" alt="arrow icon">
         </a>
@@ -742,6 +757,7 @@
 
   <script src="./static/js/modal.js"></script>
   <script src="./static/js/testimonials-slider.js"></script>
+  <script src="./static/js/quickview-slider.js"></script>
   <script src="./static/js/gsap-animation.js"></script>
   <script>
     function handleQuickViewClick(event) {
