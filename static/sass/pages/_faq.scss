@@ -16,7 +16,7 @@
 
     @include desktop-up {
       position: sticky;
-      top: 0;
+      top: calc(70px + 1rem); //height of nav + whitespace
     }
   }
 }

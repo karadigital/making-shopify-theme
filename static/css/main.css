@@ -1463,6 +1463,47 @@ Blog Card - Home Page
   height: 36px;
 }
 
+.input-styled {
+  position: relative;
+  display: flex;
+}
+.input-styled input {
+  position: absolute;
+  top: 0;
+  width: 0.1px;
+  height: 0.1px;
+}
+.input-styled__circle label {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #CFB885;
+  cursor: pointer;
+}
+.input-styled__circle input[type=radio]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  outline: 1px solid #222222;
+}
+.input-styled__circle:nth-child(2) label {
+  background-color: #C4C4C4;
+}
+.input-styled__square label {
+  outline: 1px solid #C4C4C4;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.input-styled__square input[type=radio]:checked + label {
+  outline: 2px solid #CFB885;
+}
+
 .logo__carousel {
   display: flex;
   background-color: #39302C;
@@ -1730,20 +1771,6 @@ Blog Card - Home Page
   width: 0;
 }
 
-.text-and-img__text {
-  padding: 1.5rem 5%;
-}
-@media (min-width: 1440px) {
-  .text-and-img__text {
-    padding: 1.5rem 5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .text-and-img__image {
-    height: 500px;
-  }
-}
-
 .tabs__wrapper {
   margin: 0 -1rem;
   padding: 0.5rem 1rem;
@@ -1778,6 +1805,20 @@ Blog Card - Home Page
 }
 .tabs__wrapper a.active {
   color: #222222;
+}
+
+.text-and-img__text {
+  padding: 1.5rem 5%;
+}
+@media (min-width: 1440px) {
+  .text-and-img__text {
+    padding: 1.5rem 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text-and-img__image {
+    height: 500px;
+  }
 }
 
 .underline-effect__text {
@@ -1819,47 +1860,6 @@ Blog Card - Home Page
 }
 .underline-effect__card:hover p::before {
   width: 75%;
-}
-
-.input-styled {
-  position: relative;
-  display: flex;
-}
-.input-styled input {
-  position: absolute;
-  top: 0;
-  width: 0.1px;
-  height: 0.1px;
-}
-.input-styled__circle label {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #CFB885;
-  cursor: pointer;
-}
-.input-styled__circle input[type=radio]:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  outline: 1px solid #222222;
-}
-.input-styled__circle:nth-child(2) label {
-  background-color: #C4C4C4;
-}
-.input-styled__square label {
-  outline: 1px solid #C4C4C4;
-  padding: 10px 16px;
-  cursor: pointer;
-}
-.input-styled__square input[type=radio]:checked + label {
-  outline: 2px solid #CFB885;
 }
 
 .rg-8px {
@@ -1991,6 +1991,30 @@ Blog Card - Home Page
   .cols-lg-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+}
+
+.splide .splide__arrow {
+  background-color: transparent !important;
+}
+.splide .splide__arrow--next {
+  right: 0;
+}
+.splide .splide__arrow--prev {
+  left: 0;
+}
+.splide .splide__pagination__page {
+  background: #FCFCFC;
+  outline: 1px solid #CFB885;
+}
+.splide .splide__pagination__page.is-active {
+  background: #CFB885;
+  transform: scale(1);
+}
+.splide .splide__track--nav > .splide__list > .splide__slide {
+  border: none;
+}
+.splide .splide__track--nav > .splide__list > .splide__slide.is-active {
+  border: none;
 }
 
 /*-------------------------------------------*\ 
@@ -2265,7 +2289,7 @@ Featured
 @media (min-width: 1024px) {
   .featured__content {
     position: sticky;
-    top: 0;
+    top: calc(70px + 1rem);
   }
 }
 .featured__text {
@@ -2663,7 +2687,7 @@ Hotspot
 @media (min-width: 1024px) {
   .faq__form {
     position: sticky;
-    top: 0;
+    top: calc(70px + 1rem);
   }
 }
 
@@ -2773,30 +2797,6 @@ Hotspot
 .kit__img {
   display: flex;
   width: 80px;
-}
-
-.splide .splide__arrow {
-  background-color: transparent !important;
-}
-.splide .splide__arrow--next {
-  right: 0;
-}
-.splide .splide__arrow--prev {
-  left: 0;
-}
-.splide .splide__pagination__page {
-  background: #FCFCFC;
-  outline: 1px solid #CFB885;
-}
-.splide .splide__pagination__page.is-active {
-  background: #CFB885;
-  transform: scale(1);
-}
-.splide .splide__track--nav > .splide__list > .splide__slide {
-  border: none;
-}
-.splide .splide__track--nav > .splide__list > .splide__slide.is-active {
-  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */
