@@ -24,7 +24,7 @@
           <span class="desktop-only cursor-pointer">Shops</span>
           <input type="checkbox" id="showMega" class="desktop-only d-none">
           <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
-          <div class="mega-box section__padding nav-desktop__mega-menu">
+          <div class="mega-box section__padding">
             <div class="d-grid rg-16px">
               <div class="d-grid rg-8px">
                 <img src="./static/image/img-template-1.png" alt="" class="w-100">
@@ -119,7 +119,7 @@
       <div class="product-list__wrapper">
         <div class="tabs__wrapper tabs__wrapper--product">
           <div class="">
-            <a id="tab-1" href="#all" class="whitespace-nowrap underline-effect__text active">All products</a>
+            <a id="tab-1" href="#all" class="whitespace-nowrap underline-effect__text active">All Products</a>
             <a id="tab-2" href="#watches" class="underline-effect__text">Watches</a>
             <a id="tab-3" href="#earrings" class="underline-effect__text">Earrings</a>
             <a id="tab-4" href="#rings" class="underline-effect__text">Rings</a>
@@ -141,7 +141,7 @@
             </select>
           </div>
           <div class="tabs__content">
-            <div id="watches" aria-labelledby="tab-2">
+            <div id="watches" aria-labelledby="tab-1">
               <div class="d-grid cols-sm-2 cols-lg-3 cg-sm-16px cg-lg-32px rg-32px">
                 <a href="./product-detail.html" class="product-card d-grid rg-8px">
                   <div class="product__img">
@@ -223,14 +223,20 @@
                 </a>
               </div>
             </div>
-            <div id="earrings" aria-labelledby="tab-3">
-              <p>Test 2</p>
+            <div id="earrings" aria-labelledby="tab-2">
+              <p>Test earrings</p>
             </div>
-            <div id="rings" aria-labelledby="tab-4">
-              <p>Test 3</p>
+            <div id="rings"  aria-labelledby="tab-3">
+              <p>Test rings</p>
             </div>
-            <div id="pendants" aria-labelledby="tab-5">
-              <p>Test 4</p>
+            <div id="pendants" aria-labelledby="tab-4">
+              <p>Test pendants</p>
+            </div>
+            <div id="anklets" aria-labelledby="tab-5">
+              <p>Test anklets</p>
+            </div>
+            <div id="bracelets" aria-labelledby="tab-6">
+              <p>Test bracelets</p>
             </div>
           </div>
         </div>
@@ -293,45 +299,5 @@
   </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<script>
-  $(document).ready(function(){
-    // Add active class to the first tab
-    $(".tabs__wrapper a:first").addClass("active");
-
-    // Tab switching functionality
-    $(".tabs__wrapper a").click(function(event){
-        // Prevent default scrolling behavior
-        event.preventDefault();
-
-        // If the clicked tab is already active, return false
-        if($(this).hasClass("active")) return false;
-
-        // Remove the active class from all tabs
-        $(".tabs__wrapper a").removeClass("active");
-        // Add the active class to the clicked tab
-        $(this).addClass("active");
-
-        // Hide all tab content
-        $(".tabs__content > div").hide();
-        // Show the corresponding tab content
-        var tab_id = $(this).attr("href");
-        $(tab_id).show();
-    });
-
-    // Show all products when clicking "All Products" tab
-    $(".tabs__wrapper a[href='#all']").click(function(event){
-        // Prevent default scrolling behavior
-        event.preventDefault();
-
-        // Remove active class from all tabs
-        $(".tabs__wrapper a").removeClass("active");
-        // Add active class to "All Products" tab
-        $(this).addClass("active");
-
-        // Show all tab content
-        $(".tabs__content > div").show();
-    });
-});
-</script>
+<script src="./static/js/tabs-collections.js"></script>
 </html>

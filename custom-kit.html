@@ -26,7 +26,7 @@
           <span class="desktop-only cursor-pointer">Shops</span>
           <input type="checkbox" id="showMega" class="desktop-only d-none">
           <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
-          <div class="mega-box section__padding nav-desktop__mega-menu">
+          <div class="mega-box section__padding">
             <div class="d-grid rg-16px">
               <div class="d-grid rg-8px">
                 <img src="./static/image/img-template-1.png" alt="" class="w-100">
@@ -864,51 +864,17 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
-$(document).ready(function(){
-  // Cache the tab and content selectors
-  const $tabs = $(".tabs__wrapper a");
-  const $content = $(".tabs__content > div");
-
-  // Add active class to the first tab and show its content, hide the others
-  $tabs.first().addClass("active");
-  $content.hide().first().show();
-
-  // Tab switching functionality
-  $tabs.click(function(event) {
-    // Prevent default scrolling behavior
-    event.preventDefault();
-
-    // If the clicked tab is already active, return false
-    if ($(this).hasClass("active")) return false;
-
-    // Remove the active class from all tabs
-    $tabs.removeClass("active");
-    // Add the active class to the clicked tab
-    $(this).addClass("active");
-
-    // Hide all tab content
-    $content.hide();
-    // Show the corresponding tab content
-    const tab_id = $(this).attr("href");
-    $(tab_id).show();
+  $(document).ready(function(){
+    // Initialize Splide sliders
+    $(".splide").each(function() {
+      initializeSplideSlider(this);
+    });
   });
-
-  // Initialize Splide sliders
-  $(".splide").each(function() {
-    initializeSplideSlider(this);
-  });
-});
 
 function initializeSplideSlider(selector) {
   let slider = new Splide(selector, {
     // type       : "loop",
     gap        : "3%",
-    // autoWidth: true,
-    // padding: {
-    //   left : 'calc(24px + 1rem)', // Ensure enough padding on the left
-    //   right: 'calc(24px + 1rem)'  // Ensure enough padding on the right
-    // },
-    // rewind     : false,
     pagination : false,
     isNavigation: false,
     perPage: 3,
@@ -925,19 +891,20 @@ function initializeSplideSlider(selector) {
     }
   });
 
-  var progressBar = slider.root.querySelector('.progress-status-slider');
-  if (progressBar) {
-    // Updates the bar width whenever the carousel moves:
-    slider.on('mounted move', function () {
-      var end = slider.Components.Controller.getEnd() + 1;
-      var rate = Math.min((slider.index + 1) / end, 1);
-      progressBar.style.width = String(100 * rate) + '%';
-    });
-  }
+    var progressBar = slider.root.querySelector('.progress-status-slider');
+    if (progressBar) {
+      // Updates the bar width whenever the carousel moves:
+      slider.on('mounted move', function () {
+        var end = slider.Components.Controller.getEnd() + 1;
+        var rate = Math.min((slider.index + 1) / end, 1);
+        progressBar.style.width = String(100 * rate) + '%';
+      });
+    }
 
-  slider.mount();
-  return slider;
-}
+    slider.mount();
+    return slider;
+  }
   </script>
+  <script src="./static/js/tabs-products.js"></script>
 </body>
 </html>

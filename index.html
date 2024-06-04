@@ -25,7 +25,7 @@
           <span class="desktop-only cursor-pointer">Shops</span>
           <input type="checkbox" id="showMega" class="desktop-only d-none">
           <label for="showMega" class="mobile-item mobile-only medium">Shops</label>
-          <div class="mega-box section__padding nav-desktop__mega-menu">
+          <div class="mega-box section__padding">
             <div class="d-grid rg-16px">
               <div class="d-grid rg-8px">
                 <img src="./static/image/img-template-1.png" alt="" class="w-100">
@@ -102,7 +102,76 @@
         <li><a href="#">News</a></li>
       </ul>
       <div class="d-flex align-items-center cg-8px">
-        <img src="./static/image/search.svg" alt="search icon">
+        <div class="nav-search">
+          <div>
+            <!-- <span class="cursor-pointer"></span> -->
+            <input type="checkbox" id="showSearch">
+            <label for="showSearch" class="medium">
+              <img src="./static/image/search.svg" alt="search icon">
+            </label>
+            <div class="search-box section__padding">
+
+              <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" class="mb-3">
+              <!-- Display search before inputting -->
+              <!-- <div class="search-default">
+                <p class="semi-bold">Popular Categories</p>
+                <div class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">All products</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Bracelets</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Earrings</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Rings</p>
+                </div>
+                <div class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Pendants</p>
+                </div>
+              </div> -->
+
+              <div class="search-result">
+                <!-- Need to be fix. Only show 1 tab content when active -->
+                <div class="tabs__wrapper">
+                  <div class="">
+                    <a id="tab-1" href="#search-result-product" class="underline-effect__text active">Products</a>
+                    <a id="tab-2" href="#search-result-collections" class="underline-effect__text">Collections</a>
+                    <a id="tab-3" href="#search-result-articles" class="underline-effect__text">Articles</a>
+                  </div>
+                </div>
+
+                <div class="tabs__content">
+                  <div id="search-result-product" aria-labelledby="tab-1">
+                    test 1
+                  </div>
+                  <div id="search-result-collections" aria-labelledby="tab-2">
+                    <p>Test 2</p>
+                  </div>
+                  <div id="search-result-articles" aria-labelledby="tab-3">
+                    <p>Test 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="d-flex">
           <img src="./static/image/shopping-cart.svg" alt="">
           <p class="small counter-text">0</p>
@@ -759,6 +828,8 @@
   <script src="./static/js/testimonials-slider.js"></script>
   <script src="./static/js/quickview-slider.js"></script>
   <script src="./static/js/gsap-animation.js"></script>
+  <script src="./static/js/tabs-products.js"></script>
+
   <script>
     function handleQuickViewClick(event) {
       event.stopPropagation(); // Prevent the click event from propagating to the product image
