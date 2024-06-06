@@ -1533,6 +1533,7 @@ Blog Card - Home Page
   top: 0;
   width: 0.1px;
   height: 0.1px;
+  opacity: 0;
 }
 .input-styled__circle label {
   position: relative;
@@ -1551,7 +1552,7 @@ Blog Card - Home Page
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  outline: 1px solid #222222;
+  border: 1px solid #222222;
 }
 .input-styled__circle:nth-child(2) label {
   background-color: #C4C4C4;
@@ -1699,6 +1700,7 @@ Blog Card - Home Page
 .modal-product__info {
   position: relative; /* Ensure positioning context for sticky */
   padding: 1rem;
+  box-sizing: border-box;
 }
 @media (min-width: 1024px) {
   .modal-product__info {
