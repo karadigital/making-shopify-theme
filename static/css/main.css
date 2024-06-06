@@ -1312,7 +1312,7 @@ footer .footer__copyright {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-block: 1rem;
+  padding-block: 0.75rem;
   cursor: pointer;
 }
 .accordion__item .minus {
@@ -1320,11 +1320,9 @@ footer .footer__copyright {
 }
 .accordion__item .accordion__content {
   display: none;
-}
-.accordion__item .accordion__content p {
   padding-bottom: 1rem;
 }
-.accordion__item input[type=radio] {
+.accordion__item input {
   position: absolute;
   top: 0;
   width: 0.1px;
@@ -2425,12 +2423,17 @@ Hotspot
   grid-area: card;
 }
 
-.blog__wrapper .title-5 {
+.blog__wrapper .title-5, .blog__wrapper p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+.blog__wrapper .title-5 {
+  -webkit-line-clamp: 2;
+}
+.blog__wrapper p {
+  -webkit-line-clamp: 3;
 }
 
 .collection__wrapper {

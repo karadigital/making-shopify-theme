@@ -99,7 +99,7 @@
         <li><a href="./about-us.html">About Us</a></li>
         <li><a href="./faq.html">FAQ</a></li>
         <li><a href="./contact-us.html">Contact Us</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href="./blog-list.html">News</a></li>
       </ul>
       <div class="d-flex align-items-center cg-8px">
         <div class="nav-search">
@@ -642,8 +642,8 @@
       <img src="./static/image/armani.png" alt="logo">
     </div>
   </section>
-  <!-- Hotspot -->
-  <section class="section__wrapper section__padding hotspot__section">
+  <!-- Hotspot hide first -->
+  <!-- <section class="section__wrapper section__padding hotspot__section">
     <div class="hotspot__header d-grid rg-8px">
       <p class="label text-gold">Premium Jewelry</p>
       <h2 class="title-4">Bring Quality Jewellry into Your Home</h2>
@@ -665,29 +665,29 @@
     <div class="hotspot__banner">
       <img src="./static/image/hotspot-template.png" alt="banner" class="d-flex img-object-cover">
     </div>
-  </section>
+  </section> -->
   <!-- Blog Home -->
   <section class="section__wrapper section__padding blog__wrapper d-grid rg-32px">
     <h2 class="title-4">Latest News</h2>
     <div class="d-grid rg-32px cols-lg-3 cg-16px">
-      <div class="blog__card d-grid rg-16px">
+      <a href="./blog-detail.html" class="blog__card d-grid rg-16px">
         <img src="./static/image/img-template-1.png" alt="blog img preview" class="w-100">
         <p class="label">March 07 2023</p>
         <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
-        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication. ..</p>
-      </div>
-      <div class="blog__card d-grid rg-16px">
+        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+      </a>
+      <a href="./blog-detail.html" class="blog__card d-grid rg-16px">
         <img src="./static/image/img-template-2.png" alt="blog img preview" class="w-100">
         <p class="label">March 07 2023</p>
         <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
-        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication. ..</p>
-      </div>
-      <div class="blog__card d-grid rg-16px">
+        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+      </a>
+      <a href="./blog-detail.html" class="blog__card d-grid rg-16px">
         <img src="./static/image/img-template-3.png" alt="blog img preview" class="w-100">
         <p class="label">March 07 2023</p>
         <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
-        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication. ..</p>
-      </div>
+        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+      </a>
     </div>
   </section>
   <!-- Follow Us -->
@@ -908,17 +908,30 @@
             <img src="./static/image/product-template.png" alt="product img" class="d-flex img-object-cover">
           </div>
           <p class="product-title">18K Gold Double Initial Custom Ring</p>
-          <div class="product-item__info d-grid rg-8px">
+          <div class="product-item__info">
             <div class="d-flex align-items-center cg-8px">
               <p class="label text-light-dark line-through">$210.00</p>
               <p class="label semi-bold">$180.000</p>
             </div>
-            <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
-            <p class="small">Gemstone Quartz</p>
-            <p class="small">Size: 7</p>
-            <p class="small">Product Set: Layered Necklace Set</p>
+            <div class="accordion__item">
+              <input type="checkbox" name="accordion-more-details" id="accordion-1">
+              <label class="medium" for="accordion-1"><span>More details</span>
+                <div>
+                  <img src="./static/image/chevron-down.svg" alt="chevron icon" class="plus">
+                  <img src="./static/image/chevron-up.svg" alt="chevron icon" class="minus">
+                </div>
+              </label>
+              <div class="accordion__content">
+                <div>
+                  <p class="label">Metal: <span>18KT Yellow Gold</span> </p>
+                  <p class="label">Gemstone Quartz</p>
+                  <p class="label">Size: 7</p>
+                  <p class="label">Product Set: Layered Necklace Set</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
+          <p class="product-subtotal"><span class="">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
           <div class="counter__wrapper d-flex align-items-center">
             <div class="counter">
               <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
@@ -933,17 +946,30 @@
             <img src="./static/image/product-template.png" alt="product img" class="d-flex img-object-cover">
           </div>
           <p class="product-title">18K Gold Double Initial Custom Ring</p>
-          <div class="product-item__info d-grid rg-8px">
+          <div class="product-item__info">
             <div class="d-flex align-items-center cg-8px">
               <p class="label text-light-dark line-through">$210.00</p>
               <p class="label semi-bold">$180.000</p>
             </div>
-            <p class="small">Metal: <span>18KT YELLOW GOLD</span> </p>
-            <p class="small">Gemstone Quartz</p>
-            <p class="small">Size: 7</p>
-            <p class="small">Product Set: Layered Necklace Set</p>
+            <div class="accordion__item">
+              <input type="checkbox" name="accordion-more-details" id="accordion-2">
+              <label class="medium" for="accordion-2"><span>More details</span>
+                <div>
+                  <img src="./static/image/chevron-down.svg" alt="chevron icon" class="plus">
+                  <img src="./static/image/chevron-up.svg" alt="chevron icon" class="minus">
+                </div>
+              </label>
+              <div class="accordion__content">
+                <div>
+                  <p class="label">Metal: <span>18KT Yellow Gold</span> </p>
+                  <p class="label">Gemstone Quartz</p>
+                  <p class="label">Size: 7</p>
+                  <p class="label">Product Set: Layered Necklace Set</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="product-subtotal"><span class="mobile-only">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
+          <p class="product-subtotal"><span class="">Subtotal:</span> <span class="semi-bold">$180.00</span> </p>
           <div class="counter__wrapper d-flex align-items-center">
             <div class="counter">
               <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
@@ -961,11 +987,11 @@
       <div class="side-cart__footer">
         <div class="d-flex align-items-center justify-content-between">
           <p>Savings</p>
-          <div class="text-red">-$120.00</div>
+          <div class="text-red">-$60.00</div>
         </div>
         <div class="d-flex align-items-center justify-content-between pb-2 border-bottom-light-dark">
           <p class="">Subtotal</p>
-          <div class="heading-4 semi-bold">$480.00</div>
+          <div class="heading-4 semi-bold">$360.00</div>
         </div>
         <p class="label text-center text-light-dark">Tax included and shipping calculated at checkout</p>
         <div class="d-flex cg-16px">

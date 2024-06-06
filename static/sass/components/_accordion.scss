@@ -15,7 +15,7 @@
 		justify-content: space-between;
 
 		// background-color: $white;
-		padding-block: 1rem;
+		padding-block: 0.75rem;
 
 		cursor: pointer;
 	}
@@ -30,13 +30,13 @@
 		// overflow: hidden;
 		display: none;
 		// transition: all 0.75s ease; /* Adjusted transition timing */
-		
-		p { 
-			padding-bottom: 1rem;
-		}
+		padding-bottom: 1rem;
+		// p { 
+		// 	padding-bottom: 1rem;
+		// }
 	}
 
-	input[type="radio"] {
+	input {
 		position: absolute;
 		top: 0;
 		width: 0.1px;
