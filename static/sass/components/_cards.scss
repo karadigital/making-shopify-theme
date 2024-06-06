@@ -52,6 +52,18 @@ Hotspot Card - Home Page
 Blog Card - Home Page
 \*-------------------------------------------*/
 .blog__card {
+	h3, p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+	p {
+		-webkit-line-clamp: 3;
+	}
+	h3 {
+		-webkit-line-clamp: 2;
+	}
 	img {
 		height: 250px;
 		object-fit: cover;

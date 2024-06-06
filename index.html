@@ -105,51 +105,52 @@
         <div class="nav-search">
           <div>
             <!-- <span class="cursor-pointer"></span> -->
-            <input type="checkbox" id="showSearch">
-            <label for="showSearch" class="medium">
+            <input type="checkbox" id="showSearch" class="hide-input">
+            <label for="showSearch" class="cursor-pointer">
               <img src="./static/image/search.svg" alt="search icon">
             </label>
             <div class="search-box section__padding">
 
               <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" class="mb-3">
-              <!-- Display search before inputting -->
-              <!-- <div class="search-default">
+              <!-- Uncomment this to see state before inputting -->
+
+              <div class="search-default">
                 <p class="semi-bold">Popular Categories</p>
-                <div class="d-grid rg-8px">
+                <a href="./collections.html" class="d-grid rg-8px">
                   <div class="search-default__img">
                     <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
                   </div>
                   <p class="label medium text-center">All products</p>
-                </div>
-                <div class="d-grid rg-8px">
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
                   <div class="search-default__img">
                     <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
                   </div>
                   <p class="label medium text-center">Bracelets</p>
-                </div>
-                <div class="d-grid rg-8px">
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
                   <div class="search-default__img">
                     <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
                   </div>
                   <p class="label medium text-center">Earrings</p>
-                </div>
-                <div class="d-grid rg-8px">
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
                   <div class="search-default__img">
                     <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
                   </div>
                   <p class="label medium text-center">Rings</p>
-                </div>
-                <div class="d-grid rg-8px">
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
                   <div class="search-default__img">
                     <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
                   </div>
                   <p class="label medium text-center">Pendants</p>
-                </div>
-              </div> -->
+                </a>
+              </div>
 
-              <div class="search-result">
-                <!-- Need to be fix. Only show 1 tab content when active -->
-                <div class="tabs__wrapper">
+              <!-- Use this if search result is not 0. Show one or all if query is the same as inputted search -->
+              <!-- <div class="search-result">
+                <div class="tabs__wrapper mb-3">
                   <div class="">
                     <a id="tab-1" href="#search-result-product" class="underline-effect__text active">Products</a>
                     <a id="tab-2" href="#search-result-collections" class="underline-effect__text">Collections</a>
@@ -158,17 +159,146 @@
                 </div>
 
                 <div class="tabs__content">
+
                   <div id="search-result-product" aria-labelledby="tab-1">
-                    test 1
+                    <div class="d-grid cols-sm-2 cols-lg-4 cg-sm-16px cg-lg-32px rg-32px">
+                      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Polar Watch</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
+
                   <div id="search-result-collections" aria-labelledby="tab-2">
-                    <p>Test 2</p>
+                    <div class="d-grid rg-16px rg-lg-32px cg-sm-16px cg-lg-32px cols-sm-2 cols-lg-3">
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">WATCHES</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">EARRINGS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">RINGS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">PENDANTS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">ANKLETS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">BRACELETS</p>
+                      </a>
+                    </div>
                   </div>
+
                   <div id="search-result-articles" aria-labelledby="tab-3">
-                    <p>Test 3</p>
+                    <div class="d-grid rg-32px cols-lg-3 cg-16px">
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-1.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-2.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-3.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                    </div>
                   </div>
+
                 </div>
-              </div>
+              </div> -->
+              <!-- Use this if search result is empty -->
+              <!-- <div class="search-empty semi-bold">No results found for “ARC”. Check the spelling or use a different word or phrase.</div> -->
             </div>
           </div>
         </div>
@@ -273,6 +403,36 @@
       </div>
     </div>
     <div class="featured__wrapper d-grid rg-16px cg-sm-16px cg-lg-32px cols-sm-2 cols-lg-3">
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
+          <div class="chips small">Sold Out</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
+        </div>
+        <div class="product__text d-grid rg-8px">
+          <a href="./product-detail.html" class="label">Polar Watch</a>
+          <div class="d-flex align-items-center cg-8px">
+            <p class="label text-light-dark line-through">$210.00</p>
+            <p class="subtitle semi-bold">$180.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-card d-grid rg-8px">
+        <div class="product__img product__img--home" onclick="navigateToProductPage()">
+          <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
+          <img src="./static/image/img-template-1.png" alt="product image" class="product-secondary__img d-flex img-object-cover">
+          <div class="chips small">Sold Out</div>
+          <div class="btn" onclick="handleQuickViewClick(event)">Quick View</div>
+        </div>
+        <div class="product__text d-grid rg-8px">
+          <a href="./product-detail.html" class="label">Polar Watch</a>
+          <div class="d-flex align-items-center cg-8px">
+            <p class="label text-light-dark line-through">$210.00</p>
+            <p class="subtitle semi-bold">$180.00</p>
+          </div>
+        </div>
+      </div>
       <div class="product-card d-grid rg-8px">
         <div class="product__img product__img--home" onclick="navigateToProductPage()">
           <img src="./static/image/product-template.png" alt="product image" class="product-first__img d-flex img-object-cover">
@@ -654,11 +814,11 @@
               <div class="chips small">Sale</div>
             </div>
           </div>
-          <p class="light">Handcrafted with traditional methods, the Harmony Ball Collection includes earrings and necklaces, adorned with the beautiful golden spheres known in Spain as ‘llamadores de Angeles’ which directly translates as ‘angel callers’ - inspired by the delicate subtle sound of the balls, scarcely audible but to the wearer. The Harmony Balls have a healing quality and create the harmonising sound their name derives from. The Harmony Balls have an intricate design and are created from sterling silver, plated in 18kt gold.
+          <p class="light">Handcrafted with traditional methods, the Harmony Ball Collection includes earrings and necklaces, adorned with the beautiful golden spheres known in Spain as ‘llamadores de Angeles’ which directly translates as 'angel callers'.
           </p>
-          <hr class="w-100">
+          <hr class="w-100 m-0">
           <div class="d-grid rg-8px">
-            <p id>COLOR: <span id="colorValue">18KT YELLOW GOLD</span></p>
+            <p id>Color: <span id="colorValue">18KT Yellow Gold</span></p>
             <div class="d-flex cg-16px">
               <div class="position-relative input-styled input-styled__circle">
                 <input type="radio" name="color" id="gold" value="GOLD" checked>
@@ -670,45 +830,45 @@
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-between cg-16px">
-            <p class="small">Size: <span id="sizeValue">5</span></p>
-          </div>
-          <div class="d-flex justify-content-between cg-16px">
-            <div class="d-flex cg-16px">
-              <div class="position-relative input-styled input-styled__square">
-                <input type="radio" name="size" id="size-5" value="5" checked>
-                <label for="size-5">
-                5
-                </label>
-              </div>
-              <div class="position-relative input-styled input-styled__square">
-                <input type="radio" name="size" id="size-6" value="6">
-                <label for="size-6">
-                6
-                </label>
-              </div>
-              <div class="position-relative input-styled input-styled__square">
-                <input type="radio" name="size" id="size-7" value="7">
-                <label for="size-7">
-                7
-                </label>
-              </div>
-              <div class="position-relative input-styled input-styled__square">
-                <input type="radio" name="size" id="size-8" value="8">
-                <label for="size-8">
-                8
-                </label>
-              </div>
-              <div class="position-relative input-styled input-styled__square">
-                <input type="radio" name="size" id="size-9" value="9">
-                <label for="size-9">
-                9
-                </label>
+          <div class="d-grid rg-8px">
+            <p>Size: <span id="sizeValue">5</span></p>
+            <div class="d-flex justify-content-between cg-16px">
+              <div class="d-flex cg-16px">
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-5" value="5" checked>
+                  <label for="size-5">
+                  5
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-6" value="6">
+                  <label for="size-6">
+                  6
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-7" value="7">
+                  <label for="size-7">
+                  7
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-8" value="8">
+                  <label for="size-8">
+                  8
+                  </label>
+                </div>
+                <div class="position-relative input-styled input-styled__square">
+                  <input type="radio" name="size" id="size-9" value="9">
+                  <label for="size-9">
+                  9
+                  </label>
+                </div>
               </div>
             </div>
           </div>
           <div class="d-grid rg-16px">
-            <p class="small">Quantity</p>
+            <p>Quantity</p>
             <div class="d-flex cg-16px justify-content-between">
               <div class="counter">
                 <img src="./static/image/minus.svg" alt="minus icon" class="cursor-pointer">
@@ -829,16 +989,6 @@
   <script src="./static/js/quickview-slider.js"></script>
   <script src="./static/js/gsap-animation.js"></script>
   <script src="./static/js/tabs-products.js"></script>
-
-  <script>
-    function handleQuickViewClick(event) {
-      event.stopPropagation(); // Prevent the click event from propagating to the product image
-      openModal('modal-quick-view', 'open');
-    }
-
-    function navigateToProductPage() {
-      window.location.href = './product-detail.html';
-    }
-  </script>
+  <script src="./static/js/show-search.js"></script>
 </body>
 </html>

@@ -89,3 +89,8 @@ a {
   .object-fit-cover {
 	object-fit: cover;
   }
+
+  .hide-input {
+	@include square(0.1px, $radius: 0);
+	opacity: 0;
+  }

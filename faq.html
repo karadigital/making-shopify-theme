@@ -101,7 +101,206 @@
         <li><a href="#">News</a></li>
       </ul>
       <div class="d-flex align-items-center cg-8px">
-        <img src="./static/image/search.svg" alt="search icon">
+        <div class="nav-search">
+          <div>
+            <!-- <span class="cursor-pointer"></span> -->
+            <input type="checkbox" id="showSearch" class="hide-input">
+            <label for="showSearch" class="cursor-pointer">
+              <img src="./static/image/search.svg" alt="search icon">
+            </label>
+            <div class="search-box section__padding">
+
+              <input type="text" placeholder="WHAT ARE YOU LOOKING FOR?" class="mb-3">
+              <!-- Uncomment this to see state before inputting -->
+
+              <div class="search-default">
+                <p class="semi-bold">Popular Categories</p>
+                <a href="./collections.html" class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">All products</p>
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Bracelets</p>
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Earrings</p>
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Rings</p>
+                </a>
+                <a href="./collections.html" class="d-grid rg-8px">
+                  <div class="search-default__img">
+                    <img src="./static/image/img-template-1.png" alt="" class="img-object-cover">
+                  </div>
+                  <p class="label medium text-center">Pendants</p>
+                </a>
+              </div>
+
+              <!-- Use this if search result is not 0. Show one or all if query is the same as inputted search -->
+              <!-- <div class="search-result">
+                <div class="tabs__wrapper mb-3">
+                  <div class="">
+                    <a id="tab-1" href="#search-result-product" class="underline-effect__text active">Products</a>
+                    <a id="tab-2" href="#search-result-collections" class="underline-effect__text">Collections</a>
+                    <a id="tab-3" href="#search-result-articles" class="underline-effect__text">Articles</a>
+                  </div>
+                </div>
+
+                <div class="tabs__content">
+
+                  <div id="search-result-product" aria-labelledby="tab-1">
+                    <div class="d-grid cols-sm-2 cols-lg-4 cg-sm-16px cg-lg-32px rg-32px">
+                      <a href="./product-detail.html" class="product-card d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Polar Watch</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="./product-detail-set.html" class="d-grid rg-8px">
+                        <div class="product__img">
+                          <img src="./static/image/product-template.png" alt="product image" class="d-flex img-object-cover">
+                          <div class="chips small">Sold Out</div>
+                        </div>
+                        <div class="product__text d-grid rg-8px">
+                          <p class="label">Product set</p>
+                          <div class="d-flex align-items-center cg-8px">
+                            <p class="label text-light-dark line-through">$210.00</p>
+                            <p class="subtitle semi-bold">$180.00</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div id="search-result-collections" aria-labelledby="tab-2">
+                    <div class="d-grid rg-16px rg-lg-32px cg-sm-16px cg-lg-32px cols-sm-2 cols-lg-3">
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">WATCHES</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">EARRINGS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">RINGS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">PENDANTS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">ANKLETS</p>
+                      </a>
+                      <a href="./product-list.html" class="collection__item collection__card underline-effect__card">
+                        <img src="./static/image/product-template.png" alt="product image" class="w-100">
+                        <p class="label">BRACELETS</p>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div id="search-result-articles" aria-labelledby="tab-3">
+                    <div class="d-grid rg-32px cols-lg-3 cg-16px">
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-1.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-2.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                      <div class="blog__card d-grid rg-16px">
+                        <img src="./static/image/img-template-3.png" alt="blog img preview" class="w-100">
+                        <p class="label">March 07 2023</p>
+                        <h3 class="title-5">How to Keep Your Diamonds Clean & Beautiful with Cleaning tips and more</h3>
+                        <p>Jewelry has been an important part of human culture for thousands of years, used for both adornment and communication</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div> -->
+              <!-- Use this if search result is empty -->
+              <!-- <div class="search-empty semi-bold">No results found for “ARC”. Check the spelling or use a different word or phrase.</div> -->
+            </div>
+          </div>
+        </div>
         <div class="d-flex">
           <img src="./static/image/shopping-cart.svg" alt="">
           <p class="small counter-text">0</p>
@@ -343,5 +542,6 @@
         });
     });
   </script>
+  <script src="./static/js/show-search.js"></script>
 </body>
 </html>

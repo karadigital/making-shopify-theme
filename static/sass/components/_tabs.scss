@@ -1,11 +1,11 @@
 .tabs__wrapper {
-    margin: 0 -1rem;
+    margin-inline: -1rem;
     padding: 0.5rem 1rem;
     background: $grey-3;
 
     overflow: hidden;
     @include desktop-up {
-        margin: 0;
+        margin-inline: 0;
     }
 
     & > div {

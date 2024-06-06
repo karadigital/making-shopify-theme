@@ -123,7 +123,7 @@
 .modal-product__info {
 	position: relative; /* Ensure positioning context for sticky */
 	
-	min-height: 100%; /* Ensure a minimum height */
+	// min-height: 100%; /* Ensure a minimum height */
 	padding: 1rem;
 	
 	@include desktop-up {
