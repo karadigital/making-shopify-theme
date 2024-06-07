@@ -1,0 +1,16 @@
+.error {
+  &__section {
+
+		background: url("../image/error-bg-mobile.png") no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+		height: 100vh;
+
+		@include desktop-up {
+			background-size: cover;background: url("../image/error-bg-desktop.png") no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}

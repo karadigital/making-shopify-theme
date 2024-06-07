@@ -738,6 +738,10 @@ List Style
   align-items: baseline;
 }
 
+.align-content-center {
+  align-content: center;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -971,13 +975,13 @@ textarea, .select {
 }
 @media (min-width: 1024px) {
   input[type=text],
-  input[type=password],
-  input[type=date],
-  input[type=email],
-  input[type=number],
-  input[type=tel],
-  select,
-  textarea, .select {
+input[type=password],
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=tel],
+select,
+textarea, .select {
     font-size: 1rem;
   }
 }
@@ -2858,6 +2862,21 @@ Hotspot
 .kit__img {
   display: flex;
   width: 80px;
+}
+
+.error__section {
+  background: url("../image/error-bg-mobile.png") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+@media (min-width: 1024px) {
+  .error__section {
+    background-size: cover;
+    background: url("../image/error-bg-desktop.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
